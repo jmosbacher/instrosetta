@@ -2,7 +2,7 @@
 Because message passing is, and always will be a great idea.
 This repo may be useful to you if:
  - You want to control all your lab hardware from a single script/application but those pesky hardware apis/sdks work best on a different languages/OSs and devices are connected to different PCs.
- - You like writing in language X but your lab uses langyage Y.
+ - You like writing in language X but your lab uses language Y.
  - You love writing device servers but hate writing clients.
  - You love writing device clients but hate writing servers.
  - You may upgrade some equipment soon and dont want to have to rewrite all your control software when that happens.
