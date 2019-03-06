@@ -2,8 +2,8 @@ import grpc
 from collections import enum
 import pint
 from instrosseta.utils.units import accept_text
-from instrosseta.devices.motion.linear import singleaxis_pb2
-from instrosseta.devices.motion.linear import singleaxis_pb2_grpc
+from instrosseta.interfaces.motion.linear import singleaxis_pb2
+from instrosseta.interfaces.motion.linear import singleaxis_pb2_grpc
 
 ureg = pint.UnitRegistry()
 Q_ = ureg.Quantity
@@ -13,7 +13,6 @@ class MotorType(enum):
     STEPPER = 1
 
 class LinearSingleAxis:
-
     def __init__(self, addr="localhost:50051"):
         self.addr = addr 
 
