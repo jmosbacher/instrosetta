@@ -1,0 +1,7 @@
+C:\Users\yossimo\source\repos\instrosetta\instrosetta-csharp\instrosetta\servers\motion\linear\singleaxis\ThorlabsKinesisServer\bin\Debug\ThorlabsKinesisServer.exe.config
+C:\Users\yossimo\source\repos\instrosetta\instrosetta-csharp\instrosetta\servers\motion\linear\singleaxis\ThorlabsKinesisServer\bin\Debug\ThorlabsKinesisServer.exe
+C:\Users\yossimo\source\repos\instrosetta\instrosetta-csharp\instrosetta\servers\motion\linear\singleaxis\ThorlabsKinesisServer\bin\Debug\ThorlabsKinesisServer.pdb
+C:\Users\yossimo\source\repos\instrosetta\instrosetta-csharp\instrosetta\servers\motion\linear\singleaxis\ThorlabsKinesisServer\obj\Debug\ThorlabsKinesisServer.csprojAssemblyReference.cache
+C:\Users\yossimo\source\repos\instrosetta\instrosetta-csharp\instrosetta\servers\motion\linear\singleaxis\ThorlabsKinesisServer\obj\Debug\ThorlabsKinesisServer.csproj.CoreCompileInputs.cache
+C:\Users\yossimo\source\repos\instrosetta\instrosetta-csharp\instrosetta\servers\motion\linear\singleaxis\ThorlabsKinesisServer\obj\Debug\ThorlabsKinesisServer.exe
+C:\Users\yossimo\source\repos\instrosetta\instrosetta-csharp\instrosetta\servers\motion\linear\singleaxis\ThorlabsKinesisServer\obj\Debug\ThorlabsKinesisServer.pdb
