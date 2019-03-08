@@ -22,7 +22,7 @@ namespace Devices.Motion.Linear.Singleaxis
         private KDC101 _Motor = null;
         private UnitParser _uparser = null; 
 
-        public SingleLinearAxisImpl(bool debug=false)
+        public SingleLinearAxisImpl(bool debug)
         {
             _Motor = new KDC101(debug);
             _uparser = UnitParser.Default;
@@ -143,9 +143,9 @@ namespace Devices.Motion.Linear.Singleaxis
         public override async Task MoveAbsolute(MoveAbsoluteRequest request, IServerStreamWriter<Position> responseStream, ServerCallContext context)
         {
             
-            decimal destination = (decimal) Length.Parse(String.Format("{0} {1}", request.Position.Value, request.Position.Units)).Millimeters;
+            decimal destination = (decimal) UnitConverter.ConvertByAbbreviation(request.Position.Value, "Length", request.Position.Units, "mm");
 
-            foreach (long position in _Motor.MoveAbsolute(destination)) {
+            foreach (double position in _Motor.MoveAbsolute(destination)) {
                 Position response = new Position
                 {
                     Value = position,
