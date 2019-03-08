@@ -25,7 +25,7 @@ namespace Devices.Motion.Linear.Singleaxis
         public string SerialNo
         {
             get { if (_kCubeDCServoMotor == null) {
-                    return "";
+                    return "0";
 
                     }
                 else
@@ -78,9 +78,14 @@ namespace Devices.Motion.Linear.Singleaxis
 
         public void Disconnect()
         {
-
-         _kCubeDCServoMotor.ShutDown();
-         _kCubeDCServoMotor = null;
+            if (!(_kCubeDCServoMotor == null)) {
+                _kCubeDCServoMotor.ShutDown();
+                _kCubeDCServoMotor = null;
+            }
+            return;
+            
+            
+            
 
         }
 

@@ -72,12 +72,13 @@ namespace Devices.Motion.Linear.Singleaxis
 
         public Task<Device> Disconnect()
         {
-            Device dev = new Device { SerialNumber = UInt32.Parse(_Motor.SerialNo) };
+            
 
             try
             {
+                Device dev = new Device { SerialNumber = UInt32.Parse(_Motor.SerialNo) };
                 _Motor.Disconnect();
-                
+                return Task.FromResult(dev);
             }
             catch (Exception ex)
             {
@@ -89,7 +90,7 @@ namespace Devices.Motion.Linear.Singleaxis
                 throw new RpcException(stat, meta);
             }
 
-            return Task.FromResult(dev);
+            
 
         }
 
@@ -115,10 +116,19 @@ namespace Devices.Motion.Linear.Singleaxis
 
         public override async Task MoveRelative(MoveRelativeRequest request, IServerStreamWriter<Position> responseStream, ServerCallContext context)
         {
+            if (request.Distance.Direction.ToString() == "undefined")
+            {
+                Status stat = new Status(StatusCode.InvalidArgument, "Direction undefined.");
+                Metadata meta = new Metadata
+                        {
+                            { "valid_options", "1,2" }
+                        };
+                throw new RpcException(stat, meta);
+            }
 
             decimal distance = (decimal)Length.Parse(String.Format("{0} {1}", request.Distance.Value, request.Distance.Units)).Millimeters;
 
-            foreach (long position in _Motor.MoveRelative(distance, request.Distance.Direction))
+            foreach (long position in _Motor.MoveRelative((MotorDirection) request.Distance.Direction, distance, 5000))
             {
                 Position response = new Position
                 {
