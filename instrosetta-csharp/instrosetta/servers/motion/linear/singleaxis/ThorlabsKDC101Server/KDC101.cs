@@ -9,6 +9,7 @@ using Thorlabs.MotionControl.DeviceManagerCLI;
 using Thorlabs.MotionControl.KCube.DCServoCLI;
 using Thorlabs.MotionControl.GenericMotorCLI;
 using UnitsNet.Units;
+using Thorlabs.MotionControl.GenericMotorCLI.ControlParameters;
 
 namespace Devices.Motion.Linear.Singleaxis
 {
@@ -16,10 +17,16 @@ namespace Devices.Motion.Linear.Singleaxis
     {
 
         private KCubeDCServo _kCubeDCServoMotor = null;
+        private bool _Debug = false;
 
-        public KDC101 ()
+        public KDC101 (bool debug)
         {
-
+            if (debug)
+            {
+                _Debug = true;
+                SimulationManager.Instance.InitializeSimulations();
+            }
+            
         }
 
         public string SerialNo
@@ -33,6 +40,12 @@ namespace Devices.Motion.Linear.Singleaxis
                     return _kCubeDCServoMotor.SerialNo;
                 }
             }
+        }
+
+        public List<string> GetAvailableDevices()
+        {
+            List<string> serialNumbers = DeviceManagerCLI.GetDeviceList(KCubeDCServo.DevicePrefix);
+            return serialNumbers;
         }
 
         public void Connect(string serialNo, int timeout, int interval)
@@ -50,6 +63,8 @@ namespace Devices.Motion.Linear.Singleaxis
                 }
 
             }
+            
+
 
             DeviceManagerCLI.BuildDeviceList();
 
@@ -79,13 +94,30 @@ namespace Devices.Motion.Linear.Singleaxis
         public void Disconnect()
         {
             if (!(_kCubeDCServoMotor == null)) {
+                
+
+                _kCubeDCServoMotor.StopPolling();
                 _kCubeDCServoMotor.ShutDown();
                 _kCubeDCServoMotor = null;
+                
+
+            }
+            if (_Debug)
+            {
+                SimulationManager.Instance.UninitializeSimulations();
             }
             return;
             
             
             
+
+        }
+
+        public Tuple<decimal,decimal> GetRange()
+        {
+            
+            LimitSwitchParameters realLP = _kCubeDCServoMotor.GetLimitSwitchParams();
+            return Tuple.Create((decimal) realLP.AnticlockwiseHardwareLimit, (decimal) realLP.ClockwiseHardwareLimit);
 
         }
 

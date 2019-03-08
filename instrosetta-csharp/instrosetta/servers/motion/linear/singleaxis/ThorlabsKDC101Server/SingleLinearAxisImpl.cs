@@ -12,20 +12,44 @@ using Thorlabs.MotionControl.GenericMotorCLI;
 using Grpc.Core;
 using Grpc.Core.Utils;
 using UnitsNet;
+using UnitsNet.Units;
 
 namespace Devices.Motion.Linear.Singleaxis
 {
     class SingleLinearAxisImpl : SingleLinearAxis.SingleLinearAxisBase
 
     {
-        private KDC101 _Motor = new KDC101();
-        private UnitParser _uparser = UnitParser.Default; 
+        private KDC101 _Motor = null;
+        private UnitParser _uparser = null; 
+
+        public SingleLinearAxisImpl(bool debug=false)
+        {
+            _Motor = new KDC101(debug);
+            _uparser = UnitParser.Default;
+        }
+        
         
         public override Task<TextMessage> Echo(TextMessage request, ServerCallContext context)
         {
             return Task.FromResult(request);
         }
 
+        public override async Task ScanDevices(ScanDevicesRequest request, IServerStreamWriter<Device> responseStream, ServerCallContext context)
+        {
+
+            foreach (string serialNo in _Motor.GetAvailableDevices())
+            {
+                Device device = new Device
+                {
+                    SerialNumber = UInt32.Parse(serialNo),
+
+                };
+                await responseStream.WriteAsync(device);
+            }
+
+
+
+        }
         public override Task<Device> Connect(ConnectRequest request, ServerCallContext context)
         {
             if (_Motor != null)
@@ -63,11 +87,12 @@ namespace Devices.Motion.Linear.Singleaxis
             }
             catch (Exception ex)
             {
-                Status stat = new Status(StatusCode.NotFound, "Failed to connect to device." + ex.Message);
+                Status stat = new Status(StatusCode.NotFound, "Failed to connect to device. \n" + ex.Message);
                 Metadata meta = new Metadata
                         {
                             { "exception_name", ex.GetType().Name }
                         };
+
                 throw new RpcException(stat, meta);
             }
             
@@ -97,6 +122,21 @@ namespace Devices.Motion.Linear.Singleaxis
 
             
 
+        }
+
+        public override Task<StageRange> GetRange(GetRangeRequest request, ServerCallContext context)
+        {
+            
+            var limits = _Motor.GetRange();
+        
+            var min = UnitConverter.ConvertByAbbreviation(limits.Item1, "Length", request.Units, "mm");
+            var max = UnitConverter.ConvertByAbbreviation(limits.Item2, "Length", request.Units, "mm");
+            StageRange rng = new StageRange {
+                Min = min,
+                Max = max,
+                Units = "mm",
+                };
+            return Task.FromResult(rng);
         }
 
 
