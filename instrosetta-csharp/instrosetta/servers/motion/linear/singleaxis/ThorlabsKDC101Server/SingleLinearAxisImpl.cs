@@ -21,6 +21,11 @@ namespace Devices.Motion.Linear.Singleaxis
         private KDC101 _Motor = new KDC101();
         private UnitParser _uparser = UnitParser.Default; 
         
+        public override Task<TextMessage> Echo(TextMessage request, ServerCallContext context)
+        {
+            return Task.FromResult(request);
+        }
+
         public override Task<Device> Connect(ConnectRequest request, ServerCallContext context)
         {
             if (_Motor != null)
