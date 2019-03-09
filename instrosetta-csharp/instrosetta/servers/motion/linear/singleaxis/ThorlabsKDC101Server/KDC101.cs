@@ -15,7 +15,7 @@ namespace Devices.Motion.Linear.Singleaxis
 {
     class KDC101
     {
-
+        
         private KCubeDCServo _kCubeDCServoMotor = null;
         private bool _Debug = false;
 
@@ -24,7 +24,7 @@ namespace Devices.Motion.Linear.Singleaxis
             if (debug)
             {
                 _Debug = true;
-                SimulationManager.Instance.InitializeSimulations();
+                
             }
             
         }
@@ -102,10 +102,7 @@ namespace Devices.Motion.Linear.Singleaxis
                 
 
             }
-            if (_Debug)
-            {
-                SimulationManager.Instance.UninitializeSimulations();
-            }
+   
             return;
             
             

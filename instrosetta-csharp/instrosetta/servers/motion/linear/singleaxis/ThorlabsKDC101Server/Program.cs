@@ -12,7 +12,7 @@ namespace Devices.Motion.Linear.Singleaxis
         static void Main(string[] args)
         {
             int Port = 50052;
-            bool Debug = false;
+            bool Debug = true;
 
             
             if (args.Length > 0)
