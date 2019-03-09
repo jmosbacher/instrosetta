@@ -95,7 +95,6 @@ namespace Devices.Motion.Linear.Singleaxis
         {
             if (!(_kCubeDCServoMotor == null)) {
                 
-
                 _kCubeDCServoMotor.StopPolling();
                 _kCubeDCServoMotor.ShutDown();
                 _kCubeDCServoMotor = null;
