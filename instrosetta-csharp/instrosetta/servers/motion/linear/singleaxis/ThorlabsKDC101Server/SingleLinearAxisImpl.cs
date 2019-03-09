@@ -24,6 +24,10 @@ namespace Devices.Motion.Linear.Singleaxis
 
         public SingleLinearAxisImpl(bool debug)
         {
+            if (debug)
+            {
+                SimulationManager.Instance.InitializeSimulations();
+            }
             _Motor = new KDC101(debug);
             _uparser = UnitParser.Default;
         }
@@ -79,8 +83,8 @@ namespace Devices.Motion.Linear.Singleaxis
 
             }
 
-            int timeout = (int) TimeSpan.FromSeconds(request.Timeout).TotalMilliseconds;
-            int interval = (int) TimeSpan.FromSeconds(request.PollingInterval).TotalMilliseconds;
+            int timeout = (int)(request.Timeout * 1000); //UnitConverter.ConvertByAbbreviation(request.Timeout, "Time", "s", "ms");
+            int interval = (int)(request.PollingInterval * 1000); //UnitConverter.ConvertByAbbreviation(request.PollingInterval, "Time", "s", "ms");
             try
             {
                 _Motor.Connect(request.Device.SerialNumber.ToString(), timeout, interval);
@@ -102,12 +106,13 @@ namespace Devices.Motion.Linear.Singleaxis
 
         public Task<Device> Disconnect()
         {
-            
 
+            
             try
             {
                 Device dev = new Device { SerialNumber = UInt32.Parse(_Motor.SerialNo) };
                 _Motor.Disconnect();
+                SimulationManager.Instance.UninitializeSimulations();
                 return Task.FromResult(dev);
             }
             catch (Exception ex)
@@ -119,8 +124,9 @@ namespace Devices.Motion.Linear.Singleaxis
                         };
                 throw new RpcException(stat, meta);
             }
-
             
+
+
 
         }
 
