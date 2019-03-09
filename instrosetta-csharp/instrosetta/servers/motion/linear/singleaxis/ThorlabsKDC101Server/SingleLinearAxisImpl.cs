@@ -155,6 +155,7 @@ namespace Devices.Motion.Linear.Singleaxis
             StageRange rng = new StageRange {
                 Min = min,
                 Max = max,
+                Resolution = (double) _Motor.Resolution,
                 Units = "mm",
                 };
             return Task.FromResult(rng);
@@ -171,24 +172,37 @@ namespace Devices.Motion.Linear.Singleaxis
             return Task.FromResult(position);
         }
 
-
-        public override async Task MoveAbsolute(MoveAbsoluteRequest request, IServerStreamWriter<Position> responseStream, ServerCallContext context)
+        private async Task StreamPosition(IServerStreamWriter<Position> responseStream)
         {
-            CheckConnection();
-
-            // decimal destination = (decimal) UnitConverter.ConvertByAbbreviation(request.Position.Value, "Length", request.Position.Units, "Millimeter");
-            decimal destination = (decimal)request.Position.Value;
-            foreach (double position in _Motor.MoveAbsolute(destination)) {
+            do
+            {
+                double position = (double)_Motor.Position;
+                position = (double)_Motor.Position;
                 Position response = new Position
                 {
                     Value = position,
                     Units = "mm"
 
                 };
-                await responseStream.WriteAsync(response);
-            }
 
- 
+                await responseStream.WriteAsync(response);
+                Thread.Sleep(300);
+
+            } while (_Motor.State == MotorState.MOVING);
+        }
+
+        public override async Task MoveAbsolute(MoveAbsoluteRequest request, IServerStreamWriter<Position> responseStream, ServerCallContext context)
+        {
+            CheckConnection();
+
+            // decimal destination = (decimal) UnitConverter.ConvertByAbbreviation(request.Position.Value, "Length", request.Position.Units, "Millimeter");
+            decimal destination = (decimal) request.Position.Value;
+            
+
+            _Motor.MoveAbsolute(destination);
+            await StreamPosition(responseStream);
+            _Motor.ThrowLastDeviceException();
+            
 
         }
 
@@ -208,19 +222,10 @@ namespace Devices.Motion.Linear.Singleaxis
             }
 
             decimal distance = (decimal) request.Distance.Value;
+            _Motor.MoveRelative((MotorDirection) request.Distance.Direction, distance, 5000);
 
-            foreach (double position in _Motor.MoveRelative((MotorDirection) request.Distance.Direction, distance, 5000))
-            {
-                Position response = new Position
-                {
-                    Value = position,
-                    Units = "mm"
-
-                };
-                await responseStream.WriteAsync(response);
-            }
-
-
+            await StreamPosition(responseStream);
+            _Motor.ThrowLastDeviceException();
 
         }
 
