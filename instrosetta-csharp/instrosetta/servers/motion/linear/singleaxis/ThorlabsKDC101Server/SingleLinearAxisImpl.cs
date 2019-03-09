@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Globalization;
 using System.Threading.Tasks;
 using System.Threading;
 
@@ -149,8 +150,8 @@ namespace Devices.Motion.Linear.Singleaxis
         public override async Task MoveAbsolute(MoveAbsoluteRequest request, IServerStreamWriter<Position> responseStream, ServerCallContext context)
         {
             
-            decimal destination = (decimal) UnitConverter.ConvertByAbbreviation(request.Position.Value, "Length", request.Position.Units, "mm");
-
+            // decimal destination = (decimal) UnitConverter.ConvertByAbbreviation(request.Position.Value, "Length", request.Position.Units, "Millimeter");
+            decimal destination = (decimal)request.Position.Value;
             foreach (double position in _Motor.MoveAbsolute(destination)) {
                 Position response = new Position
                 {
@@ -177,9 +178,9 @@ namespace Devices.Motion.Linear.Singleaxis
                 throw new RpcException(stat, meta);
             }
 
-            decimal distance = (decimal)Length.Parse(String.Format("{0} {1}", request.Distance.Value, request.Distance.Units)).Millimeters;
+            decimal distance = (decimal) request.Distance.Value;
 
-            foreach (long position in _Motor.MoveRelative((MotorDirection) request.Distance.Direction, distance, 5000))
+            foreach (double position in _Motor.MoveRelative((MotorDirection) request.Distance.Direction, distance, 5000))
             {
                 Position response = new Position
                 {

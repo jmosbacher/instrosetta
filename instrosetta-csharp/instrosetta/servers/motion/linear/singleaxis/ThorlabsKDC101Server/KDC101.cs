@@ -134,30 +134,33 @@ namespace Devices.Motion.Linear.Singleaxis
             _taskComplete = false;
             
             _taskID = _kCubeDCServoMotor.MoveTo(position, CommandCompleteFunction);
-
+            Console.WriteLine("Starting move...");
             do
             {
                 Thread.Sleep(500);
                 double newPos = (double) _kCubeDCServoMotor.Position;
+                Console.WriteLine("At "+ newPos.ToString());
                 yield return newPos;
 
             } while (!_taskComplete);
-
+            Console.WriteLine("Done.");
         }
 
-        public IEnumerable<long> MoveRelative(MotorDirection direction, decimal distance, int timeout)
+        public IEnumerable<double> MoveRelative(MotorDirection direction, decimal distance, int timeout)
         {
             
                _taskComplete = false;
             _taskID = _kCubeDCServoMotor.MoveRelative(direction, distance, CommandCompleteFunction);
-
+            Console.WriteLine("Starting move...");
             do
             {
                 Thread.Sleep(500);
-                StatusBase status = _kCubeDCServoMotor.Status;
-                yield return status.Position;
+                double newPos = (double) _kCubeDCServoMotor.Position;
+                Console.WriteLine("At " + newPos.ToString());
+                yield return newPos;
 
             } while (!_taskComplete);
+            Console.WriteLine("Done.");
 
         }
 
