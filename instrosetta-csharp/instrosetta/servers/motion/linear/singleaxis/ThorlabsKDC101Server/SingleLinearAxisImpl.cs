@@ -23,6 +23,17 @@ namespace Devices.Motion.Linear.Singleaxis
         private KDC101 _Motor = null;
         private UnitParser _uparser = null; 
 
+        private void CheckConnection()
+        {
+            if (_Motor == null || !_Motor.Connected) {
+                Status stat = new Status(StatusCode.Unavailable, "Not connected. \n");
+                Metadata meta = new Metadata
+                        {
+                            { "help", "Check that device is present and try calling Connect method again."}
+                        };
+                throw new RpcException(stat, meta);
+            }
+        }
         public SingleLinearAxisImpl(bool debug)
         {
             if (debug)
@@ -107,8 +118,9 @@ namespace Devices.Motion.Linear.Singleaxis
 
         public Task<Device> Disconnect()
         {
+            CheckConnection();
 
-            
+
             try
             {
                 Device dev = new Device { SerialNumber = UInt32.Parse(_Motor.SerialNo) };
@@ -133,7 +145,9 @@ namespace Devices.Motion.Linear.Singleaxis
 
         public override Task<StageRange> GetRange(GetRangeRequest request, ServerCallContext context)
         {
-            
+            CheckConnection();
+     
+
             var limits = _Motor.GetRange();
         
             var min = UnitConverter.ConvertByAbbreviation(limits.Item1, "Length", request.Units, "mm");
@@ -146,10 +160,22 @@ namespace Devices.Motion.Linear.Singleaxis
             return Task.FromResult(rng);
         }
 
+        public override Task<Position> GetPosition(GetPositionRequest request, ServerCallContext context)
+        {
+            CheckConnection();
+            Position position = new Position
+            {
+                Value = (double) _Motor.Position,
+                Units = "mm",
+            };
+            return Task.FromResult(position);
+        }
+
 
         public override async Task MoveAbsolute(MoveAbsoluteRequest request, IServerStreamWriter<Position> responseStream, ServerCallContext context)
         {
-            
+            CheckConnection();
+
             // decimal destination = (decimal) UnitConverter.ConvertByAbbreviation(request.Position.Value, "Length", request.Position.Units, "Millimeter");
             decimal destination = (decimal)request.Position.Value;
             foreach (double position in _Motor.MoveAbsolute(destination)) {
@@ -168,6 +194,9 @@ namespace Devices.Motion.Linear.Singleaxis
 
         public override async Task MoveRelative(MoveRelativeRequest request, IServerStreamWriter<Position> responseStream, ServerCallContext context)
         {
+
+            CheckConnection();
+
             if (request.Distance.Direction.ToString() == "undefined")
             {
                 Status stat = new Status(StatusCode.InvalidArgument, "Direction undefined.");

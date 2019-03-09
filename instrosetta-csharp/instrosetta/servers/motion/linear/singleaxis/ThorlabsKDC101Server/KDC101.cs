@@ -15,9 +15,10 @@ namespace Devices.Motion.Linear.Singleaxis
 {
     class KDC101
     {
-        
+
         private KCubeDCServo _kCubeDCServoMotor = null;
         private bool _Debug = false;
+
 
         public KDC101 (bool debug)
         {
@@ -28,6 +29,27 @@ namespace Devices.Motion.Linear.Singleaxis
             }
             
         }
+
+        public bool Connected
+        {
+            get
+            {
+                if (_kCubeDCServoMotor == null)
+                {
+                    return false;
+                }
+                else
+                {
+                    return true;
+                }
+            }
+        }
+
+        public decimal Position
+        {
+            get { return _kCubeDCServoMotor.Position; }
+        }
+
 
         public string SerialNo
         {
