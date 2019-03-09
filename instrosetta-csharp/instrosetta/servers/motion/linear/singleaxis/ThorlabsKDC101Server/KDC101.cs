@@ -133,16 +133,17 @@ namespace Devices.Motion.Linear.Singleaxis
         }
 
 
-        public IEnumerable <long> MoveAbsolute(decimal position)
+        public IEnumerable <double> MoveAbsolute(decimal position)
         {
             _taskComplete = false;
+            
             _taskID = _kCubeDCServoMotor.MoveTo(position, CommandCompleteFunction);
 
             do
             {
                 Thread.Sleep(500);
-                StatusBase status = _kCubeDCServoMotor.Status;
-                yield return status.Position;
+                double newPos = (double) _kCubeDCServoMotor.Position;
+                yield return newPos;
 
             } while (!_taskComplete);
 

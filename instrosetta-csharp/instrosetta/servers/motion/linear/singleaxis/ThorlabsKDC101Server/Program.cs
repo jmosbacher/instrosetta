@@ -14,7 +14,7 @@ namespace Devices.Motion.Linear.Singleaxis
             int Port = 50052;
             bool Debug = false;
 
-            SingleLinearAxisImpl impl = new SingleLinearAxisImpl();
+            
             if (args.Length > 0)
             {
                 Int32.TryParse(args[0], out Port);
@@ -23,8 +23,9 @@ namespace Devices.Motion.Linear.Singleaxis
             {
                 bool.TryParse(args[1], out Debug);
             }
+            SingleLinearAxisImpl impl = new SingleLinearAxisImpl(Debug);
 
-                Server server = new Server
+            Server server = new Server
             {
                 Services = { SingleLinearAxis.BindService(impl) },
                 Ports = { new ServerPort("localhost", Port, ServerCredentials.Insecure) }
