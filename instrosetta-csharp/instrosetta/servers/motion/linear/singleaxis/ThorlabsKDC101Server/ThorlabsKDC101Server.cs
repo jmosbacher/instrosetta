@@ -5,7 +5,7 @@ using Grpc.Core;
 using Devices.Motion.Linear.Singleaxis;
 
 
-namespace ThorlabsKDC101ServerGUI
+namespace ThorlabsKDC101Server
 {
     public class ThorlabsKDC101Server
     {

@@ -2,10 +2,7 @@
 using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Input;
-
-using Grpc.Core;
-using ThorlabsKDC101ServerGUI;
-
+using ThorlabsKDC101Server;
 
 namespace ThorlabsKDC101ServerGUI
 {
@@ -15,7 +12,7 @@ namespace ThorlabsKDC101ServerGUI
     public partial class MainWindow : Window
     {
         private bool _Serving = false;
-        private ThorlabsKDC101ServerGUI.ThorlabsKDC101Server _Server = new ThorlabsKDC101ServerGUI.ThorlabsKDC101Server();
+        private ThorlabsKDC101Server.ThorlabsKDC101Server _Server = new ThorlabsKDC101Server.ThorlabsKDC101Server();
   
         private bool _IncludeSims = false;
 

@@ -10,7 +10,7 @@ using UnitsNet;
 using Devices.Motion.Linear.Singleaxis;
 
 
-namespace ThorlabsKDC101ServerGUI
+namespace ThorlabsKDC101Server
 {
     public class ThorlabsKDC101ServerImpl : SingleLinearAxis.SingleLinearAxisBase
     {
@@ -40,7 +40,7 @@ namespace ThorlabsKDC101ServerGUI
 
         public void ActivateSimulations()
         {
-            SimulationManager.Instance.InitializeSimulations();
+            
 
         }
         public override Task<TextMessage> Echo(TextMessage request, ServerCallContext context)

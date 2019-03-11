@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using Thorlabs.MotionControl.Tools;
 using Thorlabs.MotionControl.DeviceManagerCLI;
 using Thorlabs.MotionControl.GenericMotorCLI;
 using Thorlabs.MotionControl.GenericMotorCLI.ControlParameters;
 using Thorlabs.MotionControl.KCube.DCServoCLI;
 
 
-namespace ThorlabsKDC101ServerGUI
+namespace ThorlabsKDC101Server
 {
     public enum MotorState { UNKNOWN, IDLE, MOVING };
 
@@ -68,8 +69,13 @@ namespace ThorlabsKDC101ServerGUI
             }
         }
 
-        public List<string> GetAvailableDevices()
+        public List<string> GetAvailableDevices(bool includeSimulated=true)
         {
+            if (includeSimulated)
+            {
+                SimulationManager.Instance.InitializeSimulations();
+            }
+            
             List<string> serialNumbers = DeviceManagerCLI.GetDeviceList(KCubeDCServo.DevicePrefix);
             return serialNumbers;
         }
