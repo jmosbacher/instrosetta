@@ -68,7 +68,7 @@ namespace ThorlabsKDC101Server
         {
             if (_Motor != null)
             {
-                if (_Motor.SerialNo == request.Device.SerialNumber.ToString())
+                if (_Motor.SerialNo == request.Device.SerialNumber)
                 {
                     return Task.FromResult(request.Device);
                 }
@@ -97,7 +97,7 @@ namespace ThorlabsKDC101Server
             int interval = (int)(request.PollingInterval * 1000); //UnitConverter.ConvertByAbbreviation(request.PollingInterval, "Time", "s", "ms");
             try
             {
-                _Motor.Connect(request.Device.SerialNumber.ToString(), timeout, interval);
+                _Motor.Connect(request.Device.SerialNumber, timeout, interval);
             }
             catch (Exception ex)
             {
@@ -123,7 +123,7 @@ namespace ThorlabsKDC101Server
 
                 try
             {
-                Device dev = new Device { SerialNumber = UInt32.Parse(_Motor.SerialNo) };
+                Device dev = new Device { SerialNumber = _Motor.SerialNo };
                 _Motor.Disconnect();
                 SimulationManager.Instance.UninitializeSimulations();
                 return Task.FromResult(dev);
