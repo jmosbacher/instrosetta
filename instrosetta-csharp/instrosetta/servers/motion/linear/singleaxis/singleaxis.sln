@@ -11,10 +11,15 @@ Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "ThorlabsKDC101Server", "Tho
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThorlabsKDC101ServerCLI", "ThorlabsKDC101ServerCLI\ThorlabsKDC101ServerCLI.csproj", "{7481CF03-F6E3-4B2C-A8C5-58A37D8106FC}"
 EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Singleaxis", "Singleaxis\Singleaxis.shproj", "{720E2883-BFB1-4D8E-89DE-65B437A60D43}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		ThorlabsKDC101Server\ThorlabsKDC101Server.projitems*{04d7767b-ba78-46b3-8abb-ceea980abb6f}*SharedItemsImports = 13
+		Singleaxis\Singleaxis.projitems*{05968cf9-e99e-4f2f-8d55-0c9fffd34459}*SharedItemsImports = 4
 		ThorlabsKDC101Server\ThorlabsKDC101Server.projitems*{05968cf9-e99e-4f2f-8d55-0c9fffd34459}*SharedItemsImports = 4
+		Singleaxis\Singleaxis.projitems*{720e2883-bfb1-4d8e-89de-65b437a60d43}*SharedItemsImports = 13
+		Singleaxis\Singleaxis.projitems*{7481cf03-f6e3-4b2c-a8c5-58a37d8106fc}*SharedItemsImports = 4
 		ThorlabsKDC101Server\ThorlabsKDC101Server.projitems*{7481cf03-f6e3-4b2c-a8c5-58a37d8106fc}*SharedItemsImports = 4
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
