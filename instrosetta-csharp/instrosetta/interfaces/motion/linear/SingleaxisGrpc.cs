@@ -17,10 +17,11 @@ namespace Devices.Motion.Linear.Singleaxis {
     static readonly grpc::Marshaller<global::Devices.Motion.Linear.Singleaxis.Device> __Marshaller_devices_motion_linear_singleaxis_Device = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Devices.Motion.Linear.Singleaxis.Device.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Devices.Motion.Linear.Singleaxis.ConnectRequest> __Marshaller_devices_motion_linear_singleaxis_ConnectRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Devices.Motion.Linear.Singleaxis.ConnectRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Devices.Motion.Linear.Singleaxis.DisconnectRequest> __Marshaller_devices_motion_linear_singleaxis_DisconnectRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Devices.Motion.Linear.Singleaxis.DisconnectRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Devices.Motion.Linear.Singleaxis.HomeMotorRequest> __Marshaller_devices_motion_linear_singleaxis_HomeMotorRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Devices.Motion.Linear.Singleaxis.HomeMotorRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Devices.Motion.Linear.Singleaxis.Position> __Marshaller_devices_motion_linear_singleaxis_Position = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Devices.Motion.Linear.Singleaxis.Position.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Devices.Motion.Linear.Singleaxis.GetRangeRequest> __Marshaller_devices_motion_linear_singleaxis_GetRangeRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Devices.Motion.Linear.Singleaxis.GetRangeRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Devices.Motion.Linear.Singleaxis.StageRange> __Marshaller_devices_motion_linear_singleaxis_StageRange = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Devices.Motion.Linear.Singleaxis.StageRange.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Devices.Motion.Linear.Singleaxis.GetPositionRequest> __Marshaller_devices_motion_linear_singleaxis_GetPositionRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Devices.Motion.Linear.Singleaxis.GetPositionRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Devices.Motion.Linear.Singleaxis.Position> __Marshaller_devices_motion_linear_singleaxis_Position = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Devices.Motion.Linear.Singleaxis.Position.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Devices.Motion.Linear.Singleaxis.MoveAbsoluteRequest> __Marshaller_devices_motion_linear_singleaxis_MoveAbsoluteRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Devices.Motion.Linear.Singleaxis.MoveAbsoluteRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Devices.Motion.Linear.Singleaxis.MoveRelativeRequest> __Marshaller_devices_motion_linear_singleaxis_MoveRelativeRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Devices.Motion.Linear.Singleaxis.MoveRelativeRequest.Parser.ParseFrom);
 
@@ -51,6 +52,13 @@ namespace Devices.Motion.Linear.Singleaxis {
         "Disconnect",
         __Marshaller_devices_motion_linear_singleaxis_DisconnectRequest,
         __Marshaller_devices_motion_linear_singleaxis_Device);
+
+    static readonly grpc::Method<global::Devices.Motion.Linear.Singleaxis.HomeMotorRequest, global::Devices.Motion.Linear.Singleaxis.Position> __Method_HomeMotor = new grpc::Method<global::Devices.Motion.Linear.Singleaxis.HomeMotorRequest, global::Devices.Motion.Linear.Singleaxis.Position>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "HomeMotor",
+        __Marshaller_devices_motion_linear_singleaxis_HomeMotorRequest,
+        __Marshaller_devices_motion_linear_singleaxis_Position);
 
     static readonly grpc::Method<global::Devices.Motion.Linear.Singleaxis.GetRangeRequest, global::Devices.Motion.Linear.Singleaxis.StageRange> __Method_GetRange = new grpc::Method<global::Devices.Motion.Linear.Singleaxis.GetRangeRequest, global::Devices.Motion.Linear.Singleaxis.StageRange>(
         grpc::MethodType.Unary,
@@ -105,6 +113,11 @@ namespace Devices.Motion.Linear.Singleaxis {
       }
 
       public virtual global::System.Threading.Tasks.Task<global::Devices.Motion.Linear.Singleaxis.Device> Disconnect(global::Devices.Motion.Linear.Singleaxis.DisconnectRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      public virtual global::System.Threading.Tasks.Task<global::Devices.Motion.Linear.Singleaxis.Position> HomeMotor(global::Devices.Motion.Linear.Singleaxis.HomeMotorRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -210,6 +223,22 @@ namespace Devices.Motion.Linear.Singleaxis {
       {
         return CallInvoker.AsyncUnaryCall(__Method_Disconnect, null, options, request);
       }
+      public virtual global::Devices.Motion.Linear.Singleaxis.Position HomeMotor(global::Devices.Motion.Linear.Singleaxis.HomeMotorRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return HomeMotor(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual global::Devices.Motion.Linear.Singleaxis.Position HomeMotor(global::Devices.Motion.Linear.Singleaxis.HomeMotorRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_HomeMotor, null, options, request);
+      }
+      public virtual grpc::AsyncUnaryCall<global::Devices.Motion.Linear.Singleaxis.Position> HomeMotorAsync(global::Devices.Motion.Linear.Singleaxis.HomeMotorRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return HomeMotorAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual grpc::AsyncUnaryCall<global::Devices.Motion.Linear.Singleaxis.Position> HomeMotorAsync(global::Devices.Motion.Linear.Singleaxis.HomeMotorRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_HomeMotor, null, options, request);
+      }
       public virtual global::Devices.Motion.Linear.Singleaxis.StageRange GetRange(global::Devices.Motion.Linear.Singleaxis.GetRangeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetRange(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -274,6 +303,7 @@ namespace Devices.Motion.Linear.Singleaxis {
           .AddMethod(__Method_ScanDevices, serviceImpl.ScanDevices)
           .AddMethod(__Method_Connect, serviceImpl.Connect)
           .AddMethod(__Method_Disconnect, serviceImpl.Disconnect)
+          .AddMethod(__Method_HomeMotor, serviceImpl.HomeMotor)
           .AddMethod(__Method_GetRange, serviceImpl.GetRange)
           .AddMethod(__Method_GetPosition, serviceImpl.GetPosition)
           .AddMethod(__Method_MoveAbsolute, serviceImpl.MoveAbsolute)
@@ -290,6 +320,7 @@ namespace Devices.Motion.Linear.Singleaxis {
       serviceBinder.AddMethod(__Method_ScanDevices, serviceImpl == null ? null : new grpc::ServerStreamingServerMethod<global::Devices.Motion.Linear.Singleaxis.ScanDevicesRequest, global::Devices.Motion.Linear.Singleaxis.Device>(serviceImpl.ScanDevices));
       serviceBinder.AddMethod(__Method_Connect, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Devices.Motion.Linear.Singleaxis.ConnectRequest, global::Devices.Motion.Linear.Singleaxis.Device>(serviceImpl.Connect));
       serviceBinder.AddMethod(__Method_Disconnect, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Devices.Motion.Linear.Singleaxis.DisconnectRequest, global::Devices.Motion.Linear.Singleaxis.Device>(serviceImpl.Disconnect));
+      serviceBinder.AddMethod(__Method_HomeMotor, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Devices.Motion.Linear.Singleaxis.HomeMotorRequest, global::Devices.Motion.Linear.Singleaxis.Position>(serviceImpl.HomeMotor));
       serviceBinder.AddMethod(__Method_GetRange, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Devices.Motion.Linear.Singleaxis.GetRangeRequest, global::Devices.Motion.Linear.Singleaxis.StageRange>(serviceImpl.GetRange));
       serviceBinder.AddMethod(__Method_GetPosition, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Devices.Motion.Linear.Singleaxis.GetPositionRequest, global::Devices.Motion.Linear.Singleaxis.Position>(serviceImpl.GetPosition));
       serviceBinder.AddMethod(__Method_MoveAbsolute, serviceImpl == null ? null : new grpc::ServerStreamingServerMethod<global::Devices.Motion.Linear.Singleaxis.MoveAbsoluteRequest, global::Devices.Motion.Linear.Singleaxis.Position>(serviceImpl.MoveAbsolute));
