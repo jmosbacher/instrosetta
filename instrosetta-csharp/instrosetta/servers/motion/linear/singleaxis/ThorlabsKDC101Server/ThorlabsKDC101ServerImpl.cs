@@ -55,7 +55,7 @@ namespace ThorlabsKDC101Server
             {
                 Device device = new Device
                 {
-                    SerialNumber = UInt32.Parse(serialNo),
+                    SerialNumber = serialNo,
 
                 };
                 await responseStream.WriteAsync(device);
