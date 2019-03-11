@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Grpc.Tools.1.19.0\build\Grpc.Tools.props" Condition="Exists('..\packages\Grpc.Tools.1.19.0\build\Grpc.Tools.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7481CF03-F6E3-4B2C-A8C5-58A37D8106FC}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>ThorlabsKDC101ServerCLI</RootNamespace>
+    <AssemblyName>ThorlabsKDC101ServerCLI</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Google.Protobuf, Version=3.7.0.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Protobuf.3.7.0\lib\net45\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="Grpc.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d754f35622e28bad, processorArchitecture=MSIL">
+      <HintPath>..\packages\Grpc.Core.1.19.0\lib\net45\Grpc.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Grpc.Core.Api, Version=0.0.0.0, Culture=neutral, PublicKeyToken=d754f35622e28bad, processorArchitecture=MSIL">
+      <HintPath>..\packages\Grpc.Core.Api.1.19.0\lib\net45\Grpc.Core.Api.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Interactive.Async, Version=3.2.0.0, Culture=neutral, PublicKeyToken=94bc3704cddfc263, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Interactive.Async.3.2.0\lib\net46\System.Interactive.Async.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net461\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Thorlabs.MotionControl.Controls">
+      <HintPath>..\ThorlabsKDC101ServerGUI\bin\Debug\Thorlabs.MotionControl.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Thorlabs.MotionControl.DataLogger">
+      <HintPath>..\ThorlabsKDC101ServerGUI\bin\Debug\Thorlabs.MotionControl.DataLogger.dll</HintPath>
+    </Reference>
+    <Reference Include="Thorlabs.MotionControl.DeviceManagerCLI">
+      <HintPath>..\ThorlabsKDC101ServerGUI\bin\Debug\Thorlabs.MotionControl.DeviceManagerCLI.dll</HintPath>
+    </Reference>
+    <Reference Include="Thorlabs.MotionControl.DeviceManagerUI, Version=1.14.15.15096, Culture=neutral, PublicKeyToken=c7ec6d6d6e2435e7, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ThorlabsKDC101ServerGUI\bin\Debug\Thorlabs.MotionControl.DeviceManagerUI.dll</HintPath>
+    </Reference>
+    <Reference Include="Thorlabs.MotionControl.FTD2xx_Net">
+      <HintPath>..\ThorlabsKDC101ServerGUI\bin\Debug\Thorlabs.MotionControl.FTD2xx_Net.dll</HintPath>
+    </Reference>
+    <Reference Include="Thorlabs.MotionControl.GenericMotorCLI">
+      <HintPath>..\ThorlabsKDC101ServerGUI\bin\Debug\Thorlabs.MotionControl.GenericMotorCLI.dll</HintPath>
+    </Reference>
+    <Reference Include="ThorLabs.MotionControl.KCube.DCServoCLI">
+      <HintPath>..\ThorlabsKDC101ServerGUI\bin\Debug\ThorLabs.MotionControl.KCube.DCServoCLI.dll</HintPath>
+    </Reference>
+    <Reference Include="Thorlabs.MotionControl.Tools.Common">
+      <HintPath>..\ThorlabsKDC101ServerGUI\bin\Debug\Thorlabs.MotionControl.Tools.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="UnitsNet, Version=4.0.0.0, Culture=neutral, PublicKeyToken=f8601875a1f041da, processorArchitecture=MSIL">
+      <HintPath>..\packages\UnitsNet.4.14.0\lib\net40\UnitsNet.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="..\ThorlabsKDC101Server\ThorlabsKDC101Server.projitems" Label="Shared" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\Grpc.Core.1.19.0\build\net45\Grpc.Core.targets" Condition="Exists('..\packages\Grpc.Core.1.19.0\build\net45\Grpc.Core.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Grpc.Core.1.19.0\build\net45\Grpc.Core.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Grpc.Core.1.19.0\build\net45\Grpc.Core.targets'))" />
+    <Error Condition="!Exists('..\packages\Grpc.Tools.1.19.0\build\Grpc.Tools.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Grpc.Tools.1.19.0\build\Grpc.Tools.props'))" />
+    <Error Condition="!Exists('..\packages\Grpc.Tools.1.19.0\build\Grpc.Tools.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Grpc.Tools.1.19.0\build\Grpc.Tools.targets'))" />
+  </Target>
+  <Import Project="..\packages\Grpc.Tools.1.19.0\build\Grpc.Tools.targets" Condition="Exists('..\packages\Grpc.Tools.1.19.0\build\Grpc.Tools.targets')" />
+</Project>

@@ -1,29 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Threading;
-
 using Thorlabs.MotionControl.DeviceManagerCLI;
 using Thorlabs.MotionControl.GenericMotorCLI;
 using Thorlabs.MotionControl.GenericMotorCLI.ControlParameters;
-using Thorlabs.MotionControl.GenericMotorCLI.AdvancedMotor;
-using Thorlabs.MotionControl.GenericMotorCLI.Settings;
 using Thorlabs.MotionControl.KCube.DCServoCLI;
 
-using UnitsNet.Units;
 
-
-namespace Devices.Motion.Linear.Singleaxis
+namespace ThorlabsKDC101ServerGUI
 {
-    enum MotorState { UNKNOWN, IDLE, MOVING };
+    public enum MotorState { UNKNOWN, IDLE, MOVING };
 
-    class KDC101
+    public class KDC101
     {
-
-
-
         private KCubeDCServo _kCubeDCServoMotor = null;
 
         private static MotorState _state = MotorState.UNKNOWN;
@@ -31,10 +19,8 @@ namespace Devices.Motion.Linear.Singleaxis
         private static ulong _taskID;
 
 
-        public KDC101(bool debug)
+        public KDC101()
         {
-            bool _Debug = debug;
-
         }
 
         public bool Connected
@@ -58,19 +44,23 @@ namespace Devices.Motion.Linear.Singleaxis
 
         public decimal Position
         {
-            get {
+            get
+            {
                 int iPos = _kCubeDCServoMotor.Position_DeviceUnit;
                 return _kCubeDCServoMotor.UnitConverter.DeviceUnitToReal(iPos, DeviceUnitConverter.UnitType.Length);
-                }
+            }
         }
 
 
         public string SerialNo
         {
-            get { if (_kCubeDCServoMotor == null) {
+            get
+            {
+                if (_kCubeDCServoMotor == null)
+                {
                     return "0";
 
-                    }
+                }
                 else
                 {
                     return _kCubeDCServoMotor.SerialNo;
@@ -95,11 +85,11 @@ namespace Devices.Motion.Linear.Singleaxis
                 else
                 {
                     Disconnect();
-                    
+
                 }
 
             }
-            
+
 
 
             DeviceManagerCLI.BuildDeviceList();
@@ -132,27 +122,28 @@ namespace Devices.Motion.Linear.Singleaxis
 
         public void Disconnect()
         {
-            if (!(_kCubeDCServoMotor == null)) {
-                
+            if (!(_kCubeDCServoMotor == null))
+            {
+
                 _kCubeDCServoMotor.StopPolling();
                 _kCubeDCServoMotor.ShutDown();
                 _kCubeDCServoMotor = null;
-                
+
 
             }
-   
+
             return;
-            
-            
-            
+
+
+
 
         }
 
-        public Tuple<decimal,decimal> GetRange()
+        public Tuple<decimal, decimal> GetRange()
         {
-            
+
             LimitSwitchParameters realLP = _kCubeDCServoMotor.GetLimitSwitchParams();
-            return Tuple.Create((decimal) realLP.AnticlockwiseHardwareLimit, (decimal) realLP.ClockwiseHardwareLimit);
+            return Tuple.Create((decimal)realLP.AnticlockwiseHardwareLimit, (decimal)realLP.ClockwiseHardwareLimit);
 
         }
 
@@ -163,7 +154,7 @@ namespace Devices.Motion.Linear.Singleaxis
                 _state = MotorState.IDLE;
 
                 Console.WriteLine("Stopped...");
-                
+
 
             }
         }
@@ -171,10 +162,10 @@ namespace Devices.Motion.Linear.Singleaxis
 
         public void MoveAbsolute(decimal position)
         {
- 
+
             int iPos = _kCubeDCServoMotor.UnitConverter.RealToDeviceUnit(position, DeviceUnitConverter.UnitType.Length);
             Console.WriteLine("Requested: " + position.ToString() + " " + _kCubeDCServoMotor.UnitConverter.RealUnits + " " + iPos.ToString() + " device steps.");
-            
+
             _state = MotorState.MOVING;
             _kCubeDCServoMotor.ClearDeviceExceptions();
             _taskID = _kCubeDCServoMotor.MoveTo_DeviceUnit(iPos, MoveCompleteFunction);
@@ -184,8 +175,8 @@ namespace Devices.Motion.Linear.Singleaxis
 
         public void MoveRelative(MotorDirection direction, decimal distance, int timeout)
         {
-            
-            uint iDist = (uint) _kCubeDCServoMotor.UnitConverter.RealToDeviceUnit(distance, DeviceUnitConverter.UnitType.Length);
+
+            uint iDist = (uint)_kCubeDCServoMotor.UnitConverter.RealToDeviceUnit(distance, DeviceUnitConverter.UnitType.Length);
             _state = MotorState.MOVING;
             _kCubeDCServoMotor.ClearDeviceExceptions();
             _taskID = _kCubeDCServoMotor.MoveRelative_DeviceUnit(direction, iDist, MoveCompleteFunction);
@@ -196,8 +187,6 @@ namespace Devices.Motion.Linear.Singleaxis
         {
             _kCubeDCServoMotor.ThrowLastDeviceException();
         }
-
     }
 
-    
 }
