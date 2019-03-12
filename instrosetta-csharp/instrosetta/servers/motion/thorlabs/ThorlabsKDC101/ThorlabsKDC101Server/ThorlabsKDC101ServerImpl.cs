@@ -7,12 +7,12 @@ using Thorlabs.MotionControl.GenericMotorCLI;
 
 using Grpc.Core;
 using UnitsNet;
-using Devices.Motion.Linear.Singleaxis;
+using Devices.Motion.Singleaxis;
 
 
 namespace ThorlabsKDC101Server
 {
-    public class ThorlabsKDC101ServerImpl : SingleLinearAxis.SingleLinearAxisBase
+    public class ThorlabsKDC101ServerImpl : SingleAxis.SingleAxisBase
     {
         private KDC101 _Motor = null;
         private UnitParser _uparser = null;

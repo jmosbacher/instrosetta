@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using Grpc.Core;
-using Devices.Motion.Linear.Singleaxis;
+using Devices.Motion.Singleaxis;
 
 
 namespace ThorlabsKDC101Server
@@ -25,7 +25,7 @@ namespace ThorlabsKDC101Server
                 _Impl = new ThorlabsKDC101ServerImpl();
                 _Server = new Server
                 {
-                    Services = { SingleLinearAxis.BindService(_Impl) },
+                    Services = { SingleAxis.BindService(_Impl) },
                     Ports = { new ServerPort(serveAddress, port, ServerCredentials.Insecure) }
                 };
                 _Server.Start();

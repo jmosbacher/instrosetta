@@ -108,10 +108,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="..\..\..\..\..\interfaces\motion\linear\Singleaxis.cs">
+    <Compile Include="..\..\..\..\..\interfaces\motion\Singleaxis.cs">
       <Link>Singleaxis.cs</Link>
     </Compile>
-    <Compile Include="..\..\..\..\..\interfaces\motion\linear\SingleaxisGrpc.cs">
+    <Compile Include="..\..\..\..\..\interfaces\motion\SingleaxisGrpc.cs">
       <Link>SingleaxisGrpc.cs</Link>
     </Compile>
     <Compile Include="TextBoxWriter.cs" />
@@ -151,7 +151,6 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <None Include="singleaxis.proto" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
