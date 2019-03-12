@@ -37,12 +37,7 @@ namespace ThorlabsKDC101Server
             }
         }
 
-
-        public void ActivateSimulations()
-        {
-            
-
-        }
+    
         public override Task<TextMessage> Echo(TextMessage request, ServerCallContext context)
         {
             return Task.FromResult(request);
@@ -64,6 +59,35 @@ namespace ThorlabsKDC101Server
 
 
         }
+        public override Task<Position> HomeMotor(HomeMotorRequest request, ServerCallContext context)
+        {
+            CheckConnection();
+            try
+            {
+                _Motor.Home();
+                while (_Motor.State == MotorState.MOVING)
+                {
+                    Thread.Sleep(250);
+                }
+                Position position = new Position
+                {
+                    Value = (double)_Motor.Position,
+                    Units = "mm",
+                };
+                return Task.FromResult(position);
+            }
+            catch (Exception ex)
+            {
+                Status stat = new Status(StatusCode.Internal, "Failed to home device." + ex.Message);
+                Metadata meta = new Metadata
+                        {
+                            { "exception_name", ex.GetType().Name }
+                        };
+                throw new RpcException(stat, meta);
+            }
+
+        }
+
         public override Task<Device> Connect(ConnectRequest request, ServerCallContext context)
         {
             if (_Motor != null)

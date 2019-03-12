@@ -60,7 +60,6 @@ namespace ThorlabsKDC101Server
                 if (_kCubeDCServoMotor == null)
                 {
                     return "0";
-
                 }
                 else
                 {
@@ -135,7 +134,6 @@ namespace ThorlabsKDC101Server
                 _kCubeDCServoMotor.ShutDown();
                 _kCubeDCServoMotor = null;
 
-
             }
 
             return;
@@ -143,6 +141,13 @@ namespace ThorlabsKDC101Server
 
 
 
+        }
+        public void Home()
+        {
+            _state = MotorState.MOVING;
+            _kCubeDCServoMotor.ClearDeviceExceptions();
+            _taskID = _kCubeDCServoMotor.Home(MoveCompleteFunction);
+        
         }
 
         public Tuple<decimal, decimal> GetRange()
@@ -160,8 +165,6 @@ namespace ThorlabsKDC101Server
                 _state = MotorState.IDLE;
 
                 Console.WriteLine("Stopped...");
-
-
             }
         }
 
