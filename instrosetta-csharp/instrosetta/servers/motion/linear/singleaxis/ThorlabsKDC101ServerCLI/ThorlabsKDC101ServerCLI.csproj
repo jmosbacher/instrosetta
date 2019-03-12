@@ -122,6 +122,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\..\..\..\..\interfaces\motion\linear\Singleaxis.cs">
+      <Link>Singleaxis.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\interfaces\motion\linear\SingleaxisGrpc.cs">
+      <Link>SingleaxisGrpc.cs</Link>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -142,7 +148,6 @@
     </BootstrapperPackage>
   </ItemGroup>
   <Import Project="..\ThorlabsKDC101Server\ThorlabsKDC101Server.projitems" Label="Shared" />
-  <Import Project="..\Singleaxis\Singleaxis.projitems" Label="Shared" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Grpc.Core.1.19.0\build\net45\Grpc.Core.targets" Condition="Exists('..\packages\Grpc.Core.1.19.0\build\net45\Grpc.Core.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
