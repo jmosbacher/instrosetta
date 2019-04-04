@@ -1,6 +1,7 @@
 import grpc
 from enum import Enum
 import pint
+import protobuf_to_dict
 from instrosetta.interfaces.{{cookiecutter.package_name}} import {{cookiecutter.interface_name}}_pb2 as pb2
 from instrosetta.interfaces.{{cookiecutter.package_name}} import {{cookiecutter.interface_name}}_pb2_grpc as pb2_grpc
 from instrosetta.servers.{{cookiecutter.manufacturer_name}}.{{cookiecutter.device_name}}.{{cookiecutter.device_name}}_device import {{cookiecutter.device_name.split("_")|map("title")|join("")}}Device
@@ -13,17 +14,16 @@ class {{cookiecutter.device_name.split("_")|map("title")|join("")}}Servicer(pb2_
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.device = {{cookiecutter.device_name.split("_")|map("title")|join("")}}Device()
-
-    def Connect(self, request, context):
-        if self.device.connected:
-            return pb2.ConnectResponse()
+    {% for name in cookiecutter.property_names.split(",") %}
+    {%set CamelName = name.split("_")|map("title")|join("") %}
+    def {{CamelName}}(self, request, context):
         try:
-            self.device.connect(request.serial_port, baudrate=request.baudrate, timeout=request.timeout)
+            self.device.{{name}}(**request)
         except:
             context.set_code(grpc.StatusCode.INTERNAL)
             context.set_details('Failed to connect.')
-        return pb2.ConnectResponse()
-
+        return pb2.{{CamelName}}Response()
+    {% endfor %}
     def Disconnect(self, request, context):
         try:
             self.device.disconnect()
@@ -42,12 +42,7 @@ class {{cookiecutter.device_name.split("_")|map("title")|join("")}}Servicer(pb2_
             context.set_code(grpc.StatusCode.UNAVAILABLE)
             context.set_details('Not connected to any device.')
         try:
-            resp = pb2.Get{{CamelName}}OptionsResponse(
-                #FIXME: set property range.
-                minimum = float('nan'),
-                maximum = float('nan'),
-                units = 'nan',
-            )
+            resp = pb2.Get{{CamelName}}OptionsResponse(**self.device.name_options)
            
         except Exception as e:
             context.set_code(grpc.StatusCode.INTERNAL)
@@ -61,12 +56,7 @@ class {{cookiecutter.device_name.split("_")|map("title")|join("")}}Servicer(pb2_
             context.set_code(grpc.StatusCode.UNAVAILABLE)
             context.set_details('Not connected to any device.')
         try:
-            resp = pb2.Get{{CamelName}}RangeResponse(
-                #FIXME: set property range.
-                minimum = float('nan'),
-                maximum = float('nan'),
-                units = 'nan',
-            )
+            resp = pb2.Get{{CamelName}}RangeResponse(**self.device.name_range)
            
         except Exception as e:
             context.set_code(grpc.StatusCode.INTERNAL)
@@ -84,7 +74,7 @@ class {{cookiecutter.device_name.split("_")|map("title")|join("")}}Servicer(pb2_
             else:
                 try:
                     resp = pb2.Get{{CamelName}}Response(
-                        **content
+                        **self.device.name
                         #FIXME: add response content here.
                     )
                 

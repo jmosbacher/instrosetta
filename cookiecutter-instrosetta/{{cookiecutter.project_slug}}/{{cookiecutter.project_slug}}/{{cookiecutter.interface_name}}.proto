@@ -3,9 +3,10 @@ syntax = "{{cookiecutter.syntax_version}}";
 package {{cookiecutter.package_name}}.{{cookiecutter.interface_name}};
 
 service {{cookiecutter.interface_name.split("_")|map("title")|join("")}} {
-    rpc Connect(ConnectRequest) returns (ConnectResponse) {}
-    rpc Disconnect(DisconnectRequest) returns (DisconnectResponse) {}
-
+    {% for pname in cookiecutter.method_names.split(",") -%}
+    {%- set CamelName = pname.split("_")|map("title")|join("") -%}
+    rpc {{CamelName}}({{CamelName}}Request) returns ({{CamelName}}Response) {}
+    {%  endfor %}
     {% for pname in cookiecutter.property_names.split(",") -%}
     {%- set CamelName = pname.split("_")|map("title")|join("") -%}
     {%- if pname in cookiecutter.option_names -%}
@@ -26,25 +27,16 @@ service {{cookiecutter.interface_name.split("_")|map("title")|join("")}} {
     {% endfor %}
 }
 
-message ConnectRequest {
-    string name = 1; 
-    string serial_number = 2;
-    string serial_port = 3;
-    uint32 baudrate = 4; 
-    float timeout = 6;
-}
-
-message ConnectResponse {
+{% for pname in cookiecutter.method_names.split(",") -%}
+{%- set CamelName = pname.split("_")|map("title")|join("") -%}
+message {{CamelName}}Request {
     string name = 1; 
 }
 
-message DisconnectRequest {
+message {{CamelName}}Response {
     string name = 1; 
 }
-
-message DisconnectResponse {
-    string name = 1; 
-}
+{%  endfor %}
 
 {%- for pname in cookiecutter.property_names.split(",") -%}
 {%- set CamelName = pname.split("_")|map("title")|join("") -%}

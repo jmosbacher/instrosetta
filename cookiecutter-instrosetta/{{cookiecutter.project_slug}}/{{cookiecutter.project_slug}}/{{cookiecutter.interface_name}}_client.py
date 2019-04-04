@@ -1,6 +1,7 @@
 import grpc
 from enum import Enum
 import pint
+import protobuf_to_dict
 from {{cookiecutter.project_slug}}.utils.units import accept_text
 from {{cookiecutter.project_slug}}.interfaces.{{cookiecutter.package_name}} import {{cookiecutter.interface_name}}_pb2 as pb2
 from {{cookiecutter.project_slug}}.interfaces.{{cookiecutter.package_name}} import {{cookiecutter.interface_name}}_pb2_grpc as pb2_grpc
@@ -11,7 +12,15 @@ Q_ = ureg.Quantity
 
 
 class {{cookiecutter.interface_name|title}}(RpcClient):
+    {% for name in cookiecutter.method_names.split(",") -%}
+    {%- set CamelName = name.split("_")|map("title")|join("") -%}
+    def {{name}}(self, **kwargs):
+        req = pb2.{{CamelName}}Request(**kwargs)
+        resp = self.single_rpc("{{CamelName}}", req)
+        if resp is not None:
+            return protobuf_to_dict(resp)
 
+    {% endfor %}
     {% for name in cookiecutter.property_names.split(",") -%}
     {%- set CamelName = name.split("_")|map("title")|join("") -%}
     {%- if name in cookiecutter.stream_names -%}
@@ -25,10 +34,10 @@ class {{cookiecutter.interface_name|title}}(RpcClient):
 
     {%- elif name in cookiecutter.bstream_names -%}
     def {{name}}(self):
-        def request_genegrator():
+        def request_generator():
             yield pb2.{{CamelName}}Request()
 
-        response_iterator = self.double_stream_rpc("{{CamelName}}", request_genegrator())
+        response_iterator = self.double_stream_rpc("{{CamelName}}", request_generator())
         for resp in response_iterator:
             if resp is not None:
                 yield Q_(resp.value, resp.units)

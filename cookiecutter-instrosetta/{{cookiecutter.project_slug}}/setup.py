@@ -13,6 +13,7 @@ setup(name='{{cookiecutter.project_slug}}',
           'grpcio',
           'pint',
           'protobuf',
+          "protobuf-to-dict",
       ],
       extra_requires={
           "server": "{{cookiecutter.device_dependencies}}".split(",")
