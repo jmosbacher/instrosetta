@@ -9,7 +9,7 @@ using pb = global::Google.Protobuf;
 using pbc = global::Google.Protobuf.Collections;
 using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
-namespace Interfaces.MotionControl.Singleaxis {
+namespace Instrosetta.Interfaces.MotionControl.Singleaxis {
 
   /// <summary>Holder for reflection information generated from instrosetta/interfaces/motion_control/singleaxis.proto</summary>
   public static partial class SingleaxisReflection {
@@ -25,73 +25,80 @@ namespace Interfaces.MotionControl.Singleaxis {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CjZpbnN0cm9zZXR0YS9pbnRlcmZhY2VzL21vdGlvbl9jb250cm9sL3Npbmds",
-            "ZWF4aXMucHJvdG8SJGludGVyZmFjZXMubW90aW9uX2NvbnRyb2wuc2luZ2xl",
-            "YXhpcyIsCgtUZXh0TWVzc2FnZRIMCgRuYW1lGAEgASgJEg8KB2NvbnRlbnQY",
-            "AiABKAkiPQoSU2NhbkRldmljZXNSZXF1ZXN0EgwKBG5hbWUYASABKAkSGQoR",
-            "aW5jbHVkZV9zaW11bGF0ZWQYAiABKAgiyAEKBkRldmljZRIMCgRuYW1lGAEg",
-            "ASgJEhUKDXNlcmlhbF9udW1iZXIYAiABKAkSEAoIY29tX3BvcnQYAyABKAkS",
-            "EwoLZGVzY3JpcHRpb24YBCABKAkSSgoKbW90b3JfdHlwZRgFIAEoDjI2Lmlu",
-            "dGVyZmFjZXMubW90aW9uX2NvbnRyb2wuc2luZ2xlYXhpcy5EZXZpY2UuTW90",
-            "b3JUeXBlIiYKCU1vdG9yVHlwZRIMCghEQ19TRVJWTxAAEgsKB1NURVBQRVIQ",
-            "ASKHAQoOQ29ubmVjdFJlcXVlc3QSDAoEbmFtZRgBIAEoCRI8CgZkZXZpY2UY",
-            "AiABKAsyLC5pbnRlcmZhY2VzLm1vdGlvbl9jb250cm9sLnNpbmdsZWF4aXMu",
-            "RGV2aWNlEg8KB3RpbWVvdXQYAyABKAISGAoQcG9sbGluZ19pbnRlcnZhbBgE",
-            "IAEoAiIyChFEaXNjb25uZWN0UmVxdWVzdBIMCgRuYW1lGAEgASgJEg8KB3Rp",
-            "bWVvdXQYAiABKAIiIAoQSG9tZU1vdG9yUmVxdWVzdBIMCgRuYW1lGAEgASgJ",
-            "Ii4KD0dldFJhbmdlUmVxdWVzdBIMCgRuYW1lGAEgASgJEg0KBXVuaXRzGAIg",
-            "ASgJIlcKClN0YWdlUmFuZ2USDAoEbmFtZRgBIAEoCRINCgV1bml0cxgCIAEo",
-            "CRILCgNtaW4YAyABKAESCwoDbWF4GAQgASgBEhIKCnJlc29sdXRpb24YBSAB",
-            "KAEiIwoSR2V0UG9zaXRpb25SZXF1ZXN0Eg0KBXVuaXRzGAEgASgJIqwBCghE",
-            "aXN0YW5jZRINCgV2YWx1ZRgBIAEoARINCgV1bml0cxgCIAEoCRJLCglkaXJl",
-            "Y3Rpb24YAyABKA4yOC5pbnRlcmZhY2VzLm1vdGlvbl9jb250cm9sLnNpbmds",
-            "ZWF4aXMuRGlzdGFuY2UuRGlyZWN0aW9uIjUKCURpcmVjdGlvbhINCgl1bmRl",
-            "ZmluZWQQABILCgdmb3J3YXJkEAESDAoIYmFja3dhcmQQAiIoCghQb3NpdGlv",
-            "bhINCgV2YWx1ZRgBIAEoARINCgV1bml0cxgCIAEoCSJlChNNb3ZlQWJzb2x1",
-            "dGVSZXF1ZXN0EgwKBG5hbWUYASABKAkSQAoIcG9zaXRpb24YAiABKAsyLi5p",
-            "bnRlcmZhY2VzLm1vdGlvbl9jb250cm9sLnNpbmdsZWF4aXMuUG9zaXRpb24i",
-            "ZQoTTW92ZVJlbGF0aXZlUmVxdWVzdBIMCgRuYW1lGAEgASgJEkAKCGRpc3Rh",
-            "bmNlGAIgASgLMi4uaW50ZXJmYWNlcy5tb3Rpb25fY29udHJvbC5zaW5nbGVh",
-            "eGlzLkRpc3RhbmNlMsYICgpTaW5nbGVBeGlzEm4KBEVjaG8SMS5pbnRlcmZh",
-            "Y2VzLm1vdGlvbl9jb250cm9sLnNpbmdsZWF4aXMuVGV4dE1lc3NhZ2UaMS5p",
-            "bnRlcmZhY2VzLm1vdGlvbl9jb250cm9sLnNpbmdsZWF4aXMuVGV4dE1lc3Nh",
-            "Z2UiABJ5CgtTY2FuRGV2aWNlcxI4LmludGVyZmFjZXMubW90aW9uX2NvbnRy",
-            "b2wuc2luZ2xlYXhpcy5TY2FuRGV2aWNlc1JlcXVlc3QaLC5pbnRlcmZhY2Vz",
-            "Lm1vdGlvbl9jb250cm9sLnNpbmdsZWF4aXMuRGV2aWNlIgAwARJvCgdDb25u",
-            "ZWN0EjQuaW50ZXJmYWNlcy5tb3Rpb25fY29udHJvbC5zaW5nbGVheGlzLkNv",
-            "bm5lY3RSZXF1ZXN0GiwuaW50ZXJmYWNlcy5tb3Rpb25fY29udHJvbC5zaW5n",
-            "bGVheGlzLkRldmljZSIAEnUKCkRpc2Nvbm5lY3QSNy5pbnRlcmZhY2VzLm1v",
-            "dGlvbl9jb250cm9sLnNpbmdsZWF4aXMuRGlzY29ubmVjdFJlcXVlc3QaLC5p",
-            "bnRlcmZhY2VzLm1vdGlvbl9jb250cm9sLnNpbmdsZWF4aXMuRGV2aWNlIgAS",
-            "dQoJSG9tZU1vdG9yEjYuaW50ZXJmYWNlcy5tb3Rpb25fY29udHJvbC5zaW5n",
-            "bGVheGlzLkhvbWVNb3RvclJlcXVlc3QaLi5pbnRlcmZhY2VzLm1vdGlvbl9j",
-            "b250cm9sLnNpbmdsZWF4aXMuUG9zaXRpb24iABJ1CghHZXRSYW5nZRI1Lmlu",
-            "dGVyZmFjZXMubW90aW9uX2NvbnRyb2wuc2luZ2xlYXhpcy5HZXRSYW5nZVJl",
-            "cXVlc3QaMC5pbnRlcmZhY2VzLm1vdGlvbl9jb250cm9sLnNpbmdsZWF4aXMu",
-            "U3RhZ2VSYW5nZSIAEnkKC0dldFBvc2l0aW9uEjguaW50ZXJmYWNlcy5tb3Rp",
-            "b25fY29udHJvbC5zaW5nbGVheGlzLkdldFBvc2l0aW9uUmVxdWVzdBouLmlu",
+            "ZWF4aXMucHJvdG8SMGluc3Ryb3NldHRhLmludGVyZmFjZXMubW90aW9uX2Nv",
+            "bnRyb2wuc2luZ2xlYXhpcyIsCgtUZXh0TWVzc2FnZRIMCgRuYW1lGAEgASgJ",
+            "Eg8KB2NvbnRlbnQYAiABKAkiPQoSU2NhbkRldmljZXNSZXF1ZXN0EgwKBG5h",
+            "bWUYASABKAkSGQoRaW5jbHVkZV9zaW11bGF0ZWQYAiABKAgi1AEKBkRldmlj",
+            "ZRIMCgRuYW1lGAEgASgJEhUKDXNlcmlhbF9udW1iZXIYAiABKAkSEAoIY29t",
+            "X3BvcnQYAyABKAkSEwoLZGVzY3JpcHRpb24YBCABKAkSVgoKbW90b3JfdHlw",
+            "ZRgFIAEoDjJCLmluc3Ryb3NldHRhLmludGVyZmFjZXMubW90aW9uX2NvbnRy",
+            "b2wuc2luZ2xlYXhpcy5EZXZpY2UuTW90b3JUeXBlIiYKCU1vdG9yVHlwZRIM",
+            "CghEQ19TRVJWTxAAEgsKB1NURVBQRVIQASKTAQoOQ29ubmVjdFJlcXVlc3QS",
+            "DAoEbmFtZRgBIAEoCRJICgZkZXZpY2UYAiABKAsyOC5pbnN0cm9zZXR0YS5p",
+            "bnRlcmZhY2VzLm1vdGlvbl9jb250cm9sLnNpbmdsZWF4aXMuRGV2aWNlEg8K",
+            "B3RpbWVvdXQYAyABKAISGAoQcG9sbGluZ19pbnRlcnZhbBgEIAEoAiIyChFE",
+            "aXNjb25uZWN0UmVxdWVzdBIMCgRuYW1lGAEgASgJEg8KB3RpbWVvdXQYAiAB",
+            "KAIiIAoQSG9tZU1vdG9yUmVxdWVzdBIMCgRuYW1lGAEgASgJIi4KD0dldFJh",
+            "bmdlUmVxdWVzdBIMCgRuYW1lGAEgASgJEg0KBXVuaXRzGAIgASgJIlcKClN0",
+            "YWdlUmFuZ2USDAoEbmFtZRgBIAEoCRINCgV1bml0cxgCIAEoCRILCgNtaW4Y",
+            "AyABKAESCwoDbWF4GAQgASgBEhIKCnJlc29sdXRpb24YBSABKAEiIwoSR2V0",
+            "UG9zaXRpb25SZXF1ZXN0Eg0KBXVuaXRzGAEgASgJIrgBCghEaXN0YW5jZRIN",
+            "CgV2YWx1ZRgBIAEoARINCgV1bml0cxgCIAEoCRJXCglkaXJlY3Rpb24YAyAB",
+            "KA4yRC5pbnN0cm9zZXR0YS5pbnRlcmZhY2VzLm1vdGlvbl9jb250cm9sLnNp",
+            "bmdsZWF4aXMuRGlzdGFuY2UuRGlyZWN0aW9uIjUKCURpcmVjdGlvbhINCgl1",
+            "bmRlZmluZWQQABILCgdmb3J3YXJkEAESDAoIYmFja3dhcmQQAiIoCghQb3Np",
+            "dGlvbhINCgV2YWx1ZRgBIAEoARINCgV1bml0cxgCIAEoCSJxChNNb3ZlQWJz",
+            "b2x1dGVSZXF1ZXN0EgwKBG5hbWUYASABKAkSTAoIcG9zaXRpb24YAiABKAsy",
+            "Oi5pbnN0cm9zZXR0YS5pbnRlcmZhY2VzLm1vdGlvbl9jb250cm9sLnNpbmds",
+            "ZWF4aXMuUG9zaXRpb24icQoTTW92ZVJlbGF0aXZlUmVxdWVzdBIMCgRuYW1l",
+            "GAEgASgJEkwKCGRpc3RhbmNlGAIgASgLMjouaW5zdHJvc2V0dGEuaW50ZXJm",
+            "YWNlcy5tb3Rpb25fY29udHJvbC5zaW5nbGVheGlzLkRpc3RhbmNlMqcKCgpT",
+            "aW5nbGVBeGlzEoYBCgRFY2hvEj0uaW5zdHJvc2V0dGEuaW50ZXJmYWNlcy5t",
+            "b3Rpb25fY29udHJvbC5zaW5nbGVheGlzLlRleHRNZXNzYWdlGj0uaW5zdHJv",
+            "c2V0dGEuaW50ZXJmYWNlcy5tb3Rpb25fY29udHJvbC5zaW5nbGVheGlzLlRl",
+            "eHRNZXNzYWdlIgASkQEKC1NjYW5EZXZpY2VzEkQuaW5zdHJvc2V0dGEuaW50",
+            "ZXJmYWNlcy5tb3Rpb25fY29udHJvbC5zaW5nbGVheGlzLlNjYW5EZXZpY2Vz",
+            "UmVxdWVzdBo4Lmluc3Ryb3NldHRhLmludGVyZmFjZXMubW90aW9uX2NvbnRy",
+            "b2wuc2luZ2xlYXhpcy5EZXZpY2UiADABEocBCgdDb25uZWN0EkAuaW5zdHJv",
+            "c2V0dGEuaW50ZXJmYWNlcy5tb3Rpb25fY29udHJvbC5zaW5nbGVheGlzLkNv",
+            "bm5lY3RSZXF1ZXN0GjguaW5zdHJvc2V0dGEuaW50ZXJmYWNlcy5tb3Rpb25f",
+            "Y29udHJvbC5zaW5nbGVheGlzLkRldmljZSIAEo0BCgpEaXNjb25uZWN0EkMu",
+            "aW5zdHJvc2V0dGEuaW50ZXJmYWNlcy5tb3Rpb25fY29udHJvbC5zaW5nbGVh",
+            "eGlzLkRpc2Nvbm5lY3RSZXF1ZXN0GjguaW5zdHJvc2V0dGEuaW50ZXJmYWNl",
+            "cy5tb3Rpb25fY29udHJvbC5zaW5nbGVheGlzLkRldmljZSIAEo0BCglIb21l",
+            "TW90b3ISQi5pbnN0cm9zZXR0YS5pbnRlcmZhY2VzLm1vdGlvbl9jb250cm9s",
+            "LnNpbmdsZWF4aXMuSG9tZU1vdG9yUmVxdWVzdBo6Lmluc3Ryb3NldHRhLmlu",
             "dGVyZmFjZXMubW90aW9uX2NvbnRyb2wuc2luZ2xlYXhpcy5Qb3NpdGlvbiIA",
-            "En0KDE1vdmVBYnNvbHV0ZRI5LmludGVyZmFjZXMubW90aW9uX2NvbnRyb2wu",
-            "c2luZ2xlYXhpcy5Nb3ZlQWJzb2x1dGVSZXF1ZXN0Gi4uaW50ZXJmYWNlcy5t",
-            "b3Rpb25fY29udHJvbC5zaW5nbGVheGlzLlBvc2l0aW9uIgAwARJ9CgxNb3Zl",
-            "UmVsYXRpdmUSOS5pbnRlcmZhY2VzLm1vdGlvbl9jb250cm9sLnNpbmdsZWF4",
-            "aXMuTW92ZVJlbGF0aXZlUmVxdWVzdBouLmludGVyZmFjZXMubW90aW9uX2Nv",
-            "bnRyb2wuc2luZ2xlYXhpcy5Qb3NpdGlvbiIAMAFiBnByb3RvMw=="));
+            "Eo0BCghHZXRSYW5nZRJBLmluc3Ryb3NldHRhLmludGVyZmFjZXMubW90aW9u",
+            "X2NvbnRyb2wuc2luZ2xlYXhpcy5HZXRSYW5nZVJlcXVlc3QaPC5pbnN0cm9z",
+            "ZXR0YS5pbnRlcmZhY2VzLm1vdGlvbl9jb250cm9sLnNpbmdsZWF4aXMuU3Rh",
+            "Z2VSYW5nZSIAEpEBCgtHZXRQb3NpdGlvbhJELmluc3Ryb3NldHRhLmludGVy",
+            "ZmFjZXMubW90aW9uX2NvbnRyb2wuc2luZ2xlYXhpcy5HZXRQb3NpdGlvblJl",
+            "cXVlc3QaOi5pbnN0cm9zZXR0YS5pbnRlcmZhY2VzLm1vdGlvbl9jb250cm9s",
+            "LnNpbmdsZWF4aXMuUG9zaXRpb24iABKVAQoMTW92ZUFic29sdXRlEkUuaW5z",
+            "dHJvc2V0dGEuaW50ZXJmYWNlcy5tb3Rpb25fY29udHJvbC5zaW5nbGVheGlz",
+            "Lk1vdmVBYnNvbHV0ZVJlcXVlc3QaOi5pbnN0cm9zZXR0YS5pbnRlcmZhY2Vz",
+            "Lm1vdGlvbl9jb250cm9sLnNpbmdsZWF4aXMuUG9zaXRpb24iADABEpUBCgxN",
+            "b3ZlUmVsYXRpdmUSRS5pbnN0cm9zZXR0YS5pbnRlcmZhY2VzLm1vdGlvbl9j",
+            "b250cm9sLnNpbmdsZWF4aXMuTW92ZVJlbGF0aXZlUmVxdWVzdBo6Lmluc3Ry",
+            "b3NldHRhLmludGVyZmFjZXMubW90aW9uX2NvbnRyb2wuc2luZ2xlYXhpcy5Q",
+            "b3NpdGlvbiIAMAFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Interfaces.MotionControl.Singleaxis.TextMessage), global::Interfaces.MotionControl.Singleaxis.TextMessage.Parser, new[]{ "Name", "Content" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Interfaces.MotionControl.Singleaxis.ScanDevicesRequest), global::Interfaces.MotionControl.Singleaxis.ScanDevicesRequest.Parser, new[]{ "Name", "IncludeSimulated" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Interfaces.MotionControl.Singleaxis.Device), global::Interfaces.MotionControl.Singleaxis.Device.Parser, new[]{ "Name", "SerialNumber", "ComPort", "Description", "MotorType" }, null, new[]{ typeof(global::Interfaces.MotionControl.Singleaxis.Device.Types.MotorType) }, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Interfaces.MotionControl.Singleaxis.ConnectRequest), global::Interfaces.MotionControl.Singleaxis.ConnectRequest.Parser, new[]{ "Name", "Device", "Timeout", "PollingInterval" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Interfaces.MotionControl.Singleaxis.DisconnectRequest), global::Interfaces.MotionControl.Singleaxis.DisconnectRequest.Parser, new[]{ "Name", "Timeout" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Interfaces.MotionControl.Singleaxis.HomeMotorRequest), global::Interfaces.MotionControl.Singleaxis.HomeMotorRequest.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Interfaces.MotionControl.Singleaxis.GetRangeRequest), global::Interfaces.MotionControl.Singleaxis.GetRangeRequest.Parser, new[]{ "Name", "Units" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Interfaces.MotionControl.Singleaxis.StageRange), global::Interfaces.MotionControl.Singleaxis.StageRange.Parser, new[]{ "Name", "Units", "Min", "Max", "Resolution" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Interfaces.MotionControl.Singleaxis.GetPositionRequest), global::Interfaces.MotionControl.Singleaxis.GetPositionRequest.Parser, new[]{ "Units" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Interfaces.MotionControl.Singleaxis.Distance), global::Interfaces.MotionControl.Singleaxis.Distance.Parser, new[]{ "Value", "Units", "Direction" }, null, new[]{ typeof(global::Interfaces.MotionControl.Singleaxis.Distance.Types.Direction) }, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Interfaces.MotionControl.Singleaxis.Position), global::Interfaces.MotionControl.Singleaxis.Position.Parser, new[]{ "Value", "Units" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Interfaces.MotionControl.Singleaxis.MoveAbsoluteRequest), global::Interfaces.MotionControl.Singleaxis.MoveAbsoluteRequest.Parser, new[]{ "Name", "Position" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Interfaces.MotionControl.Singleaxis.MoveRelativeRequest), global::Interfaces.MotionControl.Singleaxis.MoveRelativeRequest.Parser, new[]{ "Name", "Distance" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Instrosetta.Interfaces.MotionControl.Singleaxis.TextMessage), global::Instrosetta.Interfaces.MotionControl.Singleaxis.TextMessage.Parser, new[]{ "Name", "Content" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Instrosetta.Interfaces.MotionControl.Singleaxis.ScanDevicesRequest), global::Instrosetta.Interfaces.MotionControl.Singleaxis.ScanDevicesRequest.Parser, new[]{ "Name", "IncludeSimulated" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Instrosetta.Interfaces.MotionControl.Singleaxis.Device), global::Instrosetta.Interfaces.MotionControl.Singleaxis.Device.Parser, new[]{ "Name", "SerialNumber", "ComPort", "Description", "MotorType" }, null, new[]{ typeof(global::Instrosetta.Interfaces.MotionControl.Singleaxis.Device.Types.MotorType) }, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Instrosetta.Interfaces.MotionControl.Singleaxis.ConnectRequest), global::Instrosetta.Interfaces.MotionControl.Singleaxis.ConnectRequest.Parser, new[]{ "Name", "Device", "Timeout", "PollingInterval" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Instrosetta.Interfaces.MotionControl.Singleaxis.DisconnectRequest), global::Instrosetta.Interfaces.MotionControl.Singleaxis.DisconnectRequest.Parser, new[]{ "Name", "Timeout" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Instrosetta.Interfaces.MotionControl.Singleaxis.HomeMotorRequest), global::Instrosetta.Interfaces.MotionControl.Singleaxis.HomeMotorRequest.Parser, new[]{ "Name" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Instrosetta.Interfaces.MotionControl.Singleaxis.GetRangeRequest), global::Instrosetta.Interfaces.MotionControl.Singleaxis.GetRangeRequest.Parser, new[]{ "Name", "Units" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Instrosetta.Interfaces.MotionControl.Singleaxis.StageRange), global::Instrosetta.Interfaces.MotionControl.Singleaxis.StageRange.Parser, new[]{ "Name", "Units", "Min", "Max", "Resolution" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Instrosetta.Interfaces.MotionControl.Singleaxis.GetPositionRequest), global::Instrosetta.Interfaces.MotionControl.Singleaxis.GetPositionRequest.Parser, new[]{ "Units" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Instrosetta.Interfaces.MotionControl.Singleaxis.Distance), global::Instrosetta.Interfaces.MotionControl.Singleaxis.Distance.Parser, new[]{ "Value", "Units", "Direction" }, null, new[]{ typeof(global::Instrosetta.Interfaces.MotionControl.Singleaxis.Distance.Types.Direction) }, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Instrosetta.Interfaces.MotionControl.Singleaxis.Position), global::Instrosetta.Interfaces.MotionControl.Singleaxis.Position.Parser, new[]{ "Value", "Units" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Instrosetta.Interfaces.MotionControl.Singleaxis.MoveAbsoluteRequest), global::Instrosetta.Interfaces.MotionControl.Singleaxis.MoveAbsoluteRequest.Parser, new[]{ "Name", "Position" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Instrosetta.Interfaces.MotionControl.Singleaxis.MoveRelativeRequest), global::Instrosetta.Interfaces.MotionControl.Singleaxis.MoveRelativeRequest.Parser, new[]{ "Name", "Distance" }, null, null, null)
           }));
     }
     #endregion
@@ -106,7 +113,7 @@ namespace Interfaces.MotionControl.Singleaxis {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Interfaces.MotionControl.Singleaxis.SingleaxisReflection.Descriptor.MessageTypes[0]; }
+      get { return global::Instrosetta.Interfaces.MotionControl.Singleaxis.SingleaxisReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -263,7 +270,7 @@ namespace Interfaces.MotionControl.Singleaxis {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Interfaces.MotionControl.Singleaxis.SingleaxisReflection.Descriptor.MessageTypes[1]; }
+      get { return global::Instrosetta.Interfaces.MotionControl.Singleaxis.SingleaxisReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -420,7 +427,7 @@ namespace Interfaces.MotionControl.Singleaxis {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Interfaces.MotionControl.Singleaxis.SingleaxisReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Instrosetta.Interfaces.MotionControl.Singleaxis.SingleaxisReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -496,9 +503,9 @@ namespace Interfaces.MotionControl.Singleaxis {
 
     /// <summary>Field number for the "motor_type" field.</summary>
     public const int MotorTypeFieldNumber = 5;
-    private global::Interfaces.MotionControl.Singleaxis.Device.Types.MotorType motorType_ = 0;
+    private global::Instrosetta.Interfaces.MotionControl.Singleaxis.Device.Types.MotorType motorType_ = 0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Interfaces.MotionControl.Singleaxis.Device.Types.MotorType MotorType {
+    public global::Instrosetta.Interfaces.MotionControl.Singleaxis.Device.Types.MotorType MotorType {
       get { return motorType_; }
       set {
         motorType_ = value;
@@ -644,7 +651,7 @@ namespace Interfaces.MotionControl.Singleaxis {
             break;
           }
           case 40: {
-            motorType_ = (global::Interfaces.MotionControl.Singleaxis.Device.Types.MotorType) input.ReadEnum();
+            motorType_ = (global::Instrosetta.Interfaces.MotionControl.Singleaxis.Device.Types.MotorType) input.ReadEnum();
             break;
           }
         }
@@ -673,7 +680,7 @@ namespace Interfaces.MotionControl.Singleaxis {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Interfaces.MotionControl.Singleaxis.SingleaxisReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Instrosetta.Interfaces.MotionControl.Singleaxis.SingleaxisReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -715,9 +722,9 @@ namespace Interfaces.MotionControl.Singleaxis {
 
     /// <summary>Field number for the "device" field.</summary>
     public const int DeviceFieldNumber = 2;
-    private global::Interfaces.MotionControl.Singleaxis.Device device_;
+    private global::Instrosetta.Interfaces.MotionControl.Singleaxis.Device device_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Interfaces.MotionControl.Singleaxis.Device Device {
+    public global::Instrosetta.Interfaces.MotionControl.Singleaxis.Device Device {
       get { return device_; }
       set {
         device_ = value;
@@ -841,7 +848,7 @@ namespace Interfaces.MotionControl.Singleaxis {
       }
       if (other.device_ != null) {
         if (device_ == null) {
-          device_ = new global::Interfaces.MotionControl.Singleaxis.Device();
+          device_ = new global::Instrosetta.Interfaces.MotionControl.Singleaxis.Device();
         }
         Device.MergeFrom(other.Device);
       }
@@ -868,7 +875,7 @@ namespace Interfaces.MotionControl.Singleaxis {
           }
           case 18: {
             if (device_ == null) {
-              device_ = new global::Interfaces.MotionControl.Singleaxis.Device();
+              device_ = new global::Instrosetta.Interfaces.MotionControl.Singleaxis.Device();
             }
             input.ReadMessage(device_);
             break;
@@ -895,7 +902,7 @@ namespace Interfaces.MotionControl.Singleaxis {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Interfaces.MotionControl.Singleaxis.SingleaxisReflection.Descriptor.MessageTypes[4]; }
+      get { return global::Instrosetta.Interfaces.MotionControl.Singleaxis.SingleaxisReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1055,7 +1062,7 @@ namespace Interfaces.MotionControl.Singleaxis {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Interfaces.MotionControl.Singleaxis.SingleaxisReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Instrosetta.Interfaces.MotionControl.Singleaxis.SingleaxisReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1184,7 +1191,7 @@ namespace Interfaces.MotionControl.Singleaxis {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Interfaces.MotionControl.Singleaxis.SingleaxisReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Instrosetta.Interfaces.MotionControl.Singleaxis.SingleaxisReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1341,7 +1348,7 @@ namespace Interfaces.MotionControl.Singleaxis {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Interfaces.MotionControl.Singleaxis.SingleaxisReflection.Descriptor.MessageTypes[7]; }
+      get { return global::Instrosetta.Interfaces.MotionControl.Singleaxis.SingleaxisReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1582,7 +1589,7 @@ namespace Interfaces.MotionControl.Singleaxis {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Interfaces.MotionControl.Singleaxis.SingleaxisReflection.Descriptor.MessageTypes[8]; }
+      get { return global::Instrosetta.Interfaces.MotionControl.Singleaxis.SingleaxisReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1711,7 +1718,7 @@ namespace Interfaces.MotionControl.Singleaxis {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Interfaces.MotionControl.Singleaxis.SingleaxisReflection.Descriptor.MessageTypes[9]; }
+      get { return global::Instrosetta.Interfaces.MotionControl.Singleaxis.SingleaxisReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1763,9 +1770,9 @@ namespace Interfaces.MotionControl.Singleaxis {
 
     /// <summary>Field number for the "direction" field.</summary>
     public const int DirectionFieldNumber = 3;
-    private global::Interfaces.MotionControl.Singleaxis.Distance.Types.Direction direction_ = 0;
+    private global::Instrosetta.Interfaces.MotionControl.Singleaxis.Distance.Types.Direction direction_ = 0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Interfaces.MotionControl.Singleaxis.Distance.Types.Direction Direction {
+    public global::Instrosetta.Interfaces.MotionControl.Singleaxis.Distance.Types.Direction Direction {
       get { return direction_; }
       set {
         direction_ = value;
@@ -1879,7 +1886,7 @@ namespace Interfaces.MotionControl.Singleaxis {
             break;
           }
           case 24: {
-            direction_ = (global::Interfaces.MotionControl.Singleaxis.Distance.Types.Direction) input.ReadEnum();
+            direction_ = (global::Instrosetta.Interfaces.MotionControl.Singleaxis.Distance.Types.Direction) input.ReadEnum();
             break;
           }
         }
@@ -1909,7 +1916,7 @@ namespace Interfaces.MotionControl.Singleaxis {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Interfaces.MotionControl.Singleaxis.SingleaxisReflection.Descriptor.MessageTypes[10]; }
+      get { return global::Instrosetta.Interfaces.MotionControl.Singleaxis.SingleaxisReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2066,7 +2073,7 @@ namespace Interfaces.MotionControl.Singleaxis {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Interfaces.MotionControl.Singleaxis.SingleaxisReflection.Descriptor.MessageTypes[11]; }
+      get { return global::Instrosetta.Interfaces.MotionControl.Singleaxis.SingleaxisReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2106,9 +2113,9 @@ namespace Interfaces.MotionControl.Singleaxis {
 
     /// <summary>Field number for the "position" field.</summary>
     public const int PositionFieldNumber = 2;
-    private global::Interfaces.MotionControl.Singleaxis.Position position_;
+    private global::Instrosetta.Interfaces.MotionControl.Singleaxis.Position position_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Interfaces.MotionControl.Singleaxis.Position Position {
+    public global::Instrosetta.Interfaces.MotionControl.Singleaxis.Position Position {
       get { return position_; }
       set {
         position_ = value;
@@ -2189,7 +2196,7 @@ namespace Interfaces.MotionControl.Singleaxis {
       }
       if (other.position_ != null) {
         if (position_ == null) {
-          position_ = new global::Interfaces.MotionControl.Singleaxis.Position();
+          position_ = new global::Instrosetta.Interfaces.MotionControl.Singleaxis.Position();
         }
         Position.MergeFrom(other.Position);
       }
@@ -2210,7 +2217,7 @@ namespace Interfaces.MotionControl.Singleaxis {
           }
           case 18: {
             if (position_ == null) {
-              position_ = new global::Interfaces.MotionControl.Singleaxis.Position();
+              position_ = new global::Instrosetta.Interfaces.MotionControl.Singleaxis.Position();
             }
             input.ReadMessage(position_);
             break;
@@ -2229,7 +2236,7 @@ namespace Interfaces.MotionControl.Singleaxis {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Interfaces.MotionControl.Singleaxis.SingleaxisReflection.Descriptor.MessageTypes[12]; }
+      get { return global::Instrosetta.Interfaces.MotionControl.Singleaxis.SingleaxisReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2269,9 +2276,9 @@ namespace Interfaces.MotionControl.Singleaxis {
 
     /// <summary>Field number for the "distance" field.</summary>
     public const int DistanceFieldNumber = 2;
-    private global::Interfaces.MotionControl.Singleaxis.Distance distance_;
+    private global::Instrosetta.Interfaces.MotionControl.Singleaxis.Distance distance_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Interfaces.MotionControl.Singleaxis.Distance Distance {
+    public global::Instrosetta.Interfaces.MotionControl.Singleaxis.Distance Distance {
       get { return distance_; }
       set {
         distance_ = value;
@@ -2352,7 +2359,7 @@ namespace Interfaces.MotionControl.Singleaxis {
       }
       if (other.distance_ != null) {
         if (distance_ == null) {
-          distance_ = new global::Interfaces.MotionControl.Singleaxis.Distance();
+          distance_ = new global::Instrosetta.Interfaces.MotionControl.Singleaxis.Distance();
         }
         Distance.MergeFrom(other.Distance);
       }
@@ -2373,7 +2380,7 @@ namespace Interfaces.MotionControl.Singleaxis {
           }
           case 18: {
             if (distance_ == null) {
-              distance_ = new global::Interfaces.MotionControl.Singleaxis.Distance();
+              distance_ = new global::Instrosetta.Interfaces.MotionControl.Singleaxis.Distance();
             }
             input.ReadMessage(distance_);
             break;
