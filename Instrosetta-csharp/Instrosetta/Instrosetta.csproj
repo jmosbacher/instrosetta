@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Version>0.1.0</Version>
+    <Authors>Yossi Mosbacher</Authors>
+    <Description>The rosetta stone of instrument control.</Description>
+    <PackageReleaseNotes>Test</PackageReleaseNotes>
+    <PackageTags>test</PackageTags>
+    <PackageId>InstrosettaTest</PackageId>
+    <Product>InstrosettaTest</Product>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Google.Protobuf" Version="3.7.0" />
+    <PackageReference Include="Grpc" Version="1.19.0" />
+    <PackageReference Include="Grpc.Tools" Version="1.19.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Protobuf Include="..\..\instrosetta-proto\**\*.proto" ProtoRoot="..\..\instrosetta-proto" OutputDir="$([System.String]::Copy('%(RelativeDir)').Replace('..\..\instrosetta-proto\instrosetta', '.\src'))" CompileOutputs="false" />
+  </ItemGroup>
+  
+
+</Project>

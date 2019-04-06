@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using Grpc.Core;
-using Devices.Motion.Singleaxis;
+using Instrosetta.Interfaces.MotionControl.Singleaxis;
 
 
 namespace ThorlabsKDC101Server

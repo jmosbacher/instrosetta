@@ -47,6 +47,9 @@
     <Reference Include="Grpc.Core.Api, Version=0.0.0.0, Culture=neutral, PublicKeyToken=d754f35622e28bad, processorArchitecture=MSIL">
       <HintPath>..\packages\Grpc.Core.Api.1.19.0\lib\net45\Grpc.Core.Api.dll</HintPath>
     </Reference>
+    <Reference Include="Instrosetta, Version=0.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\InstrosettaTest.0.1.0\lib\netstandard2.0\Instrosetta.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Interactive.Async, Version=3.2.0.0, Culture=neutral, PublicKeyToken=94bc3704cddfc263, processorArchitecture=MSIL">
@@ -64,37 +67,24 @@
     <Reference Include="System.Xaml">
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
     </Reference>
-    <Reference Include="Thorlabs.MotionControl.Controls, Version=1.14.15.15096, Culture=neutral, PublicKeyToken=c7ec6d6d6e2435e7, processorArchitecture=AMD64">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\Thorlabs.MotionControl.Controls.dll</HintPath>
+    <Reference Include="Thorlabs.MotionControl.DeviceManagerCLI">
+      <HintPath>..\ThorlabsDependencies\Thorlabs.MotionControl.DeviceManagerCLI.dll</HintPath>
     </Reference>
-    <Reference Include="Thorlabs.MotionControl.DataLogger, Version=1.0.0.15096, Culture=neutral, PublicKeyToken=c7ec6d6d6e2435e7, processorArchitecture=AMD64">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\Thorlabs.MotionControl.DataLogger.dll</HintPath>
+    <Reference Include="Thorlabs.MotionControl.GenericMotorCLI">
+      <HintPath>..\ThorlabsDependencies\Thorlabs.MotionControl.GenericMotorCLI.dll</HintPath>
     </Reference>
-    <Reference Include="Thorlabs.MotionControl.DeviceManagerCLI, Version=1.14.15.15096, Culture=neutral, PublicKeyToken=c7ec6d6d6e2435e7, processorArchitecture=AMD64">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\Thorlabs.MotionControl.DeviceManagerCLI.dll</HintPath>
+    <Reference Include="Thorlabs.MotionControl.KCube.DCServoCLI">
+      <HintPath>..\ThorlabsDependencies\Thorlabs.MotionControl.KCube.DCServoCLI.dll</HintPath>
     </Reference>
-    <Reference Include="Thorlabs.MotionControl.DeviceManagerUI, Version=1.14.15.15096, Culture=neutral, PublicKeyToken=c7ec6d6d6e2435e7, processorArchitecture=AMD64">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\Thorlabs.MotionControl.DeviceManagerUI.dll</HintPath>
-    </Reference>
-    <Reference Include="Thorlabs.MotionControl.FTD2xx_Net, Version=1.0.0.15096, Culture=neutral, PublicKeyToken=c7ec6d6d6e2435e7, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\Thorlabs.MotionControl.FTD2xx_Net.dll</HintPath>
-    </Reference>
-    <Reference Include="Thorlabs.MotionControl.GenericMotorCLI, Version=1.14.15.15096, Culture=neutral, PublicKeyToken=c7ec6d6d6e2435e7, processorArchitecture=AMD64">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\Thorlabs.MotionControl.GenericMotorCLI.dll</HintPath>
-    </Reference>
-    <Reference Include="ThorLabs.MotionControl.KCube.DCServoCLI, Version=1.14.15.15096, Culture=neutral, PublicKeyToken=c7ec6d6d6e2435e7, processorArchitecture=AMD64">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\ThorLabs.MotionControl.KCube.DCServoCLI.dll</HintPath>
+    <Reference Include="Thorlabs.MotionControl.PrivateInternal">
+      <HintPath>..\ThorlabsDependencies\Thorlabs.MotionControl.PrivateInternal.dll</HintPath>
     </Reference>
     <Reference Include="Thorlabs.MotionControl.Tools.Common, Version=1.0.0.15096, Culture=neutral, PublicKeyToken=c7ec6d6d6e2435e7, processorArchitecture=AMD64">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\Thorlabs.MotionControl.Tools.Common.dll</HintPath>
+      <HintPath>..\ThorlabsDependencies\Thorlabs.MotionControl.Tools.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Thorlabs.MotionControl.Tools.Logging">
+      <HintPath>..\ThorlabsDependencies\Thorlabs.MotionControl.Tools.Logging.dll</HintPath>
     </Reference>
     <Reference Include="UnitsNet, Version=4.0.0.0, Culture=neutral, PublicKeyToken=f8601875a1f041da, processorArchitecture=MSIL">
       <HintPath>..\packages\UnitsNet.4.14.0\lib\net40\UnitsNet.dll</HintPath>
@@ -108,12 +98,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="..\..\..\..\..\interfaces\motion\Singleaxis.cs">
-      <Link>Singleaxis.cs</Link>
-    </Compile>
-    <Compile Include="..\..\..\..\..\interfaces\motion\SingleaxisGrpc.cs">
-      <Link>SingleaxisGrpc.cs</Link>
-    </Compile>
     <Compile Include="TextBoxWriter.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>

@@ -7,7 +7,7 @@ using Thorlabs.MotionControl.GenericMotorCLI;
 
 using Grpc.Core;
 using UnitsNet;
-using Devices.Motion.Singleaxis;
+using Instrosetta.Interfaces.MotionControl.Singleaxis;
 
 
 namespace ThorlabsKDC101Server
