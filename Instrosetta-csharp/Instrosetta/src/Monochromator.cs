@@ -9,7 +9,7 @@ using pb = global::Google.Protobuf;
 using pbc = global::Google.Protobuf.Collections;
 using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
-namespace Instrosetta.Interfaces.Optomechanics.Monochromator {
+namespace Instrosetta.Interfaces.LightAnalysis.Monochromator {
 
   /// <summary>Holder for reflection information generated from instrosetta/interfaces/light_analysis/monochromator.proto</summary>
   public static partial class MonochromatorReflection {
@@ -25,77 +25,78 @@ namespace Instrosetta.Interfaces.Optomechanics.Monochromator {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CjlpbnN0cm9zZXR0YS9pbnRlcmZhY2VzL2xpZ2h0X2FuYWx5c2lzL21vbm9j",
-            "aHJvbWF0b3IucHJvdG8SMmluc3Ryb3NldHRhLmludGVyZmFjZXMub3B0b21l",
-            "Y2hhbmljcy5tb25vY2hyb21hdG9yIm0KDkNvbm5lY3RSZXF1ZXN0EgwKBG5h",
-            "bWUYASABKAkSFQoNc2VyaWFsX251bWJlchgCIAEoCRITCgtzZXJpYWxfcG9y",
-            "dBgDIAEoCRIQCghiYXVkcmF0ZRgEIAEoDRIPCgd0aW1lb3V0GAYgASgCIh8K",
-            "D0Nvbm5lY3RSZXNwb25zZRIMCgRuYW1lGAEgASgJIiEKEURpc2Nvbm5lY3RS",
-            "ZXF1ZXN0EgwKBG5hbWUYASABKAkiIgoSRGlzY29ubmVjdFJlc3BvbnNlEgwK",
-            "BG5hbWUYASABKAkiKQoZR2V0V2F2ZWxlbmd0aFJhbmdlUmVxdWVzdBIMCgRu",
-            "YW1lGAEgASgJIlsKGkdldFdhdmVsZW5ndGhSYW5nZVJlc3BvbnNlEgwKBG5h",
-            "bWUYASABKAkSDwoHbWluaW11bRgCIAEoAhIPCgdtYXhpbXVtGAMgASgCEg0K",
-            "BXVuaXRzGAQgASgJIiQKFEdldFdhdmVsZW5ndGhSZXF1ZXN0EgwKBG5hbWUY",
-            "ASABKAkiSAoVR2V0V2F2ZWxlbmd0aFJlc3BvbnNlEgwKBG5hbWUYASABKAkS",
-            "EgoKd2F2ZWxlbmd0aBgCIAEoAhINCgV1bml0cxgDIAEoCSJHChRTZXRXYXZl",
-            "bGVuZ3RoUmVxdWVzdBIMCgRuYW1lGAEgASgJEhIKCndhdmVsZW5ndGgYAiAB",
-            "KAISDQoFdW5pdHMYAyABKAkiSAoVU2V0V2F2ZWxlbmd0aFJlc3BvbnNlEgwK",
-            "BG5hbWUYASABKAkSEgoKd2F2ZWxlbmd0aBgCIAEoAhINCgV1bml0cxgDIAEo",
-            "CSIoChhHZXRHcmF0aW5nT3B0aW9uc1JlcXVlc3QSDAoEbmFtZRgBIAEoCSI6",
-            "ChlHZXRHcmF0aW5nT3B0aW9uc1Jlc3BvbnNlEgwKBG5hbWUYASABKAkSDwoH",
-            "b3B0aW9ucxgCIAMoDSIhChFHZXRHcmF0aW5nUmVxdWVzdBIMCgRuYW1lGAEg",
-            "ASgJIjMKEkdldEdyYXRpbmdSZXNwb25zZRIMCgRuYW1lGAEgASgJEg8KB2dy",
-            "YXRpbmcYAiABKA0iMgoRU2V0R3JhdGluZ1JlcXVlc3QSDAoEbmFtZRgBIAEo",
-            "CRIPCgdncmF0aW5nGAIgASgNIjMKElNldEdyYXRpbmdSZXNwb25zZRIMCgRu",
-            "YW1lGAEgASgJEg8KB2dyYXRpbmcYAiABKA0ywwoKDU1vbm9jaHJvbWF0b3IS",
-            "lAEKB0Nvbm5lY3QSQi5pbnN0cm9zZXR0YS5pbnRlcmZhY2VzLm9wdG9tZWNo",
-            "YW5pY3MubW9ub2Nocm9tYXRvci5Db25uZWN0UmVxdWVzdBpDLmluc3Ryb3Nl",
-            "dHRhLmludGVyZmFjZXMub3B0b21lY2hhbmljcy5tb25vY2hyb21hdG9yLkNv",
-            "bm5lY3RSZXNwb25zZSIAEp0BCgpEaXNjb25uZWN0EkUuaW5zdHJvc2V0dGEu",
-            "aW50ZXJmYWNlcy5vcHRvbWVjaGFuaWNzLm1vbm9jaHJvbWF0b3IuRGlzY29u",
-            "bmVjdFJlcXVlc3QaRi5pbnN0cm9zZXR0YS5pbnRlcmZhY2VzLm9wdG9tZWNo",
-            "YW5pY3MubW9ub2Nocm9tYXRvci5EaXNjb25uZWN0UmVzcG9uc2UiABK1AQoS",
-            "R2V0V2F2ZWxlbmd0aFJhbmdlEk0uaW5zdHJvc2V0dGEuaW50ZXJmYWNlcy5v",
-            "cHRvbWVjaGFuaWNzLm1vbm9jaHJvbWF0b3IuR2V0V2F2ZWxlbmd0aFJhbmdl",
-            "UmVxdWVzdBpOLmluc3Ryb3NldHRhLmludGVyZmFjZXMub3B0b21lY2hhbmlj",
-            "cy5tb25vY2hyb21hdG9yLkdldFdhdmVsZW5ndGhSYW5nZVJlc3BvbnNlIgAS",
-            "pgEKDUdldFdhdmVsZW5ndGgSSC5pbnN0cm9zZXR0YS5pbnRlcmZhY2VzLm9w",
-            "dG9tZWNoYW5pY3MubW9ub2Nocm9tYXRvci5HZXRXYXZlbGVuZ3RoUmVxdWVz",
-            "dBpJLmluc3Ryb3NldHRhLmludGVyZmFjZXMub3B0b21lY2hhbmljcy5tb25v",
-            "Y2hyb21hdG9yLkdldFdhdmVsZW5ndGhSZXNwb25zZSIAEqYBCg1TZXRXYXZl",
-            "bGVuZ3RoEkguaW5zdHJvc2V0dGEuaW50ZXJmYWNlcy5vcHRvbWVjaGFuaWNz",
-            "Lm1vbm9jaHJvbWF0b3IuU2V0V2F2ZWxlbmd0aFJlcXVlc3QaSS5pbnN0cm9z",
-            "ZXR0YS5pbnRlcmZhY2VzLm9wdG9tZWNoYW5pY3MubW9ub2Nocm9tYXRvci5T",
-            "ZXRXYXZlbGVuZ3RoUmVzcG9uc2UiABKwAQoPR2V0R3JhdGluZ1JhbmdlEkwu",
-            "aW5zdHJvc2V0dGEuaW50ZXJmYWNlcy5vcHRvbWVjaGFuaWNzLm1vbm9jaHJv",
-            "bWF0b3IuR2V0R3JhdGluZ09wdGlvbnNSZXF1ZXN0Gk0uaW5zdHJvc2V0dGEu",
-            "aW50ZXJmYWNlcy5vcHRvbWVjaGFuaWNzLm1vbm9jaHJvbWF0b3IuR2V0R3Jh",
-            "dGluZ09wdGlvbnNSZXNwb25zZSIAEp0BCgpHZXRHcmF0aW5nEkUuaW5zdHJv",
-            "c2V0dGEuaW50ZXJmYWNlcy5vcHRvbWVjaGFuaWNzLm1vbm9jaHJvbWF0b3Iu",
-            "R2V0R3JhdGluZ1JlcXVlc3QaRi5pbnN0cm9zZXR0YS5pbnRlcmZhY2VzLm9w",
-            "dG9tZWNoYW5pY3MubW9ub2Nocm9tYXRvci5HZXRHcmF0aW5nUmVzcG9uc2Ui",
-            "ABKdAQoKU2V0R3JhdGluZxJFLmluc3Ryb3NldHRhLmludGVyZmFjZXMub3B0",
-            "b21lY2hhbmljcy5tb25vY2hyb21hdG9yLlNldEdyYXRpbmdSZXF1ZXN0GkYu",
-            "aW5zdHJvc2V0dGEuaW50ZXJmYWNlcy5vcHRvbWVjaGFuaWNzLm1vbm9jaHJv",
-            "bWF0b3IuU2V0R3JhdGluZ1Jlc3BvbnNlIgBiBnByb3RvMw=="));
+            "aHJvbWF0b3IucHJvdG8SM2luc3Ryb3NldHRhLmludGVyZmFjZXMubGlnaHRf",
+            "YW5hbHlzaXMubW9ub2Nocm9tYXRvciJtCg5Db25uZWN0UmVxdWVzdBIMCgRu",
+            "YW1lGAEgASgJEhUKDXNlcmlhbF9udW1iZXIYAiABKAkSEwoLc2VyaWFsX3Bv",
+            "cnQYAyABKAkSEAoIYmF1ZHJhdGUYBCABKA0SDwoHdGltZW91dBgGIAEoAiIf",
+            "Cg9Db25uZWN0UmVzcG9uc2USDAoEbmFtZRgBIAEoCSIhChFEaXNjb25uZWN0",
+            "UmVxdWVzdBIMCgRuYW1lGAEgASgJIiIKEkRpc2Nvbm5lY3RSZXNwb25zZRIM",
+            "CgRuYW1lGAEgASgJIikKGUdldFdhdmVsZW5ndGhSYW5nZVJlcXVlc3QSDAoE",
+            "bmFtZRgBIAEoCSJbChpHZXRXYXZlbGVuZ3RoUmFuZ2VSZXNwb25zZRIMCgRu",
+            "YW1lGAEgASgJEg8KB21pbmltdW0YAiABKAISDwoHbWF4aW11bRgDIAEoAhIN",
+            "CgV1bml0cxgEIAEoCSIkChRHZXRXYXZlbGVuZ3RoUmVxdWVzdBIMCgRuYW1l",
+            "GAEgASgJIkgKFUdldFdhdmVsZW5ndGhSZXNwb25zZRIMCgRuYW1lGAEgASgJ",
+            "EhIKCndhdmVsZW5ndGgYAiABKAISDQoFdW5pdHMYAyABKAkiRwoUU2V0V2F2",
+            "ZWxlbmd0aFJlcXVlc3QSDAoEbmFtZRgBIAEoCRISCgp3YXZlbGVuZ3RoGAIg",
+            "ASgCEg0KBXVuaXRzGAMgASgJIkgKFVNldFdhdmVsZW5ndGhSZXNwb25zZRIM",
+            "CgRuYW1lGAEgASgJEhIKCndhdmVsZW5ndGgYAiABKAISDQoFdW5pdHMYAyAB",
+            "KAkiKAoYR2V0R3JhdGluZ09wdGlvbnNSZXF1ZXN0EgwKBG5hbWUYASABKAki",
+            "OgoZR2V0R3JhdGluZ09wdGlvbnNSZXNwb25zZRIMCgRuYW1lGAEgASgJEg8K",
+            "B29wdGlvbnMYAiADKA0iIQoRR2V0R3JhdGluZ1JlcXVlc3QSDAoEbmFtZRgB",
+            "IAEoCSIzChJHZXRHcmF0aW5nUmVzcG9uc2USDAoEbmFtZRgBIAEoCRIPCgdn",
+            "cmF0aW5nGAIgASgNIjIKEVNldEdyYXRpbmdSZXF1ZXN0EgwKBG5hbWUYASAB",
+            "KAkSDwoHZ3JhdGluZxgCIAEoDSIzChJTZXRHcmF0aW5nUmVzcG9uc2USDAoE",
+            "bmFtZRgBIAEoCRIPCgdncmF0aW5nGAIgASgNMtMKCg1Nb25vY2hyb21hdG9y",
+            "EpYBCgdDb25uZWN0EkMuaW5zdHJvc2V0dGEuaW50ZXJmYWNlcy5saWdodF9h",
+            "bmFseXNpcy5tb25vY2hyb21hdG9yLkNvbm5lY3RSZXF1ZXN0GkQuaW5zdHJv",
+            "c2V0dGEuaW50ZXJmYWNlcy5saWdodF9hbmFseXNpcy5tb25vY2hyb21hdG9y",
+            "LkNvbm5lY3RSZXNwb25zZSIAEp8BCgpEaXNjb25uZWN0EkYuaW5zdHJvc2V0",
+            "dGEuaW50ZXJmYWNlcy5saWdodF9hbmFseXNpcy5tb25vY2hyb21hdG9yLkRp",
+            "c2Nvbm5lY3RSZXF1ZXN0GkcuaW5zdHJvc2V0dGEuaW50ZXJmYWNlcy5saWdo",
+            "dF9hbmFseXNpcy5tb25vY2hyb21hdG9yLkRpc2Nvbm5lY3RSZXNwb25zZSIA",
+            "ErcBChJHZXRXYXZlbGVuZ3RoUmFuZ2USTi5pbnN0cm9zZXR0YS5pbnRlcmZh",
+            "Y2VzLmxpZ2h0X2FuYWx5c2lzLm1vbm9jaHJvbWF0b3IuR2V0V2F2ZWxlbmd0",
+            "aFJhbmdlUmVxdWVzdBpPLmluc3Ryb3NldHRhLmludGVyZmFjZXMubGlnaHRf",
+            "YW5hbHlzaXMubW9ub2Nocm9tYXRvci5HZXRXYXZlbGVuZ3RoUmFuZ2VSZXNw",
+            "b25zZSIAEqgBCg1HZXRXYXZlbGVuZ3RoEkkuaW5zdHJvc2V0dGEuaW50ZXJm",
+            "YWNlcy5saWdodF9hbmFseXNpcy5tb25vY2hyb21hdG9yLkdldFdhdmVsZW5n",
+            "dGhSZXF1ZXN0GkouaW5zdHJvc2V0dGEuaW50ZXJmYWNlcy5saWdodF9hbmFs",
+            "eXNpcy5tb25vY2hyb21hdG9yLkdldFdhdmVsZW5ndGhSZXNwb25zZSIAEqgB",
+            "Cg1TZXRXYXZlbGVuZ3RoEkkuaW5zdHJvc2V0dGEuaW50ZXJmYWNlcy5saWdo",
+            "dF9hbmFseXNpcy5tb25vY2hyb21hdG9yLlNldFdhdmVsZW5ndGhSZXF1ZXN0",
+            "GkouaW5zdHJvc2V0dGEuaW50ZXJmYWNlcy5saWdodF9hbmFseXNpcy5tb25v",
+            "Y2hyb21hdG9yLlNldFdhdmVsZW5ndGhSZXNwb25zZSIAErIBCg9HZXRHcmF0",
+            "aW5nUmFuZ2USTS5pbnN0cm9zZXR0YS5pbnRlcmZhY2VzLmxpZ2h0X2FuYWx5",
+            "c2lzLm1vbm9jaHJvbWF0b3IuR2V0R3JhdGluZ09wdGlvbnNSZXF1ZXN0Gk4u",
+            "aW5zdHJvc2V0dGEuaW50ZXJmYWNlcy5saWdodF9hbmFseXNpcy5tb25vY2hy",
+            "b21hdG9yLkdldEdyYXRpbmdPcHRpb25zUmVzcG9uc2UiABKfAQoKR2V0R3Jh",
+            "dGluZxJGLmluc3Ryb3NldHRhLmludGVyZmFjZXMubGlnaHRfYW5hbHlzaXMu",
+            "bW9ub2Nocm9tYXRvci5HZXRHcmF0aW5nUmVxdWVzdBpHLmluc3Ryb3NldHRh",
+            "LmludGVyZmFjZXMubGlnaHRfYW5hbHlzaXMubW9ub2Nocm9tYXRvci5HZXRH",
+            "cmF0aW5nUmVzcG9uc2UiABKfAQoKU2V0R3JhdGluZxJGLmluc3Ryb3NldHRh",
+            "LmludGVyZmFjZXMubGlnaHRfYW5hbHlzaXMubW9ub2Nocm9tYXRvci5TZXRH",
+            "cmF0aW5nUmVxdWVzdBpHLmluc3Ryb3NldHRhLmludGVyZmFjZXMubGlnaHRf",
+            "YW5hbHlzaXMubW9ub2Nocm9tYXRvci5TZXRHcmF0aW5nUmVzcG9uc2UiAGIG",
+            "cHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Instrosetta.Interfaces.Optomechanics.Monochromator.ConnectRequest), global::Instrosetta.Interfaces.Optomechanics.Monochromator.ConnectRequest.Parser, new[]{ "Name", "SerialNumber", "SerialPort", "Baudrate", "Timeout" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Instrosetta.Interfaces.Optomechanics.Monochromator.ConnectResponse), global::Instrosetta.Interfaces.Optomechanics.Monochromator.ConnectResponse.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Instrosetta.Interfaces.Optomechanics.Monochromator.DisconnectRequest), global::Instrosetta.Interfaces.Optomechanics.Monochromator.DisconnectRequest.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Instrosetta.Interfaces.Optomechanics.Monochromator.DisconnectResponse), global::Instrosetta.Interfaces.Optomechanics.Monochromator.DisconnectResponse.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Instrosetta.Interfaces.Optomechanics.Monochromator.GetWavelengthRangeRequest), global::Instrosetta.Interfaces.Optomechanics.Monochromator.GetWavelengthRangeRequest.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Instrosetta.Interfaces.Optomechanics.Monochromator.GetWavelengthRangeResponse), global::Instrosetta.Interfaces.Optomechanics.Monochromator.GetWavelengthRangeResponse.Parser, new[]{ "Name", "Minimum", "Maximum", "Units" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Instrosetta.Interfaces.Optomechanics.Monochromator.GetWavelengthRequest), global::Instrosetta.Interfaces.Optomechanics.Monochromator.GetWavelengthRequest.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Instrosetta.Interfaces.Optomechanics.Monochromator.GetWavelengthResponse), global::Instrosetta.Interfaces.Optomechanics.Monochromator.GetWavelengthResponse.Parser, new[]{ "Name", "Wavelength", "Units" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Instrosetta.Interfaces.Optomechanics.Monochromator.SetWavelengthRequest), global::Instrosetta.Interfaces.Optomechanics.Monochromator.SetWavelengthRequest.Parser, new[]{ "Name", "Wavelength", "Units" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Instrosetta.Interfaces.Optomechanics.Monochromator.SetWavelengthResponse), global::Instrosetta.Interfaces.Optomechanics.Monochromator.SetWavelengthResponse.Parser, new[]{ "Name", "Wavelength", "Units" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Instrosetta.Interfaces.Optomechanics.Monochromator.GetGratingOptionsRequest), global::Instrosetta.Interfaces.Optomechanics.Monochromator.GetGratingOptionsRequest.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Instrosetta.Interfaces.Optomechanics.Monochromator.GetGratingOptionsResponse), global::Instrosetta.Interfaces.Optomechanics.Monochromator.GetGratingOptionsResponse.Parser, new[]{ "Name", "Options" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Instrosetta.Interfaces.Optomechanics.Monochromator.GetGratingRequest), global::Instrosetta.Interfaces.Optomechanics.Monochromator.GetGratingRequest.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Instrosetta.Interfaces.Optomechanics.Monochromator.GetGratingResponse), global::Instrosetta.Interfaces.Optomechanics.Monochromator.GetGratingResponse.Parser, new[]{ "Name", "Grating" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Instrosetta.Interfaces.Optomechanics.Monochromator.SetGratingRequest), global::Instrosetta.Interfaces.Optomechanics.Monochromator.SetGratingRequest.Parser, new[]{ "Name", "Grating" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Instrosetta.Interfaces.Optomechanics.Monochromator.SetGratingResponse), global::Instrosetta.Interfaces.Optomechanics.Monochromator.SetGratingResponse.Parser, new[]{ "Name", "Grating" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Instrosetta.Interfaces.LightAnalysis.Monochromator.ConnectRequest), global::Instrosetta.Interfaces.LightAnalysis.Monochromator.ConnectRequest.Parser, new[]{ "Name", "SerialNumber", "SerialPort", "Baudrate", "Timeout" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Instrosetta.Interfaces.LightAnalysis.Monochromator.ConnectResponse), global::Instrosetta.Interfaces.LightAnalysis.Monochromator.ConnectResponse.Parser, new[]{ "Name" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Instrosetta.Interfaces.LightAnalysis.Monochromator.DisconnectRequest), global::Instrosetta.Interfaces.LightAnalysis.Monochromator.DisconnectRequest.Parser, new[]{ "Name" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Instrosetta.Interfaces.LightAnalysis.Monochromator.DisconnectResponse), global::Instrosetta.Interfaces.LightAnalysis.Monochromator.DisconnectResponse.Parser, new[]{ "Name" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Instrosetta.Interfaces.LightAnalysis.Monochromator.GetWavelengthRangeRequest), global::Instrosetta.Interfaces.LightAnalysis.Monochromator.GetWavelengthRangeRequest.Parser, new[]{ "Name" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Instrosetta.Interfaces.LightAnalysis.Monochromator.GetWavelengthRangeResponse), global::Instrosetta.Interfaces.LightAnalysis.Monochromator.GetWavelengthRangeResponse.Parser, new[]{ "Name", "Minimum", "Maximum", "Units" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Instrosetta.Interfaces.LightAnalysis.Monochromator.GetWavelengthRequest), global::Instrosetta.Interfaces.LightAnalysis.Monochromator.GetWavelengthRequest.Parser, new[]{ "Name" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Instrosetta.Interfaces.LightAnalysis.Monochromator.GetWavelengthResponse), global::Instrosetta.Interfaces.LightAnalysis.Monochromator.GetWavelengthResponse.Parser, new[]{ "Name", "Wavelength", "Units" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Instrosetta.Interfaces.LightAnalysis.Monochromator.SetWavelengthRequest), global::Instrosetta.Interfaces.LightAnalysis.Monochromator.SetWavelengthRequest.Parser, new[]{ "Name", "Wavelength", "Units" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Instrosetta.Interfaces.LightAnalysis.Monochromator.SetWavelengthResponse), global::Instrosetta.Interfaces.LightAnalysis.Monochromator.SetWavelengthResponse.Parser, new[]{ "Name", "Wavelength", "Units" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Instrosetta.Interfaces.LightAnalysis.Monochromator.GetGratingOptionsRequest), global::Instrosetta.Interfaces.LightAnalysis.Monochromator.GetGratingOptionsRequest.Parser, new[]{ "Name" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Instrosetta.Interfaces.LightAnalysis.Monochromator.GetGratingOptionsResponse), global::Instrosetta.Interfaces.LightAnalysis.Monochromator.GetGratingOptionsResponse.Parser, new[]{ "Name", "Options" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Instrosetta.Interfaces.LightAnalysis.Monochromator.GetGratingRequest), global::Instrosetta.Interfaces.LightAnalysis.Monochromator.GetGratingRequest.Parser, new[]{ "Name" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Instrosetta.Interfaces.LightAnalysis.Monochromator.GetGratingResponse), global::Instrosetta.Interfaces.LightAnalysis.Monochromator.GetGratingResponse.Parser, new[]{ "Name", "Grating" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Instrosetta.Interfaces.LightAnalysis.Monochromator.SetGratingRequest), global::Instrosetta.Interfaces.LightAnalysis.Monochromator.SetGratingRequest.Parser, new[]{ "Name", "Grating" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Instrosetta.Interfaces.LightAnalysis.Monochromator.SetGratingResponse), global::Instrosetta.Interfaces.LightAnalysis.Monochromator.SetGratingResponse.Parser, new[]{ "Name", "Grating" }, null, null, null)
           }));
     }
     #endregion
@@ -110,7 +111,7 @@ namespace Instrosetta.Interfaces.Optomechanics.Monochromator {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Instrosetta.Interfaces.Optomechanics.Monochromator.MonochromatorReflection.Descriptor.MessageTypes[0]; }
+      get { return global::Instrosetta.Interfaces.LightAnalysis.Monochromator.MonochromatorReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -351,7 +352,7 @@ namespace Instrosetta.Interfaces.Optomechanics.Monochromator {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Instrosetta.Interfaces.Optomechanics.Monochromator.MonochromatorReflection.Descriptor.MessageTypes[1]; }
+      get { return global::Instrosetta.Interfaces.LightAnalysis.Monochromator.MonochromatorReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -480,7 +481,7 @@ namespace Instrosetta.Interfaces.Optomechanics.Monochromator {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Instrosetta.Interfaces.Optomechanics.Monochromator.MonochromatorReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Instrosetta.Interfaces.LightAnalysis.Monochromator.MonochromatorReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -609,7 +610,7 @@ namespace Instrosetta.Interfaces.Optomechanics.Monochromator {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Instrosetta.Interfaces.Optomechanics.Monochromator.MonochromatorReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Instrosetta.Interfaces.LightAnalysis.Monochromator.MonochromatorReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -738,7 +739,7 @@ namespace Instrosetta.Interfaces.Optomechanics.Monochromator {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Instrosetta.Interfaces.Optomechanics.Monochromator.MonochromatorReflection.Descriptor.MessageTypes[4]; }
+      get { return global::Instrosetta.Interfaces.LightAnalysis.Monochromator.MonochromatorReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -867,7 +868,7 @@ namespace Instrosetta.Interfaces.Optomechanics.Monochromator {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Instrosetta.Interfaces.Optomechanics.Monochromator.MonochromatorReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Instrosetta.Interfaces.LightAnalysis.Monochromator.MonochromatorReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1080,7 +1081,7 @@ namespace Instrosetta.Interfaces.Optomechanics.Monochromator {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Instrosetta.Interfaces.Optomechanics.Monochromator.MonochromatorReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Instrosetta.Interfaces.LightAnalysis.Monochromator.MonochromatorReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1209,7 +1210,7 @@ namespace Instrosetta.Interfaces.Optomechanics.Monochromator {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Instrosetta.Interfaces.Optomechanics.Monochromator.MonochromatorReflection.Descriptor.MessageTypes[7]; }
+      get { return global::Instrosetta.Interfaces.LightAnalysis.Monochromator.MonochromatorReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1394,7 +1395,7 @@ namespace Instrosetta.Interfaces.Optomechanics.Monochromator {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Instrosetta.Interfaces.Optomechanics.Monochromator.MonochromatorReflection.Descriptor.MessageTypes[8]; }
+      get { return global::Instrosetta.Interfaces.LightAnalysis.Monochromator.MonochromatorReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1579,7 +1580,7 @@ namespace Instrosetta.Interfaces.Optomechanics.Monochromator {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Instrosetta.Interfaces.Optomechanics.Monochromator.MonochromatorReflection.Descriptor.MessageTypes[9]; }
+      get { return global::Instrosetta.Interfaces.LightAnalysis.Monochromator.MonochromatorReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1764,7 +1765,7 @@ namespace Instrosetta.Interfaces.Optomechanics.Monochromator {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Instrosetta.Interfaces.Optomechanics.Monochromator.MonochromatorReflection.Descriptor.MessageTypes[10]; }
+      get { return global::Instrosetta.Interfaces.LightAnalysis.Monochromator.MonochromatorReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1893,7 +1894,7 @@ namespace Instrosetta.Interfaces.Optomechanics.Monochromator {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Instrosetta.Interfaces.Optomechanics.Monochromator.MonochromatorReflection.Descriptor.MessageTypes[11]; }
+      get { return global::Instrosetta.Interfaces.LightAnalysis.Monochromator.MonochromatorReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2043,7 +2044,7 @@ namespace Instrosetta.Interfaces.Optomechanics.Monochromator {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Instrosetta.Interfaces.Optomechanics.Monochromator.MonochromatorReflection.Descriptor.MessageTypes[12]; }
+      get { return global::Instrosetta.Interfaces.LightAnalysis.Monochromator.MonochromatorReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2172,7 +2173,7 @@ namespace Instrosetta.Interfaces.Optomechanics.Monochromator {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Instrosetta.Interfaces.Optomechanics.Monochromator.MonochromatorReflection.Descriptor.MessageTypes[13]; }
+      get { return global::Instrosetta.Interfaces.LightAnalysis.Monochromator.MonochromatorReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2329,7 +2330,7 @@ namespace Instrosetta.Interfaces.Optomechanics.Monochromator {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Instrosetta.Interfaces.Optomechanics.Monochromator.MonochromatorReflection.Descriptor.MessageTypes[14]; }
+      get { return global::Instrosetta.Interfaces.LightAnalysis.Monochromator.MonochromatorReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2486,7 +2487,7 @@ namespace Instrosetta.Interfaces.Optomechanics.Monochromator {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Instrosetta.Interfaces.Optomechanics.Monochromator.MonochromatorReflection.Descriptor.MessageTypes[15]; }
+      get { return global::Instrosetta.Interfaces.LightAnalysis.Monochromator.MonochromatorReflection.Descriptor.MessageTypes[15]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

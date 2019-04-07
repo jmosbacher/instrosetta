@@ -651,7 +651,7 @@ namespace Instrosetta.Interfaces.MotionControl.Singleaxis {
             break;
           }
           case 40: {
-            motorType_ = (global::Instrosetta.Interfaces.MotionControl.Singleaxis.Device.Types.MotorType) input.ReadEnum();
+            MotorType = (global::Instrosetta.Interfaces.MotionControl.Singleaxis.Device.Types.MotorType) input.ReadEnum();
             break;
           }
         }
@@ -848,7 +848,7 @@ namespace Instrosetta.Interfaces.MotionControl.Singleaxis {
       }
       if (other.device_ != null) {
         if (device_ == null) {
-          device_ = new global::Instrosetta.Interfaces.MotionControl.Singleaxis.Device();
+          Device = new global::Instrosetta.Interfaces.MotionControl.Singleaxis.Device();
         }
         Device.MergeFrom(other.Device);
       }
@@ -875,9 +875,9 @@ namespace Instrosetta.Interfaces.MotionControl.Singleaxis {
           }
           case 18: {
             if (device_ == null) {
-              device_ = new global::Instrosetta.Interfaces.MotionControl.Singleaxis.Device();
+              Device = new global::Instrosetta.Interfaces.MotionControl.Singleaxis.Device();
             }
-            input.ReadMessage(device_);
+            input.ReadMessage(Device);
             break;
           }
           case 29: {
@@ -1886,7 +1886,7 @@ namespace Instrosetta.Interfaces.MotionControl.Singleaxis {
             break;
           }
           case 24: {
-            direction_ = (global::Instrosetta.Interfaces.MotionControl.Singleaxis.Distance.Types.Direction) input.ReadEnum();
+            Direction = (global::Instrosetta.Interfaces.MotionControl.Singleaxis.Distance.Types.Direction) input.ReadEnum();
             break;
           }
         }
@@ -2196,7 +2196,7 @@ namespace Instrosetta.Interfaces.MotionControl.Singleaxis {
       }
       if (other.position_ != null) {
         if (position_ == null) {
-          position_ = new global::Instrosetta.Interfaces.MotionControl.Singleaxis.Position();
+          Position = new global::Instrosetta.Interfaces.MotionControl.Singleaxis.Position();
         }
         Position.MergeFrom(other.Position);
       }
@@ -2217,9 +2217,9 @@ namespace Instrosetta.Interfaces.MotionControl.Singleaxis {
           }
           case 18: {
             if (position_ == null) {
-              position_ = new global::Instrosetta.Interfaces.MotionControl.Singleaxis.Position();
+              Position = new global::Instrosetta.Interfaces.MotionControl.Singleaxis.Position();
             }
-            input.ReadMessage(position_);
+            input.ReadMessage(Position);
             break;
           }
         }
@@ -2359,7 +2359,7 @@ namespace Instrosetta.Interfaces.MotionControl.Singleaxis {
       }
       if (other.distance_ != null) {
         if (distance_ == null) {
-          distance_ = new global::Instrosetta.Interfaces.MotionControl.Singleaxis.Distance();
+          Distance = new global::Instrosetta.Interfaces.MotionControl.Singleaxis.Distance();
         }
         Distance.MergeFrom(other.Distance);
       }
@@ -2380,9 +2380,9 @@ namespace Instrosetta.Interfaces.MotionControl.Singleaxis {
           }
           case 18: {
             if (distance_ == null) {
-              distance_ = new global::Instrosetta.Interfaces.MotionControl.Singleaxis.Distance();
+              Distance = new global::Instrosetta.Interfaces.MotionControl.Singleaxis.Distance();
             }
-            input.ReadMessage(distance_);
+            input.ReadMessage(Distance);
             break;
           }
         }
