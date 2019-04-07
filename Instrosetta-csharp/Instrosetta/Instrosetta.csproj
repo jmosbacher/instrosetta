@@ -22,7 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Protobuf Include="../../instrosetta-proto/**/*.proto" ProtoRoot="../../instrosetta-proto" OutputDir="./src" CompileOutputs="false" BaseNameSpace="" />
+    <Protobuf Include="../../instrosetta-proto/**/*.proto" ProtoRoot="../../instrosetta-proto" OutputDir="./src" CompileOutputs="false"/>
   </ItemGroup>
   
 
