@@ -22,7 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Protobuf Include="..\..\instrosetta-proto\**\*.proto" ProtoRoot="..\..\instrosetta-proto" OutputDir="$([System.String]::Copy('%(RelativeDir)').Replace('..\..\instrosetta-proto\instrosetta', '.\src'))" CompileOutputs="false" />
+    <Protobuf Include="../../instrosetta-proto/**/*.proto" ProtoRoot="../../instrosetta-proto" OutputDir="./src" CompileOutputs="false" BaseNameSpace="" />
   </ItemGroup>
   
 
