@@ -1,9 +1,9 @@
 import grpc
 from enum import Enum
 import pint
-from instrosetta.interfaces.optomechanics import monochromator_pb2 as pb2
-from instrosetta.interfaces.optomechanics import monochromator_pb2_grpc as pb2_grpc
-from instrosetta.servers.spectral_products.cm112.cm112_device import CM112Device
+from instrosetta.interfaces.light_analysis import monochromator_pb2 as pb2
+from instrosetta.interfaces.light_analysis import monochromator_pb2_grpc as pb2_grpc
+from .cm112_device import CM112Device
 
 ureg = pint.UnitRegistry()
 Q_ = ureg.Quantity
