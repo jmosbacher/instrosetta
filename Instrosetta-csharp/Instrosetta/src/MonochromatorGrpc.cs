@@ -7,129 +7,129 @@
 
 using grpc = global::Grpc.Core;
 
-namespace Instrosetta.Interfaces.Optomechanics.Monochromator {
+namespace Instrosetta.Interfaces.LightAnalysis.Monochromator {
   public static partial class Monochromator
   {
-    static readonly string __ServiceName = "instrosetta.interfaces.optomechanics.monochromator.Monochromator";
+    static readonly string __ServiceName = "instrosetta.interfaces.light_analysis.monochromator.Monochromator";
 
-    static readonly grpc::Marshaller<global::Instrosetta.Interfaces.Optomechanics.Monochromator.ConnectRequest> __Marshaller_instrosetta_interfaces_optomechanics_monochromator_ConnectRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Instrosetta.Interfaces.Optomechanics.Monochromator.ConnectRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Instrosetta.Interfaces.Optomechanics.Monochromator.ConnectResponse> __Marshaller_instrosetta_interfaces_optomechanics_monochromator_ConnectResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Instrosetta.Interfaces.Optomechanics.Monochromator.ConnectResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Instrosetta.Interfaces.Optomechanics.Monochromator.DisconnectRequest> __Marshaller_instrosetta_interfaces_optomechanics_monochromator_DisconnectRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Instrosetta.Interfaces.Optomechanics.Monochromator.DisconnectRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Instrosetta.Interfaces.Optomechanics.Monochromator.DisconnectResponse> __Marshaller_instrosetta_interfaces_optomechanics_monochromator_DisconnectResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Instrosetta.Interfaces.Optomechanics.Monochromator.DisconnectResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Instrosetta.Interfaces.Optomechanics.Monochromator.GetWavelengthRangeRequest> __Marshaller_instrosetta_interfaces_optomechanics_monochromator_GetWavelengthRangeRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Instrosetta.Interfaces.Optomechanics.Monochromator.GetWavelengthRangeRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Instrosetta.Interfaces.Optomechanics.Monochromator.GetWavelengthRangeResponse> __Marshaller_instrosetta_interfaces_optomechanics_monochromator_GetWavelengthRangeResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Instrosetta.Interfaces.Optomechanics.Monochromator.GetWavelengthRangeResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Instrosetta.Interfaces.Optomechanics.Monochromator.GetWavelengthRequest> __Marshaller_instrosetta_interfaces_optomechanics_monochromator_GetWavelengthRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Instrosetta.Interfaces.Optomechanics.Monochromator.GetWavelengthRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Instrosetta.Interfaces.Optomechanics.Monochromator.GetWavelengthResponse> __Marshaller_instrosetta_interfaces_optomechanics_monochromator_GetWavelengthResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Instrosetta.Interfaces.Optomechanics.Monochromator.GetWavelengthResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Instrosetta.Interfaces.Optomechanics.Monochromator.SetWavelengthRequest> __Marshaller_instrosetta_interfaces_optomechanics_monochromator_SetWavelengthRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Instrosetta.Interfaces.Optomechanics.Monochromator.SetWavelengthRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Instrosetta.Interfaces.Optomechanics.Monochromator.SetWavelengthResponse> __Marshaller_instrosetta_interfaces_optomechanics_monochromator_SetWavelengthResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Instrosetta.Interfaces.Optomechanics.Monochromator.SetWavelengthResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Instrosetta.Interfaces.Optomechanics.Monochromator.GetGratingOptionsRequest> __Marshaller_instrosetta_interfaces_optomechanics_monochromator_GetGratingOptionsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Instrosetta.Interfaces.Optomechanics.Monochromator.GetGratingOptionsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Instrosetta.Interfaces.Optomechanics.Monochromator.GetGratingOptionsResponse> __Marshaller_instrosetta_interfaces_optomechanics_monochromator_GetGratingOptionsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Instrosetta.Interfaces.Optomechanics.Monochromator.GetGratingOptionsResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Instrosetta.Interfaces.Optomechanics.Monochromator.GetGratingRequest> __Marshaller_instrosetta_interfaces_optomechanics_monochromator_GetGratingRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Instrosetta.Interfaces.Optomechanics.Monochromator.GetGratingRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Instrosetta.Interfaces.Optomechanics.Monochromator.GetGratingResponse> __Marshaller_instrosetta_interfaces_optomechanics_monochromator_GetGratingResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Instrosetta.Interfaces.Optomechanics.Monochromator.GetGratingResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Instrosetta.Interfaces.Optomechanics.Monochromator.SetGratingRequest> __Marshaller_instrosetta_interfaces_optomechanics_monochromator_SetGratingRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Instrosetta.Interfaces.Optomechanics.Monochromator.SetGratingRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Instrosetta.Interfaces.Optomechanics.Monochromator.SetGratingResponse> __Marshaller_instrosetta_interfaces_optomechanics_monochromator_SetGratingResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Instrosetta.Interfaces.Optomechanics.Monochromator.SetGratingResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Instrosetta.Interfaces.LightAnalysis.Monochromator.ConnectRequest> __Marshaller_instrosetta_interfaces_light_analysis_monochromator_ConnectRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Instrosetta.Interfaces.LightAnalysis.Monochromator.ConnectRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Instrosetta.Interfaces.LightAnalysis.Monochromator.ConnectResponse> __Marshaller_instrosetta_interfaces_light_analysis_monochromator_ConnectResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Instrosetta.Interfaces.LightAnalysis.Monochromator.ConnectResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Instrosetta.Interfaces.LightAnalysis.Monochromator.DisconnectRequest> __Marshaller_instrosetta_interfaces_light_analysis_monochromator_DisconnectRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Instrosetta.Interfaces.LightAnalysis.Monochromator.DisconnectRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Instrosetta.Interfaces.LightAnalysis.Monochromator.DisconnectResponse> __Marshaller_instrosetta_interfaces_light_analysis_monochromator_DisconnectResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Instrosetta.Interfaces.LightAnalysis.Monochromator.DisconnectResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Instrosetta.Interfaces.LightAnalysis.Monochromator.GetWavelengthRangeRequest> __Marshaller_instrosetta_interfaces_light_analysis_monochromator_GetWavelengthRangeRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Instrosetta.Interfaces.LightAnalysis.Monochromator.GetWavelengthRangeRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Instrosetta.Interfaces.LightAnalysis.Monochromator.GetWavelengthRangeResponse> __Marshaller_instrosetta_interfaces_light_analysis_monochromator_GetWavelengthRangeResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Instrosetta.Interfaces.LightAnalysis.Monochromator.GetWavelengthRangeResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Instrosetta.Interfaces.LightAnalysis.Monochromator.GetWavelengthRequest> __Marshaller_instrosetta_interfaces_light_analysis_monochromator_GetWavelengthRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Instrosetta.Interfaces.LightAnalysis.Monochromator.GetWavelengthRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Instrosetta.Interfaces.LightAnalysis.Monochromator.GetWavelengthResponse> __Marshaller_instrosetta_interfaces_light_analysis_monochromator_GetWavelengthResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Instrosetta.Interfaces.LightAnalysis.Monochromator.GetWavelengthResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Instrosetta.Interfaces.LightAnalysis.Monochromator.SetWavelengthRequest> __Marshaller_instrosetta_interfaces_light_analysis_monochromator_SetWavelengthRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Instrosetta.Interfaces.LightAnalysis.Monochromator.SetWavelengthRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Instrosetta.Interfaces.LightAnalysis.Monochromator.SetWavelengthResponse> __Marshaller_instrosetta_interfaces_light_analysis_monochromator_SetWavelengthResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Instrosetta.Interfaces.LightAnalysis.Monochromator.SetWavelengthResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Instrosetta.Interfaces.LightAnalysis.Monochromator.GetGratingOptionsRequest> __Marshaller_instrosetta_interfaces_light_analysis_monochromator_GetGratingOptionsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Instrosetta.Interfaces.LightAnalysis.Monochromator.GetGratingOptionsRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Instrosetta.Interfaces.LightAnalysis.Monochromator.GetGratingOptionsResponse> __Marshaller_instrosetta_interfaces_light_analysis_monochromator_GetGratingOptionsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Instrosetta.Interfaces.LightAnalysis.Monochromator.GetGratingOptionsResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Instrosetta.Interfaces.LightAnalysis.Monochromator.GetGratingRequest> __Marshaller_instrosetta_interfaces_light_analysis_monochromator_GetGratingRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Instrosetta.Interfaces.LightAnalysis.Monochromator.GetGratingRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Instrosetta.Interfaces.LightAnalysis.Monochromator.GetGratingResponse> __Marshaller_instrosetta_interfaces_light_analysis_monochromator_GetGratingResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Instrosetta.Interfaces.LightAnalysis.Monochromator.GetGratingResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Instrosetta.Interfaces.LightAnalysis.Monochromator.SetGratingRequest> __Marshaller_instrosetta_interfaces_light_analysis_monochromator_SetGratingRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Instrosetta.Interfaces.LightAnalysis.Monochromator.SetGratingRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Instrosetta.Interfaces.LightAnalysis.Monochromator.SetGratingResponse> __Marshaller_instrosetta_interfaces_light_analysis_monochromator_SetGratingResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Instrosetta.Interfaces.LightAnalysis.Monochromator.SetGratingResponse.Parser.ParseFrom);
 
-    static readonly grpc::Method<global::Instrosetta.Interfaces.Optomechanics.Monochromator.ConnectRequest, global::Instrosetta.Interfaces.Optomechanics.Monochromator.ConnectResponse> __Method_Connect = new grpc::Method<global::Instrosetta.Interfaces.Optomechanics.Monochromator.ConnectRequest, global::Instrosetta.Interfaces.Optomechanics.Monochromator.ConnectResponse>(
+    static readonly grpc::Method<global::Instrosetta.Interfaces.LightAnalysis.Monochromator.ConnectRequest, global::Instrosetta.Interfaces.LightAnalysis.Monochromator.ConnectResponse> __Method_Connect = new grpc::Method<global::Instrosetta.Interfaces.LightAnalysis.Monochromator.ConnectRequest, global::Instrosetta.Interfaces.LightAnalysis.Monochromator.ConnectResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "Connect",
-        __Marshaller_instrosetta_interfaces_optomechanics_monochromator_ConnectRequest,
-        __Marshaller_instrosetta_interfaces_optomechanics_monochromator_ConnectResponse);
+        __Marshaller_instrosetta_interfaces_light_analysis_monochromator_ConnectRequest,
+        __Marshaller_instrosetta_interfaces_light_analysis_monochromator_ConnectResponse);
 
-    static readonly grpc::Method<global::Instrosetta.Interfaces.Optomechanics.Monochromator.DisconnectRequest, global::Instrosetta.Interfaces.Optomechanics.Monochromator.DisconnectResponse> __Method_Disconnect = new grpc::Method<global::Instrosetta.Interfaces.Optomechanics.Monochromator.DisconnectRequest, global::Instrosetta.Interfaces.Optomechanics.Monochromator.DisconnectResponse>(
+    static readonly grpc::Method<global::Instrosetta.Interfaces.LightAnalysis.Monochromator.DisconnectRequest, global::Instrosetta.Interfaces.LightAnalysis.Monochromator.DisconnectResponse> __Method_Disconnect = new grpc::Method<global::Instrosetta.Interfaces.LightAnalysis.Monochromator.DisconnectRequest, global::Instrosetta.Interfaces.LightAnalysis.Monochromator.DisconnectResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "Disconnect",
-        __Marshaller_instrosetta_interfaces_optomechanics_monochromator_DisconnectRequest,
-        __Marshaller_instrosetta_interfaces_optomechanics_monochromator_DisconnectResponse);
+        __Marshaller_instrosetta_interfaces_light_analysis_monochromator_DisconnectRequest,
+        __Marshaller_instrosetta_interfaces_light_analysis_monochromator_DisconnectResponse);
 
-    static readonly grpc::Method<global::Instrosetta.Interfaces.Optomechanics.Monochromator.GetWavelengthRangeRequest, global::Instrosetta.Interfaces.Optomechanics.Monochromator.GetWavelengthRangeResponse> __Method_GetWavelengthRange = new grpc::Method<global::Instrosetta.Interfaces.Optomechanics.Monochromator.GetWavelengthRangeRequest, global::Instrosetta.Interfaces.Optomechanics.Monochromator.GetWavelengthRangeResponse>(
+    static readonly grpc::Method<global::Instrosetta.Interfaces.LightAnalysis.Monochromator.GetWavelengthRangeRequest, global::Instrosetta.Interfaces.LightAnalysis.Monochromator.GetWavelengthRangeResponse> __Method_GetWavelengthRange = new grpc::Method<global::Instrosetta.Interfaces.LightAnalysis.Monochromator.GetWavelengthRangeRequest, global::Instrosetta.Interfaces.LightAnalysis.Monochromator.GetWavelengthRangeResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "GetWavelengthRange",
-        __Marshaller_instrosetta_interfaces_optomechanics_monochromator_GetWavelengthRangeRequest,
-        __Marshaller_instrosetta_interfaces_optomechanics_monochromator_GetWavelengthRangeResponse);
+        __Marshaller_instrosetta_interfaces_light_analysis_monochromator_GetWavelengthRangeRequest,
+        __Marshaller_instrosetta_interfaces_light_analysis_monochromator_GetWavelengthRangeResponse);
 
-    static readonly grpc::Method<global::Instrosetta.Interfaces.Optomechanics.Monochromator.GetWavelengthRequest, global::Instrosetta.Interfaces.Optomechanics.Monochromator.GetWavelengthResponse> __Method_GetWavelength = new grpc::Method<global::Instrosetta.Interfaces.Optomechanics.Monochromator.GetWavelengthRequest, global::Instrosetta.Interfaces.Optomechanics.Monochromator.GetWavelengthResponse>(
+    static readonly grpc::Method<global::Instrosetta.Interfaces.LightAnalysis.Monochromator.GetWavelengthRequest, global::Instrosetta.Interfaces.LightAnalysis.Monochromator.GetWavelengthResponse> __Method_GetWavelength = new grpc::Method<global::Instrosetta.Interfaces.LightAnalysis.Monochromator.GetWavelengthRequest, global::Instrosetta.Interfaces.LightAnalysis.Monochromator.GetWavelengthResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "GetWavelength",
-        __Marshaller_instrosetta_interfaces_optomechanics_monochromator_GetWavelengthRequest,
-        __Marshaller_instrosetta_interfaces_optomechanics_monochromator_GetWavelengthResponse);
+        __Marshaller_instrosetta_interfaces_light_analysis_monochromator_GetWavelengthRequest,
+        __Marshaller_instrosetta_interfaces_light_analysis_monochromator_GetWavelengthResponse);
 
-    static readonly grpc::Method<global::Instrosetta.Interfaces.Optomechanics.Monochromator.SetWavelengthRequest, global::Instrosetta.Interfaces.Optomechanics.Monochromator.SetWavelengthResponse> __Method_SetWavelength = new grpc::Method<global::Instrosetta.Interfaces.Optomechanics.Monochromator.SetWavelengthRequest, global::Instrosetta.Interfaces.Optomechanics.Monochromator.SetWavelengthResponse>(
+    static readonly grpc::Method<global::Instrosetta.Interfaces.LightAnalysis.Monochromator.SetWavelengthRequest, global::Instrosetta.Interfaces.LightAnalysis.Monochromator.SetWavelengthResponse> __Method_SetWavelength = new grpc::Method<global::Instrosetta.Interfaces.LightAnalysis.Monochromator.SetWavelengthRequest, global::Instrosetta.Interfaces.LightAnalysis.Monochromator.SetWavelengthResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "SetWavelength",
-        __Marshaller_instrosetta_interfaces_optomechanics_monochromator_SetWavelengthRequest,
-        __Marshaller_instrosetta_interfaces_optomechanics_monochromator_SetWavelengthResponse);
+        __Marshaller_instrosetta_interfaces_light_analysis_monochromator_SetWavelengthRequest,
+        __Marshaller_instrosetta_interfaces_light_analysis_monochromator_SetWavelengthResponse);
 
-    static readonly grpc::Method<global::Instrosetta.Interfaces.Optomechanics.Monochromator.GetGratingOptionsRequest, global::Instrosetta.Interfaces.Optomechanics.Monochromator.GetGratingOptionsResponse> __Method_GetGratingRange = new grpc::Method<global::Instrosetta.Interfaces.Optomechanics.Monochromator.GetGratingOptionsRequest, global::Instrosetta.Interfaces.Optomechanics.Monochromator.GetGratingOptionsResponse>(
+    static readonly grpc::Method<global::Instrosetta.Interfaces.LightAnalysis.Monochromator.GetGratingOptionsRequest, global::Instrosetta.Interfaces.LightAnalysis.Monochromator.GetGratingOptionsResponse> __Method_GetGratingRange = new grpc::Method<global::Instrosetta.Interfaces.LightAnalysis.Monochromator.GetGratingOptionsRequest, global::Instrosetta.Interfaces.LightAnalysis.Monochromator.GetGratingOptionsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "GetGratingRange",
-        __Marshaller_instrosetta_interfaces_optomechanics_monochromator_GetGratingOptionsRequest,
-        __Marshaller_instrosetta_interfaces_optomechanics_monochromator_GetGratingOptionsResponse);
+        __Marshaller_instrosetta_interfaces_light_analysis_monochromator_GetGratingOptionsRequest,
+        __Marshaller_instrosetta_interfaces_light_analysis_monochromator_GetGratingOptionsResponse);
 
-    static readonly grpc::Method<global::Instrosetta.Interfaces.Optomechanics.Monochromator.GetGratingRequest, global::Instrosetta.Interfaces.Optomechanics.Monochromator.GetGratingResponse> __Method_GetGrating = new grpc::Method<global::Instrosetta.Interfaces.Optomechanics.Monochromator.GetGratingRequest, global::Instrosetta.Interfaces.Optomechanics.Monochromator.GetGratingResponse>(
+    static readonly grpc::Method<global::Instrosetta.Interfaces.LightAnalysis.Monochromator.GetGratingRequest, global::Instrosetta.Interfaces.LightAnalysis.Monochromator.GetGratingResponse> __Method_GetGrating = new grpc::Method<global::Instrosetta.Interfaces.LightAnalysis.Monochromator.GetGratingRequest, global::Instrosetta.Interfaces.LightAnalysis.Monochromator.GetGratingResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "GetGrating",
-        __Marshaller_instrosetta_interfaces_optomechanics_monochromator_GetGratingRequest,
-        __Marshaller_instrosetta_interfaces_optomechanics_monochromator_GetGratingResponse);
+        __Marshaller_instrosetta_interfaces_light_analysis_monochromator_GetGratingRequest,
+        __Marshaller_instrosetta_interfaces_light_analysis_monochromator_GetGratingResponse);
 
-    static readonly grpc::Method<global::Instrosetta.Interfaces.Optomechanics.Monochromator.SetGratingRequest, global::Instrosetta.Interfaces.Optomechanics.Monochromator.SetGratingResponse> __Method_SetGrating = new grpc::Method<global::Instrosetta.Interfaces.Optomechanics.Monochromator.SetGratingRequest, global::Instrosetta.Interfaces.Optomechanics.Monochromator.SetGratingResponse>(
+    static readonly grpc::Method<global::Instrosetta.Interfaces.LightAnalysis.Monochromator.SetGratingRequest, global::Instrosetta.Interfaces.LightAnalysis.Monochromator.SetGratingResponse> __Method_SetGrating = new grpc::Method<global::Instrosetta.Interfaces.LightAnalysis.Monochromator.SetGratingRequest, global::Instrosetta.Interfaces.LightAnalysis.Monochromator.SetGratingResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "SetGrating",
-        __Marshaller_instrosetta_interfaces_optomechanics_monochromator_SetGratingRequest,
-        __Marshaller_instrosetta_interfaces_optomechanics_monochromator_SetGratingResponse);
+        __Marshaller_instrosetta_interfaces_light_analysis_monochromator_SetGratingRequest,
+        __Marshaller_instrosetta_interfaces_light_analysis_monochromator_SetGratingResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
-      get { return global::Instrosetta.Interfaces.Optomechanics.Monochromator.MonochromatorReflection.Descriptor.Services[0]; }
+      get { return global::Instrosetta.Interfaces.LightAnalysis.Monochromator.MonochromatorReflection.Descriptor.Services[0]; }
     }
 
     /// <summary>Base class for server-side implementations of Monochromator</summary>
     public abstract partial class MonochromatorBase
     {
-      public virtual global::System.Threading.Tasks.Task<global::Instrosetta.Interfaces.Optomechanics.Monochromator.ConnectResponse> Connect(global::Instrosetta.Interfaces.Optomechanics.Monochromator.ConnectRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Instrosetta.Interfaces.LightAnalysis.Monochromator.ConnectResponse> Connect(global::Instrosetta.Interfaces.LightAnalysis.Monochromator.ConnectRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
-      public virtual global::System.Threading.Tasks.Task<global::Instrosetta.Interfaces.Optomechanics.Monochromator.DisconnectResponse> Disconnect(global::Instrosetta.Interfaces.Optomechanics.Monochromator.DisconnectRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Instrosetta.Interfaces.LightAnalysis.Monochromator.DisconnectResponse> Disconnect(global::Instrosetta.Interfaces.LightAnalysis.Monochromator.DisconnectRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
-      public virtual global::System.Threading.Tasks.Task<global::Instrosetta.Interfaces.Optomechanics.Monochromator.GetWavelengthRangeResponse> GetWavelengthRange(global::Instrosetta.Interfaces.Optomechanics.Monochromator.GetWavelengthRangeRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Instrosetta.Interfaces.LightAnalysis.Monochromator.GetWavelengthRangeResponse> GetWavelengthRange(global::Instrosetta.Interfaces.LightAnalysis.Monochromator.GetWavelengthRangeRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
-      public virtual global::System.Threading.Tasks.Task<global::Instrosetta.Interfaces.Optomechanics.Monochromator.GetWavelengthResponse> GetWavelength(global::Instrosetta.Interfaces.Optomechanics.Monochromator.GetWavelengthRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Instrosetta.Interfaces.LightAnalysis.Monochromator.GetWavelengthResponse> GetWavelength(global::Instrosetta.Interfaces.LightAnalysis.Monochromator.GetWavelengthRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
-      public virtual global::System.Threading.Tasks.Task<global::Instrosetta.Interfaces.Optomechanics.Monochromator.SetWavelengthResponse> SetWavelength(global::Instrosetta.Interfaces.Optomechanics.Monochromator.SetWavelengthRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Instrosetta.Interfaces.LightAnalysis.Monochromator.SetWavelengthResponse> SetWavelength(global::Instrosetta.Interfaces.LightAnalysis.Monochromator.SetWavelengthRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
-      public virtual global::System.Threading.Tasks.Task<global::Instrosetta.Interfaces.Optomechanics.Monochromator.GetGratingOptionsResponse> GetGratingRange(global::Instrosetta.Interfaces.Optomechanics.Monochromator.GetGratingOptionsRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Instrosetta.Interfaces.LightAnalysis.Monochromator.GetGratingOptionsResponse> GetGratingRange(global::Instrosetta.Interfaces.LightAnalysis.Monochromator.GetGratingOptionsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
-      public virtual global::System.Threading.Tasks.Task<global::Instrosetta.Interfaces.Optomechanics.Monochromator.GetGratingResponse> GetGrating(global::Instrosetta.Interfaces.Optomechanics.Monochromator.GetGratingRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Instrosetta.Interfaces.LightAnalysis.Monochromator.GetGratingResponse> GetGrating(global::Instrosetta.Interfaces.LightAnalysis.Monochromator.GetGratingRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
-      public virtual global::System.Threading.Tasks.Task<global::Instrosetta.Interfaces.Optomechanics.Monochromator.SetGratingResponse> SetGrating(global::Instrosetta.Interfaces.Optomechanics.Monochromator.SetGratingRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Instrosetta.Interfaces.LightAnalysis.Monochromator.SetGratingResponse> SetGrating(global::Instrosetta.Interfaces.LightAnalysis.Monochromator.SetGratingRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -159,131 +159,131 @@ namespace Instrosetta.Interfaces.Optomechanics.Monochromator {
       {
       }
 
-      public virtual global::Instrosetta.Interfaces.Optomechanics.Monochromator.ConnectResponse Connect(global::Instrosetta.Interfaces.Optomechanics.Monochromator.ConnectRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::Instrosetta.Interfaces.LightAnalysis.Monochromator.ConnectResponse Connect(global::Instrosetta.Interfaces.LightAnalysis.Monochromator.ConnectRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return Connect(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual global::Instrosetta.Interfaces.Optomechanics.Monochromator.ConnectResponse Connect(global::Instrosetta.Interfaces.Optomechanics.Monochromator.ConnectRequest request, grpc::CallOptions options)
+      public virtual global::Instrosetta.Interfaces.LightAnalysis.Monochromator.ConnectResponse Connect(global::Instrosetta.Interfaces.LightAnalysis.Monochromator.ConnectRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_Connect, null, options, request);
       }
-      public virtual grpc::AsyncUnaryCall<global::Instrosetta.Interfaces.Optomechanics.Monochromator.ConnectResponse> ConnectAsync(global::Instrosetta.Interfaces.Optomechanics.Monochromator.ConnectRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Instrosetta.Interfaces.LightAnalysis.Monochromator.ConnectResponse> ConnectAsync(global::Instrosetta.Interfaces.LightAnalysis.Monochromator.ConnectRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ConnectAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual grpc::AsyncUnaryCall<global::Instrosetta.Interfaces.Optomechanics.Monochromator.ConnectResponse> ConnectAsync(global::Instrosetta.Interfaces.Optomechanics.Monochromator.ConnectRequest request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::Instrosetta.Interfaces.LightAnalysis.Monochromator.ConnectResponse> ConnectAsync(global::Instrosetta.Interfaces.LightAnalysis.Monochromator.ConnectRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_Connect, null, options, request);
       }
-      public virtual global::Instrosetta.Interfaces.Optomechanics.Monochromator.DisconnectResponse Disconnect(global::Instrosetta.Interfaces.Optomechanics.Monochromator.DisconnectRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::Instrosetta.Interfaces.LightAnalysis.Monochromator.DisconnectResponse Disconnect(global::Instrosetta.Interfaces.LightAnalysis.Monochromator.DisconnectRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return Disconnect(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual global::Instrosetta.Interfaces.Optomechanics.Monochromator.DisconnectResponse Disconnect(global::Instrosetta.Interfaces.Optomechanics.Monochromator.DisconnectRequest request, grpc::CallOptions options)
+      public virtual global::Instrosetta.Interfaces.LightAnalysis.Monochromator.DisconnectResponse Disconnect(global::Instrosetta.Interfaces.LightAnalysis.Monochromator.DisconnectRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_Disconnect, null, options, request);
       }
-      public virtual grpc::AsyncUnaryCall<global::Instrosetta.Interfaces.Optomechanics.Monochromator.DisconnectResponse> DisconnectAsync(global::Instrosetta.Interfaces.Optomechanics.Monochromator.DisconnectRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Instrosetta.Interfaces.LightAnalysis.Monochromator.DisconnectResponse> DisconnectAsync(global::Instrosetta.Interfaces.LightAnalysis.Monochromator.DisconnectRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DisconnectAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual grpc::AsyncUnaryCall<global::Instrosetta.Interfaces.Optomechanics.Monochromator.DisconnectResponse> DisconnectAsync(global::Instrosetta.Interfaces.Optomechanics.Monochromator.DisconnectRequest request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::Instrosetta.Interfaces.LightAnalysis.Monochromator.DisconnectResponse> DisconnectAsync(global::Instrosetta.Interfaces.LightAnalysis.Monochromator.DisconnectRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_Disconnect, null, options, request);
       }
-      public virtual global::Instrosetta.Interfaces.Optomechanics.Monochromator.GetWavelengthRangeResponse GetWavelengthRange(global::Instrosetta.Interfaces.Optomechanics.Monochromator.GetWavelengthRangeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::Instrosetta.Interfaces.LightAnalysis.Monochromator.GetWavelengthRangeResponse GetWavelengthRange(global::Instrosetta.Interfaces.LightAnalysis.Monochromator.GetWavelengthRangeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetWavelengthRange(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual global::Instrosetta.Interfaces.Optomechanics.Monochromator.GetWavelengthRangeResponse GetWavelengthRange(global::Instrosetta.Interfaces.Optomechanics.Monochromator.GetWavelengthRangeRequest request, grpc::CallOptions options)
+      public virtual global::Instrosetta.Interfaces.LightAnalysis.Monochromator.GetWavelengthRangeResponse GetWavelengthRange(global::Instrosetta.Interfaces.LightAnalysis.Monochromator.GetWavelengthRangeRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetWavelengthRange, null, options, request);
       }
-      public virtual grpc::AsyncUnaryCall<global::Instrosetta.Interfaces.Optomechanics.Monochromator.GetWavelengthRangeResponse> GetWavelengthRangeAsync(global::Instrosetta.Interfaces.Optomechanics.Monochromator.GetWavelengthRangeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Instrosetta.Interfaces.LightAnalysis.Monochromator.GetWavelengthRangeResponse> GetWavelengthRangeAsync(global::Instrosetta.Interfaces.LightAnalysis.Monochromator.GetWavelengthRangeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetWavelengthRangeAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual grpc::AsyncUnaryCall<global::Instrosetta.Interfaces.Optomechanics.Monochromator.GetWavelengthRangeResponse> GetWavelengthRangeAsync(global::Instrosetta.Interfaces.Optomechanics.Monochromator.GetWavelengthRangeRequest request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::Instrosetta.Interfaces.LightAnalysis.Monochromator.GetWavelengthRangeResponse> GetWavelengthRangeAsync(global::Instrosetta.Interfaces.LightAnalysis.Monochromator.GetWavelengthRangeRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetWavelengthRange, null, options, request);
       }
-      public virtual global::Instrosetta.Interfaces.Optomechanics.Monochromator.GetWavelengthResponse GetWavelength(global::Instrosetta.Interfaces.Optomechanics.Monochromator.GetWavelengthRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::Instrosetta.Interfaces.LightAnalysis.Monochromator.GetWavelengthResponse GetWavelength(global::Instrosetta.Interfaces.LightAnalysis.Monochromator.GetWavelengthRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetWavelength(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual global::Instrosetta.Interfaces.Optomechanics.Monochromator.GetWavelengthResponse GetWavelength(global::Instrosetta.Interfaces.Optomechanics.Monochromator.GetWavelengthRequest request, grpc::CallOptions options)
+      public virtual global::Instrosetta.Interfaces.LightAnalysis.Monochromator.GetWavelengthResponse GetWavelength(global::Instrosetta.Interfaces.LightAnalysis.Monochromator.GetWavelengthRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetWavelength, null, options, request);
       }
-      public virtual grpc::AsyncUnaryCall<global::Instrosetta.Interfaces.Optomechanics.Monochromator.GetWavelengthResponse> GetWavelengthAsync(global::Instrosetta.Interfaces.Optomechanics.Monochromator.GetWavelengthRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Instrosetta.Interfaces.LightAnalysis.Monochromator.GetWavelengthResponse> GetWavelengthAsync(global::Instrosetta.Interfaces.LightAnalysis.Monochromator.GetWavelengthRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetWavelengthAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual grpc::AsyncUnaryCall<global::Instrosetta.Interfaces.Optomechanics.Monochromator.GetWavelengthResponse> GetWavelengthAsync(global::Instrosetta.Interfaces.Optomechanics.Monochromator.GetWavelengthRequest request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::Instrosetta.Interfaces.LightAnalysis.Monochromator.GetWavelengthResponse> GetWavelengthAsync(global::Instrosetta.Interfaces.LightAnalysis.Monochromator.GetWavelengthRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetWavelength, null, options, request);
       }
-      public virtual global::Instrosetta.Interfaces.Optomechanics.Monochromator.SetWavelengthResponse SetWavelength(global::Instrosetta.Interfaces.Optomechanics.Monochromator.SetWavelengthRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::Instrosetta.Interfaces.LightAnalysis.Monochromator.SetWavelengthResponse SetWavelength(global::Instrosetta.Interfaces.LightAnalysis.Monochromator.SetWavelengthRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return SetWavelength(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual global::Instrosetta.Interfaces.Optomechanics.Monochromator.SetWavelengthResponse SetWavelength(global::Instrosetta.Interfaces.Optomechanics.Monochromator.SetWavelengthRequest request, grpc::CallOptions options)
+      public virtual global::Instrosetta.Interfaces.LightAnalysis.Monochromator.SetWavelengthResponse SetWavelength(global::Instrosetta.Interfaces.LightAnalysis.Monochromator.SetWavelengthRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_SetWavelength, null, options, request);
       }
-      public virtual grpc::AsyncUnaryCall<global::Instrosetta.Interfaces.Optomechanics.Monochromator.SetWavelengthResponse> SetWavelengthAsync(global::Instrosetta.Interfaces.Optomechanics.Monochromator.SetWavelengthRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Instrosetta.Interfaces.LightAnalysis.Monochromator.SetWavelengthResponse> SetWavelengthAsync(global::Instrosetta.Interfaces.LightAnalysis.Monochromator.SetWavelengthRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return SetWavelengthAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual grpc::AsyncUnaryCall<global::Instrosetta.Interfaces.Optomechanics.Monochromator.SetWavelengthResponse> SetWavelengthAsync(global::Instrosetta.Interfaces.Optomechanics.Monochromator.SetWavelengthRequest request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::Instrosetta.Interfaces.LightAnalysis.Monochromator.SetWavelengthResponse> SetWavelengthAsync(global::Instrosetta.Interfaces.LightAnalysis.Monochromator.SetWavelengthRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_SetWavelength, null, options, request);
       }
-      public virtual global::Instrosetta.Interfaces.Optomechanics.Monochromator.GetGratingOptionsResponse GetGratingRange(global::Instrosetta.Interfaces.Optomechanics.Monochromator.GetGratingOptionsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::Instrosetta.Interfaces.LightAnalysis.Monochromator.GetGratingOptionsResponse GetGratingRange(global::Instrosetta.Interfaces.LightAnalysis.Monochromator.GetGratingOptionsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetGratingRange(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual global::Instrosetta.Interfaces.Optomechanics.Monochromator.GetGratingOptionsResponse GetGratingRange(global::Instrosetta.Interfaces.Optomechanics.Monochromator.GetGratingOptionsRequest request, grpc::CallOptions options)
+      public virtual global::Instrosetta.Interfaces.LightAnalysis.Monochromator.GetGratingOptionsResponse GetGratingRange(global::Instrosetta.Interfaces.LightAnalysis.Monochromator.GetGratingOptionsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetGratingRange, null, options, request);
       }
-      public virtual grpc::AsyncUnaryCall<global::Instrosetta.Interfaces.Optomechanics.Monochromator.GetGratingOptionsResponse> GetGratingRangeAsync(global::Instrosetta.Interfaces.Optomechanics.Monochromator.GetGratingOptionsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Instrosetta.Interfaces.LightAnalysis.Monochromator.GetGratingOptionsResponse> GetGratingRangeAsync(global::Instrosetta.Interfaces.LightAnalysis.Monochromator.GetGratingOptionsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetGratingRangeAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual grpc::AsyncUnaryCall<global::Instrosetta.Interfaces.Optomechanics.Monochromator.GetGratingOptionsResponse> GetGratingRangeAsync(global::Instrosetta.Interfaces.Optomechanics.Monochromator.GetGratingOptionsRequest request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::Instrosetta.Interfaces.LightAnalysis.Monochromator.GetGratingOptionsResponse> GetGratingRangeAsync(global::Instrosetta.Interfaces.LightAnalysis.Monochromator.GetGratingOptionsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetGratingRange, null, options, request);
       }
-      public virtual global::Instrosetta.Interfaces.Optomechanics.Monochromator.GetGratingResponse GetGrating(global::Instrosetta.Interfaces.Optomechanics.Monochromator.GetGratingRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::Instrosetta.Interfaces.LightAnalysis.Monochromator.GetGratingResponse GetGrating(global::Instrosetta.Interfaces.LightAnalysis.Monochromator.GetGratingRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetGrating(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual global::Instrosetta.Interfaces.Optomechanics.Monochromator.GetGratingResponse GetGrating(global::Instrosetta.Interfaces.Optomechanics.Monochromator.GetGratingRequest request, grpc::CallOptions options)
+      public virtual global::Instrosetta.Interfaces.LightAnalysis.Monochromator.GetGratingResponse GetGrating(global::Instrosetta.Interfaces.LightAnalysis.Monochromator.GetGratingRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetGrating, null, options, request);
       }
-      public virtual grpc::AsyncUnaryCall<global::Instrosetta.Interfaces.Optomechanics.Monochromator.GetGratingResponse> GetGratingAsync(global::Instrosetta.Interfaces.Optomechanics.Monochromator.GetGratingRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Instrosetta.Interfaces.LightAnalysis.Monochromator.GetGratingResponse> GetGratingAsync(global::Instrosetta.Interfaces.LightAnalysis.Monochromator.GetGratingRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetGratingAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual grpc::AsyncUnaryCall<global::Instrosetta.Interfaces.Optomechanics.Monochromator.GetGratingResponse> GetGratingAsync(global::Instrosetta.Interfaces.Optomechanics.Monochromator.GetGratingRequest request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::Instrosetta.Interfaces.LightAnalysis.Monochromator.GetGratingResponse> GetGratingAsync(global::Instrosetta.Interfaces.LightAnalysis.Monochromator.GetGratingRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetGrating, null, options, request);
       }
-      public virtual global::Instrosetta.Interfaces.Optomechanics.Monochromator.SetGratingResponse SetGrating(global::Instrosetta.Interfaces.Optomechanics.Monochromator.SetGratingRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::Instrosetta.Interfaces.LightAnalysis.Monochromator.SetGratingResponse SetGrating(global::Instrosetta.Interfaces.LightAnalysis.Monochromator.SetGratingRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return SetGrating(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual global::Instrosetta.Interfaces.Optomechanics.Monochromator.SetGratingResponse SetGrating(global::Instrosetta.Interfaces.Optomechanics.Monochromator.SetGratingRequest request, grpc::CallOptions options)
+      public virtual global::Instrosetta.Interfaces.LightAnalysis.Monochromator.SetGratingResponse SetGrating(global::Instrosetta.Interfaces.LightAnalysis.Monochromator.SetGratingRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_SetGrating, null, options, request);
       }
-      public virtual grpc::AsyncUnaryCall<global::Instrosetta.Interfaces.Optomechanics.Monochromator.SetGratingResponse> SetGratingAsync(global::Instrosetta.Interfaces.Optomechanics.Monochromator.SetGratingRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Instrosetta.Interfaces.LightAnalysis.Monochromator.SetGratingResponse> SetGratingAsync(global::Instrosetta.Interfaces.LightAnalysis.Monochromator.SetGratingRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return SetGratingAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual grpc::AsyncUnaryCall<global::Instrosetta.Interfaces.Optomechanics.Monochromator.SetGratingResponse> SetGratingAsync(global::Instrosetta.Interfaces.Optomechanics.Monochromator.SetGratingRequest request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::Instrosetta.Interfaces.LightAnalysis.Monochromator.SetGratingResponse> SetGratingAsync(global::Instrosetta.Interfaces.LightAnalysis.Monochromator.SetGratingRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_SetGrating, null, options, request);
       }
@@ -315,14 +315,14 @@ namespace Instrosetta.Interfaces.Optomechanics.Monochromator {
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
     public static void BindService(grpc::ServiceBinderBase serviceBinder, MonochromatorBase serviceImpl)
     {
-      serviceBinder.AddMethod(__Method_Connect, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Instrosetta.Interfaces.Optomechanics.Monochromator.ConnectRequest, global::Instrosetta.Interfaces.Optomechanics.Monochromator.ConnectResponse>(serviceImpl.Connect));
-      serviceBinder.AddMethod(__Method_Disconnect, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Instrosetta.Interfaces.Optomechanics.Monochromator.DisconnectRequest, global::Instrosetta.Interfaces.Optomechanics.Monochromator.DisconnectResponse>(serviceImpl.Disconnect));
-      serviceBinder.AddMethod(__Method_GetWavelengthRange, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Instrosetta.Interfaces.Optomechanics.Monochromator.GetWavelengthRangeRequest, global::Instrosetta.Interfaces.Optomechanics.Monochromator.GetWavelengthRangeResponse>(serviceImpl.GetWavelengthRange));
-      serviceBinder.AddMethod(__Method_GetWavelength, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Instrosetta.Interfaces.Optomechanics.Monochromator.GetWavelengthRequest, global::Instrosetta.Interfaces.Optomechanics.Monochromator.GetWavelengthResponse>(serviceImpl.GetWavelength));
-      serviceBinder.AddMethod(__Method_SetWavelength, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Instrosetta.Interfaces.Optomechanics.Monochromator.SetWavelengthRequest, global::Instrosetta.Interfaces.Optomechanics.Monochromator.SetWavelengthResponse>(serviceImpl.SetWavelength));
-      serviceBinder.AddMethod(__Method_GetGratingRange, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Instrosetta.Interfaces.Optomechanics.Monochromator.GetGratingOptionsRequest, global::Instrosetta.Interfaces.Optomechanics.Monochromator.GetGratingOptionsResponse>(serviceImpl.GetGratingRange));
-      serviceBinder.AddMethod(__Method_GetGrating, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Instrosetta.Interfaces.Optomechanics.Monochromator.GetGratingRequest, global::Instrosetta.Interfaces.Optomechanics.Monochromator.GetGratingResponse>(serviceImpl.GetGrating));
-      serviceBinder.AddMethod(__Method_SetGrating, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Instrosetta.Interfaces.Optomechanics.Monochromator.SetGratingRequest, global::Instrosetta.Interfaces.Optomechanics.Monochromator.SetGratingResponse>(serviceImpl.SetGrating));
+      serviceBinder.AddMethod(__Method_Connect, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Instrosetta.Interfaces.LightAnalysis.Monochromator.ConnectRequest, global::Instrosetta.Interfaces.LightAnalysis.Monochromator.ConnectResponse>(serviceImpl.Connect));
+      serviceBinder.AddMethod(__Method_Disconnect, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Instrosetta.Interfaces.LightAnalysis.Monochromator.DisconnectRequest, global::Instrosetta.Interfaces.LightAnalysis.Monochromator.DisconnectResponse>(serviceImpl.Disconnect));
+      serviceBinder.AddMethod(__Method_GetWavelengthRange, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Instrosetta.Interfaces.LightAnalysis.Monochromator.GetWavelengthRangeRequest, global::Instrosetta.Interfaces.LightAnalysis.Monochromator.GetWavelengthRangeResponse>(serviceImpl.GetWavelengthRange));
+      serviceBinder.AddMethod(__Method_GetWavelength, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Instrosetta.Interfaces.LightAnalysis.Monochromator.GetWavelengthRequest, global::Instrosetta.Interfaces.LightAnalysis.Monochromator.GetWavelengthResponse>(serviceImpl.GetWavelength));
+      serviceBinder.AddMethod(__Method_SetWavelength, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Instrosetta.Interfaces.LightAnalysis.Monochromator.SetWavelengthRequest, global::Instrosetta.Interfaces.LightAnalysis.Monochromator.SetWavelengthResponse>(serviceImpl.SetWavelength));
+      serviceBinder.AddMethod(__Method_GetGratingRange, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Instrosetta.Interfaces.LightAnalysis.Monochromator.GetGratingOptionsRequest, global::Instrosetta.Interfaces.LightAnalysis.Monochromator.GetGratingOptionsResponse>(serviceImpl.GetGratingRange));
+      serviceBinder.AddMethod(__Method_GetGrating, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Instrosetta.Interfaces.LightAnalysis.Monochromator.GetGratingRequest, global::Instrosetta.Interfaces.LightAnalysis.Monochromator.GetGratingResponse>(serviceImpl.GetGrating));
+      serviceBinder.AddMethod(__Method_SetGrating, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Instrosetta.Interfaces.LightAnalysis.Monochromator.SetGratingRequest, global::Instrosetta.Interfaces.LightAnalysis.Monochromator.SetGratingResponse>(serviceImpl.SetGrating));
     }
 
   }
