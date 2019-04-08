@@ -347,7 +347,7 @@
     <ROW BootstrOptKey="GlobalOptions" DownloadFolder="[AppDataFolder][|Manufacturer]\[|ProductName]\prerequisites" Options="2"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.BuildComponent">
-    <ROW BuildKey="DefaultBuild" BuildName="DefaultBuild" BuildOrder="1" BuildType="0" Languages="en" InstallationType="4" UseLargeSchema="true" MsiPackageType="x64"/>
+    <ROW BuildKey="DefaultBuild" BuildName="DefaultBuild" BuildOrder="1" BuildType="0" PackageFileName="ThorlabsKDC101ServerInstaller" Languages="en" InstallationType="4" UseLargeSchema="true" MsiPackageType="x64"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.DictionaryComponent">
     <ROW Path="&lt;AI_DICTS&gt;ui.ail"/>
@@ -450,7 +450,7 @@
     <ROW UpgradeCode="[|UpgradeCode]" VersionMin="[|ProductVersion]" Attributes="2" ActionProperty="AI_NEWERPRODUCTFOUND"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.VsProjectComponent">
-    <ROW ProjectId="{7481cf03-f6e3-4b2c-a8c5-58a37d8106fc}" ProjectName="ThorlabsKDC101ServerCLI" OutputGroup="PrimaryOutput" OutputFile="ThorlabsKDC101ServerCLI.exe"/>
+    <ROW ProjectId="{7481cf03-f6e3-4b2c-a8c5-58a37d8106fc}" ProjectName="ThorlabsKDC101ServerCLI" OutputGroup="PrimaryOutput" OutputFile="ThorlabsKDC101ServerCLI.exe" OutputFileShortcut="ThorlabsKDC101ServerCLI"/>
     <ROW ProjectId="{7481cf03-f6e3-4b2c-a8c5-58a37d8106fc}" ProjectName="ThorlabsKDC101ServerCLI" OutputGroup="PrimaryOutput" OutputFile="ThorlabsKDC101ServerCLI.exe.config"/>
     <ROW ProjectId="{7481cf03-f6e3-4b2c-a8c5-58a37d8106fc}" ProjectName="ThorlabsKDC101ServerCLI" OutputGroup="References" OutputFile="Google.Protobuf.dll"/>
     <ROW ProjectId="{7481cf03-f6e3-4b2c-a8c5-58a37d8106fc}" ProjectName="ThorlabsKDC101ServerCLI" OutputGroup="References" OutputFile="Grpc.Core.Api.dll"/>
@@ -488,7 +488,7 @@
     <ROW ProjectId="{7481cf03-f6e3-4b2c-a8c5-58a37d8106fc}" ProjectName="ThorlabsKDC101ServerCLI" OutputGroup="ContentOutput" OutputFile="Thorlabs.MotionControl.Tools.Logging.dll_2"/>
     <ROW ProjectId="{7481cf03-f6e3-4b2c-a8c5-58a37d8106fc}" ProjectName="ThorlabsKDC101ServerCLI" OutputGroup="ContentOutput" OutputFile="Thorlabs.MotionControl.Tools.WPF.dll"/>
     <ROW ProjectId="{7481cf03-f6e3-4b2c-a8c5-58a37d8106fc}" ProjectName="ThorlabsKDC101ServerCLI" OutputGroup="ContentOutput" OutputFile="Thorlabs.MotionControl.Tools.WPF.UI.dll"/>
-    <ROW ProjectId="{05968cf9-e99e-4f2f-8d55-0c9fffd34459}" ProjectName="ThorlabsKDC101ServerGUI" OutputGroup="PrimaryOutput" OutputFile="ThorlabsKDC101ServerGUI.exe"/>
+    <ROW ProjectId="{05968cf9-e99e-4f2f-8d55-0c9fffd34459}" ProjectName="ThorlabsKDC101ServerGUI" OutputGroup="PrimaryOutput" OutputFile="ThorlabsKDC101ServerGUI.exe" OutputFileShortcut="ThorlabsKDC101ServerGUI"/>
     <ROW ProjectId="{05968cf9-e99e-4f2f-8d55-0c9fffd34459}" ProjectName="ThorlabsKDC101ServerGUI" OutputGroup="PrimaryOutput" OutputFile="ThorlabsKDC101ServerGUI.exe.config"/>
     <ROW ProjectId="{05968cf9-e99e-4f2f-8d55-0c9fffd34459}" ProjectName="ThorlabsKDC101ServerGUI" OutputGroup="References" OutputFile="Google.Protobuf.dll_1"/>
     <ROW ProjectId="{05968cf9-e99e-4f2f-8d55-0c9fffd34459}" ProjectName="ThorlabsKDC101ServerGUI" OutputGroup="References" OutputFile="Grpc.Core.Api.dll_1"/>
