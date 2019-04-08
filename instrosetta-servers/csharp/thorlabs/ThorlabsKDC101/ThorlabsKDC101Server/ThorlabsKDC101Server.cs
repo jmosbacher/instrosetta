@@ -40,8 +40,24 @@ namespace ThorlabsKDC101Server
 
         public void StopServing()
             {
-                _Impl.Disconnect();
+            
+            try
+            {
+                _Impl.OnExit();
+            }
+            catch (Exception ex)
+            {
+
+            }
+            try
+            {
                 _Server.ShutdownAsync().Wait();
+            }
+            catch (Exception ex)
+            {
+                
+            }
+                
                 _Server = null;
                 _Impl = null;
                 _Serving = false;

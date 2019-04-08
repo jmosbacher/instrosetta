@@ -42,7 +42,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
+    <PlatformTarget>x64</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -101,7 +101,8 @@
     <Reference Include="Thorlabs.MotionControl.PrivateInternal">
       <HintPath>..\ThorlabsDependencies\Thorlabs.MotionControl.PrivateInternal.dll</HintPath>
     </Reference>
-    <Reference Include="Thorlabs.MotionControl.Tools.Common">
+    <Reference Include="Thorlabs.MotionControl.Tools.Common, Version=1.0.0.15096, Culture=neutral, PublicKeyToken=c7ec6d6d6e2435e7, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\ThorlabsDependencies\Thorlabs.MotionControl.Tools.Common.dll</HintPath>
     </Reference>
     <Reference Include="Thorlabs.MotionControl.Tools.Logging">

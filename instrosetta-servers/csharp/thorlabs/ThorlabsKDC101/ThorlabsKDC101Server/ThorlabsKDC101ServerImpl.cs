@@ -137,6 +137,26 @@ namespace ThorlabsKDC101Server
             return Task.FromResult(request.Device);
 
         }
+        public bool OnExit()
+        {
+            
+
+            if (_Motor == null || !_Motor.Connected)
+            {
+                return true;
+            }
+            try
+            {
+                _Motor.Disconnect();
+                SimulationManager.Instance.UninitializeSimulations();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+
+        }
 
         public Task<Device> Disconnect()
         {
