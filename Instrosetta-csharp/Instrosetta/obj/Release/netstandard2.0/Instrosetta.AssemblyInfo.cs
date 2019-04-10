@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyDescriptionAttribute("The rosetta stone of instrument control.")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("0.1.2.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("0.1.2")]
-[assembly: System.Reflection.AssemblyProductAttribute("Instrosetta")]
+[assembly: System.Reflection.AssemblyProductAttribute("InstrosettaTest")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Instrosetta")]
 [assembly: System.Reflection.AssemblyVersionAttribute("0.1.2.0")]
 

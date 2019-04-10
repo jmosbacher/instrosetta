@@ -38,10 +38,7 @@ namespace ThorlabsKDC101Server
         }
 
     
-        public override Task<TextMessage> Echo(TextMessage request, ServerCallContext context)
-        {
-            return Task.FromResult(request);
-        }
+        
 
         public override async Task ScanDevices(ScanDevicesRequest request, IServerStreamWriter<Device> responseStream, ServerCallContext context)
         {

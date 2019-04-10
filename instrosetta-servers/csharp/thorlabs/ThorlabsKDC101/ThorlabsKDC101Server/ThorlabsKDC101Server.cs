@@ -5,7 +5,7 @@ using Grpc.Core;
 using Grpc.Reflection;
 using Grpc.Reflection.V1Alpha;
 using Instrosetta.Interfaces.MotionControl.Singleaxis;
-using Instrosetta.Interfaces.
+
 
 namespace ThorlabsKDC101Server
 {
@@ -25,7 +25,7 @@ namespace ThorlabsKDC101Server
             else
             {
                 _Impl = new ThorlabsKDC101ServerImpl();
-                _Reflection = new ReflectionServiceImpl(SingleAxis.Descriptor, ServerReflection.Descriptor);
+                _Reflection = new ReflectionServiceImpl(SingleAxis.Descriptor, Echo.Descriptor, ServerReflection.Descriptor);
                 _Server = new Server
                 {
                     Services = { SingleAxis.BindService(_Impl),

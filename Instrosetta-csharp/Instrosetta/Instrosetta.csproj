@@ -7,8 +7,8 @@
     <Description>The rosetta stone of instrument control.</Description>
     <PackageReleaseNotes>Release for internal testing. Fixed echo bug.</PackageReleaseNotes>
     <PackageTags></PackageTags>
-    <PackageId>Instrosetta</PackageId>
-    <Product>Instrosetta</Product>
+    <PackageId>InstrosettaTest</PackageId>
+    <Product>InstrosettaTest</Product>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
