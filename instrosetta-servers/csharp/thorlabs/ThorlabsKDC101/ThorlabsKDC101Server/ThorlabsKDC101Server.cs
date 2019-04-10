@@ -4,8 +4,9 @@ using System.Text;
 using Grpc.Core;
 using Grpc.Reflection;
 using Grpc.Reflection.V1Alpha;
-using Instrosetta.Interfaces.MotionControl.Singleaxis;
-
+using Instrosetta.Interfaces.MotionControl.Singleaxis.V1;
+using Instrosetta.Interfaces.Debugging.Echo.V1;
+using Instrosetta.Servers.Debugging.EchoServer.V1;
 
 namespace ThorlabsKDC101Server
 {
@@ -13,8 +14,10 @@ namespace ThorlabsKDC101Server
     {
         private bool _Serving = false;
         private Server _Server = null;
+        private EchoImpl _EchoImpl = null;
         private ThorlabsKDC101ServerImpl _Impl = null;
         private ReflectionServiceImpl _Reflection = null;
+
         public void StartServing(string serveAddress, int port)
         {
             if (_Serving)
@@ -25,10 +28,13 @@ namespace ThorlabsKDC101Server
             else
             {
                 _Impl = new ThorlabsKDC101ServerImpl();
-                _Reflection = new ReflectionServiceImpl(SingleAxis.Descriptor, Echo.Descriptor, ServerReflection.Descriptor);
+                _EchoImpl = new EchoImpl();
+                _Reflection = new ReflectionServiceImpl(SingleAxis.Descriptor, EchoService.Descriptor, ServerReflection.Descriptor);
                 _Server = new Server
                 {
-                    Services = { SingleAxis.BindService(_Impl),
+                    Services = {
+                                 EchoService.BindService(_EchoImpl),
+                                 SingleAxis.BindService(_Impl),
                                  ServerReflection.BindService(_Reflection)},
                     Ports = { new ServerPort(serveAddress, port, ServerCredentials.Insecure) }
                 };
@@ -47,7 +53,7 @@ namespace ThorlabsKDC101Server
             }
             catch (Exception ex)
             {
-
+              
             }
             try
             {

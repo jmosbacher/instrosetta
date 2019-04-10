@@ -7,7 +7,7 @@ using Thorlabs.MotionControl.GenericMotorCLI;
 
 using Grpc.Core;
 using UnitsNet;
-using Instrosetta.Interfaces.MotionControl.Singleaxis;
+using Instrosetta.Interfaces.MotionControl.Singleaxis.V1;
 
 
 namespace ThorlabsKDC101Server
@@ -40,17 +40,17 @@ namespace ThorlabsKDC101Server
     
         
 
-        public override async Task ScanDevices(ScanDevicesRequest request, IServerStreamWriter<Device> responseStream, ServerCallContext context)
+        public override async Task ScanDevices(ScanDevicesRequest request, IServerStreamWriter<ScanDevicesResponse> responseStream, ServerCallContext context)
         {
 
             foreach (string serialNo in _Motor.GetAvailableDevices())
             {
-                Device device = new Device
+                ScanDevicesResponse response = new ScanDevicesResponse
                 {
-                    SerialNumber = serialNo,
+                    DeviceId = serialNo,
 
                 };
-                await responseStream.WriteAsync(device);
+                await responseStream.WriteAsync(response);
             }
 
 

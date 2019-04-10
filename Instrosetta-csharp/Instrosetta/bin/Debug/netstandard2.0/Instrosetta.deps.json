@@ -7,7 +7,7 @@
   "targets": {
     ".NETStandard,Version=v2.0": {},
     ".NETStandard,Version=v2.0/": {
-      "Instrosetta/0.1.0": {
+      "Instrosetta/0.1.2": {
         "dependencies": {
           "Google.Protobuf": "3.7.0",
           "Grpc": "1.19.0",
@@ -169,7 +169,7 @@
     }
   },
   "libraries": {
-    "Instrosetta/0.1.0": {
+    "Instrosetta/0.1.2": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

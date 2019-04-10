@@ -3,7 +3,7 @@ using Grpc.Core;
 using Instrosetta.Interfaces.Debugging.Echo.V1;
 using System.Threading.Tasks;
 
-namespace Instrosetta.Servers.Debugging.EchoServer
+namespace Instrosetta.Servers.Debugging.EchoServer.V1
 {
     public class EchoImpl : EchoService.EchoServiceBase
     {

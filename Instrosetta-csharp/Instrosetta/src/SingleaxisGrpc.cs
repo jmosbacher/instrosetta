@@ -7,137 +7,126 @@
 
 using grpc = global::Grpc.Core;
 
-namespace Instrosetta.Interfaces.MotionControl.Singleaxis {
+namespace Instrosetta.Interfaces.MotionControl.Singleaxis.V1 {
   public static partial class SingleAxis
   {
-    static readonly string __ServiceName = "instrosetta.interfaces.motion_control.singleaxis.SingleAxis";
+    static readonly string __ServiceName = "instrosetta.interfaces.motion_control.singleaxis.v1.SingleAxis";
 
-    static readonly grpc::Marshaller<global::Instrosetta.Interfaces.MotionControl.Singleaxis.TextMessage> __Marshaller_instrosetta_interfaces_motion_control_singleaxis_TextMessage = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Instrosetta.Interfaces.MotionControl.Singleaxis.TextMessage.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Instrosetta.Interfaces.MotionControl.Singleaxis.ScanDevicesRequest> __Marshaller_instrosetta_interfaces_motion_control_singleaxis_ScanDevicesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Instrosetta.Interfaces.MotionControl.Singleaxis.ScanDevicesRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Instrosetta.Interfaces.MotionControl.Singleaxis.Device> __Marshaller_instrosetta_interfaces_motion_control_singleaxis_Device = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Instrosetta.Interfaces.MotionControl.Singleaxis.Device.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Instrosetta.Interfaces.MotionControl.Singleaxis.ConnectRequest> __Marshaller_instrosetta_interfaces_motion_control_singleaxis_ConnectRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Instrosetta.Interfaces.MotionControl.Singleaxis.ConnectRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Instrosetta.Interfaces.MotionControl.Singleaxis.DisconnectRequest> __Marshaller_instrosetta_interfaces_motion_control_singleaxis_DisconnectRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Instrosetta.Interfaces.MotionControl.Singleaxis.DisconnectRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Instrosetta.Interfaces.MotionControl.Singleaxis.HomeMotorRequest> __Marshaller_instrosetta_interfaces_motion_control_singleaxis_HomeMotorRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Instrosetta.Interfaces.MotionControl.Singleaxis.HomeMotorRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Instrosetta.Interfaces.MotionControl.Singleaxis.Position> __Marshaller_instrosetta_interfaces_motion_control_singleaxis_Position = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Instrosetta.Interfaces.MotionControl.Singleaxis.Position.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Instrosetta.Interfaces.MotionControl.Singleaxis.GetRangeRequest> __Marshaller_instrosetta_interfaces_motion_control_singleaxis_GetRangeRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Instrosetta.Interfaces.MotionControl.Singleaxis.GetRangeRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Instrosetta.Interfaces.MotionControl.Singleaxis.StageRange> __Marshaller_instrosetta_interfaces_motion_control_singleaxis_StageRange = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Instrosetta.Interfaces.MotionControl.Singleaxis.StageRange.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Instrosetta.Interfaces.MotionControl.Singleaxis.GetPositionRequest> __Marshaller_instrosetta_interfaces_motion_control_singleaxis_GetPositionRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Instrosetta.Interfaces.MotionControl.Singleaxis.GetPositionRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Instrosetta.Interfaces.MotionControl.Singleaxis.MoveAbsoluteRequest> __Marshaller_instrosetta_interfaces_motion_control_singleaxis_MoveAbsoluteRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Instrosetta.Interfaces.MotionControl.Singleaxis.MoveAbsoluteRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Instrosetta.Interfaces.MotionControl.Singleaxis.MoveRelativeRequest> __Marshaller_instrosetta_interfaces_motion_control_singleaxis_MoveRelativeRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Instrosetta.Interfaces.MotionControl.Singleaxis.MoveRelativeRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Instrosetta.Interfaces.MotionControl.Singleaxis.V1.ScanDevicesRequest> __Marshaller_instrosetta_interfaces_motion_control_singleaxis_v1_ScanDevicesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Instrosetta.Interfaces.MotionControl.Singleaxis.V1.ScanDevicesRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Instrosetta.Interfaces.MotionControl.Singleaxis.V1.ScanDevicesResponse> __Marshaller_instrosetta_interfaces_motion_control_singleaxis_v1_ScanDevicesResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Instrosetta.Interfaces.MotionControl.Singleaxis.V1.ScanDevicesResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::ConnectRequest> __Marshaller_ConnectRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::ConnectRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::ConnectResponse> __Marshaller_ConnectResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::ConnectResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::DisconnectRequest> __Marshaller_DisconnectRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::DisconnectRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::DisconnectResponse> __Marshaller_DisconnectResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::DisconnectResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Instrosetta.Interfaces.MotionControl.Singleaxis.V1.HomeMotorRequest> __Marshaller_instrosetta_interfaces_motion_control_singleaxis_v1_HomeMotorRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Instrosetta.Interfaces.MotionControl.Singleaxis.V1.HomeMotorRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Instrosetta.Interfaces.MotionControl.Singleaxis.V1.Position> __Marshaller_instrosetta_interfaces_motion_control_singleaxis_v1_Position = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Instrosetta.Interfaces.MotionControl.Singleaxis.V1.Position.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Instrosetta.Interfaces.MotionControl.Singleaxis.V1.GetRangeRequest> __Marshaller_instrosetta_interfaces_motion_control_singleaxis_v1_GetRangeRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Instrosetta.Interfaces.MotionControl.Singleaxis.V1.GetRangeRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Instrosetta.Interfaces.MotionControl.Singleaxis.V1.StageRange> __Marshaller_instrosetta_interfaces_motion_control_singleaxis_v1_StageRange = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Instrosetta.Interfaces.MotionControl.Singleaxis.V1.StageRange.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Instrosetta.Interfaces.MotionControl.Singleaxis.V1.GetPositionRequest> __Marshaller_instrosetta_interfaces_motion_control_singleaxis_v1_GetPositionRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Instrosetta.Interfaces.MotionControl.Singleaxis.V1.GetPositionRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Instrosetta.Interfaces.MotionControl.Singleaxis.V1.MoveAbsoluteRequest> __Marshaller_instrosetta_interfaces_motion_control_singleaxis_v1_MoveAbsoluteRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Instrosetta.Interfaces.MotionControl.Singleaxis.V1.MoveAbsoluteRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Instrosetta.Interfaces.MotionControl.Singleaxis.V1.MoveRelativeRequest> __Marshaller_instrosetta_interfaces_motion_control_singleaxis_v1_MoveRelativeRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Instrosetta.Interfaces.MotionControl.Singleaxis.V1.MoveRelativeRequest.Parser.ParseFrom);
 
-    static readonly grpc::Method<global::Instrosetta.Interfaces.MotionControl.Singleaxis.TextMessage, global::Instrosetta.Interfaces.MotionControl.Singleaxis.TextMessage> __Method_Echo = new grpc::Method<global::Instrosetta.Interfaces.MotionControl.Singleaxis.TextMessage, global::Instrosetta.Interfaces.MotionControl.Singleaxis.TextMessage>(
-        grpc::MethodType.Unary,
-        __ServiceName,
-        "Echo",
-        __Marshaller_instrosetta_interfaces_motion_control_singleaxis_TextMessage,
-        __Marshaller_instrosetta_interfaces_motion_control_singleaxis_TextMessage);
-
-    static readonly grpc::Method<global::Instrosetta.Interfaces.MotionControl.Singleaxis.ScanDevicesRequest, global::Instrosetta.Interfaces.MotionControl.Singleaxis.Device> __Method_ScanDevices = new grpc::Method<global::Instrosetta.Interfaces.MotionControl.Singleaxis.ScanDevicesRequest, global::Instrosetta.Interfaces.MotionControl.Singleaxis.Device>(
+    static readonly grpc::Method<global::Instrosetta.Interfaces.MotionControl.Singleaxis.V1.ScanDevicesRequest, global::Instrosetta.Interfaces.MotionControl.Singleaxis.V1.ScanDevicesResponse> __Method_ScanDevices = new grpc::Method<global::Instrosetta.Interfaces.MotionControl.Singleaxis.V1.ScanDevicesRequest, global::Instrosetta.Interfaces.MotionControl.Singleaxis.V1.ScanDevicesResponse>(
         grpc::MethodType.ServerStreaming,
         __ServiceName,
         "ScanDevices",
-        __Marshaller_instrosetta_interfaces_motion_control_singleaxis_ScanDevicesRequest,
-        __Marshaller_instrosetta_interfaces_motion_control_singleaxis_Device);
+        __Marshaller_instrosetta_interfaces_motion_control_singleaxis_v1_ScanDevicesRequest,
+        __Marshaller_instrosetta_interfaces_motion_control_singleaxis_v1_ScanDevicesResponse);
 
-    static readonly grpc::Method<global::Instrosetta.Interfaces.MotionControl.Singleaxis.ConnectRequest, global::Instrosetta.Interfaces.MotionControl.Singleaxis.Device> __Method_Connect = new grpc::Method<global::Instrosetta.Interfaces.MotionControl.Singleaxis.ConnectRequest, global::Instrosetta.Interfaces.MotionControl.Singleaxis.Device>(
+    static readonly grpc::Method<global::ConnectRequest, global::ConnectResponse> __Method_Connect = new grpc::Method<global::ConnectRequest, global::ConnectResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "Connect",
-        __Marshaller_instrosetta_interfaces_motion_control_singleaxis_ConnectRequest,
-        __Marshaller_instrosetta_interfaces_motion_control_singleaxis_Device);
+        __Marshaller_ConnectRequest,
+        __Marshaller_ConnectResponse);
 
-    static readonly grpc::Method<global::Instrosetta.Interfaces.MotionControl.Singleaxis.DisconnectRequest, global::Instrosetta.Interfaces.MotionControl.Singleaxis.Device> __Method_Disconnect = new grpc::Method<global::Instrosetta.Interfaces.MotionControl.Singleaxis.DisconnectRequest, global::Instrosetta.Interfaces.MotionControl.Singleaxis.Device>(
+    static readonly grpc::Method<global::DisconnectRequest, global::DisconnectResponse> __Method_Disconnect = new grpc::Method<global::DisconnectRequest, global::DisconnectResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "Disconnect",
-        __Marshaller_instrosetta_interfaces_motion_control_singleaxis_DisconnectRequest,
-        __Marshaller_instrosetta_interfaces_motion_control_singleaxis_Device);
+        __Marshaller_DisconnectRequest,
+        __Marshaller_DisconnectResponse);
 
-    static readonly grpc::Method<global::Instrosetta.Interfaces.MotionControl.Singleaxis.HomeMotorRequest, global::Instrosetta.Interfaces.MotionControl.Singleaxis.Position> __Method_HomeMotor = new grpc::Method<global::Instrosetta.Interfaces.MotionControl.Singleaxis.HomeMotorRequest, global::Instrosetta.Interfaces.MotionControl.Singleaxis.Position>(
+    static readonly grpc::Method<global::Instrosetta.Interfaces.MotionControl.Singleaxis.V1.HomeMotorRequest, global::Instrosetta.Interfaces.MotionControl.Singleaxis.V1.Position> __Method_HomeMotor = new grpc::Method<global::Instrosetta.Interfaces.MotionControl.Singleaxis.V1.HomeMotorRequest, global::Instrosetta.Interfaces.MotionControl.Singleaxis.V1.Position>(
         grpc::MethodType.Unary,
         __ServiceName,
         "HomeMotor",
-        __Marshaller_instrosetta_interfaces_motion_control_singleaxis_HomeMotorRequest,
-        __Marshaller_instrosetta_interfaces_motion_control_singleaxis_Position);
+        __Marshaller_instrosetta_interfaces_motion_control_singleaxis_v1_HomeMotorRequest,
+        __Marshaller_instrosetta_interfaces_motion_control_singleaxis_v1_Position);
 
-    static readonly grpc::Method<global::Instrosetta.Interfaces.MotionControl.Singleaxis.GetRangeRequest, global::Instrosetta.Interfaces.MotionControl.Singleaxis.StageRange> __Method_GetRange = new grpc::Method<global::Instrosetta.Interfaces.MotionControl.Singleaxis.GetRangeRequest, global::Instrosetta.Interfaces.MotionControl.Singleaxis.StageRange>(
+    static readonly grpc::Method<global::Instrosetta.Interfaces.MotionControl.Singleaxis.V1.GetRangeRequest, global::Instrosetta.Interfaces.MotionControl.Singleaxis.V1.StageRange> __Method_GetRange = new grpc::Method<global::Instrosetta.Interfaces.MotionControl.Singleaxis.V1.GetRangeRequest, global::Instrosetta.Interfaces.MotionControl.Singleaxis.V1.StageRange>(
         grpc::MethodType.Unary,
         __ServiceName,
         "GetRange",
-        __Marshaller_instrosetta_interfaces_motion_control_singleaxis_GetRangeRequest,
-        __Marshaller_instrosetta_interfaces_motion_control_singleaxis_StageRange);
+        __Marshaller_instrosetta_interfaces_motion_control_singleaxis_v1_GetRangeRequest,
+        __Marshaller_instrosetta_interfaces_motion_control_singleaxis_v1_StageRange);
 
-    static readonly grpc::Method<global::Instrosetta.Interfaces.MotionControl.Singleaxis.GetPositionRequest, global::Instrosetta.Interfaces.MotionControl.Singleaxis.Position> __Method_GetPosition = new grpc::Method<global::Instrosetta.Interfaces.MotionControl.Singleaxis.GetPositionRequest, global::Instrosetta.Interfaces.MotionControl.Singleaxis.Position>(
+    static readonly grpc::Method<global::Instrosetta.Interfaces.MotionControl.Singleaxis.V1.GetPositionRequest, global::Instrosetta.Interfaces.MotionControl.Singleaxis.V1.Position> __Method_GetPosition = new grpc::Method<global::Instrosetta.Interfaces.MotionControl.Singleaxis.V1.GetPositionRequest, global::Instrosetta.Interfaces.MotionControl.Singleaxis.V1.Position>(
         grpc::MethodType.Unary,
         __ServiceName,
         "GetPosition",
-        __Marshaller_instrosetta_interfaces_motion_control_singleaxis_GetPositionRequest,
-        __Marshaller_instrosetta_interfaces_motion_control_singleaxis_Position);
+        __Marshaller_instrosetta_interfaces_motion_control_singleaxis_v1_GetPositionRequest,
+        __Marshaller_instrosetta_interfaces_motion_control_singleaxis_v1_Position);
 
-    static readonly grpc::Method<global::Instrosetta.Interfaces.MotionControl.Singleaxis.MoveAbsoluteRequest, global::Instrosetta.Interfaces.MotionControl.Singleaxis.Position> __Method_MoveAbsolute = new grpc::Method<global::Instrosetta.Interfaces.MotionControl.Singleaxis.MoveAbsoluteRequest, global::Instrosetta.Interfaces.MotionControl.Singleaxis.Position>(
+    static readonly grpc::Method<global::Instrosetta.Interfaces.MotionControl.Singleaxis.V1.MoveAbsoluteRequest, global::Instrosetta.Interfaces.MotionControl.Singleaxis.V1.Position> __Method_MoveAbsolute = new grpc::Method<global::Instrosetta.Interfaces.MotionControl.Singleaxis.V1.MoveAbsoluteRequest, global::Instrosetta.Interfaces.MotionControl.Singleaxis.V1.Position>(
         grpc::MethodType.ServerStreaming,
         __ServiceName,
         "MoveAbsolute",
-        __Marshaller_instrosetta_interfaces_motion_control_singleaxis_MoveAbsoluteRequest,
-        __Marshaller_instrosetta_interfaces_motion_control_singleaxis_Position);
+        __Marshaller_instrosetta_interfaces_motion_control_singleaxis_v1_MoveAbsoluteRequest,
+        __Marshaller_instrosetta_interfaces_motion_control_singleaxis_v1_Position);
 
-    static readonly grpc::Method<global::Instrosetta.Interfaces.MotionControl.Singleaxis.MoveRelativeRequest, global::Instrosetta.Interfaces.MotionControl.Singleaxis.Position> __Method_MoveRelative = new grpc::Method<global::Instrosetta.Interfaces.MotionControl.Singleaxis.MoveRelativeRequest, global::Instrosetta.Interfaces.MotionControl.Singleaxis.Position>(
+    static readonly grpc::Method<global::Instrosetta.Interfaces.MotionControl.Singleaxis.V1.MoveRelativeRequest, global::Instrosetta.Interfaces.MotionControl.Singleaxis.V1.Position> __Method_MoveRelative = new grpc::Method<global::Instrosetta.Interfaces.MotionControl.Singleaxis.V1.MoveRelativeRequest, global::Instrosetta.Interfaces.MotionControl.Singleaxis.V1.Position>(
         grpc::MethodType.ServerStreaming,
         __ServiceName,
         "MoveRelative",
-        __Marshaller_instrosetta_interfaces_motion_control_singleaxis_MoveRelativeRequest,
-        __Marshaller_instrosetta_interfaces_motion_control_singleaxis_Position);
+        __Marshaller_instrosetta_interfaces_motion_control_singleaxis_v1_MoveRelativeRequest,
+        __Marshaller_instrosetta_interfaces_motion_control_singleaxis_v1_Position);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
-      get { return global::Instrosetta.Interfaces.MotionControl.Singleaxis.SingleaxisReflection.Descriptor.Services[0]; }
+      get { return global::Instrosetta.Interfaces.MotionControl.Singleaxis.V1.SingleaxisReflection.Descriptor.Services[0]; }
     }
 
     /// <summary>Base class for server-side implementations of SingleAxis</summary>
     public abstract partial class SingleAxisBase
     {
-      public virtual global::System.Threading.Tasks.Task<global::Instrosetta.Interfaces.MotionControl.Singleaxis.TextMessage> Echo(global::Instrosetta.Interfaces.MotionControl.Singleaxis.TextMessage request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task ScanDevices(global::Instrosetta.Interfaces.MotionControl.Singleaxis.V1.ScanDevicesRequest request, grpc::IServerStreamWriter<global::Instrosetta.Interfaces.MotionControl.Singleaxis.V1.ScanDevicesResponse> responseStream, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
-      public virtual global::System.Threading.Tasks.Task ScanDevices(global::Instrosetta.Interfaces.MotionControl.Singleaxis.ScanDevicesRequest request, grpc::IServerStreamWriter<global::Instrosetta.Interfaces.MotionControl.Singleaxis.Device> responseStream, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::ConnectResponse> Connect(global::ConnectRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
-      public virtual global::System.Threading.Tasks.Task<global::Instrosetta.Interfaces.MotionControl.Singleaxis.Device> Connect(global::Instrosetta.Interfaces.MotionControl.Singleaxis.ConnectRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::DisconnectResponse> Disconnect(global::DisconnectRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
-      public virtual global::System.Threading.Tasks.Task<global::Instrosetta.Interfaces.MotionControl.Singleaxis.Device> Disconnect(global::Instrosetta.Interfaces.MotionControl.Singleaxis.DisconnectRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Instrosetta.Interfaces.MotionControl.Singleaxis.V1.Position> HomeMotor(global::Instrosetta.Interfaces.MotionControl.Singleaxis.V1.HomeMotorRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
-      public virtual global::System.Threading.Tasks.Task<global::Instrosetta.Interfaces.MotionControl.Singleaxis.Position> HomeMotor(global::Instrosetta.Interfaces.MotionControl.Singleaxis.HomeMotorRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Instrosetta.Interfaces.MotionControl.Singleaxis.V1.StageRange> GetRange(global::Instrosetta.Interfaces.MotionControl.Singleaxis.V1.GetRangeRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
-      public virtual global::System.Threading.Tasks.Task<global::Instrosetta.Interfaces.MotionControl.Singleaxis.StageRange> GetRange(global::Instrosetta.Interfaces.MotionControl.Singleaxis.GetRangeRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Instrosetta.Interfaces.MotionControl.Singleaxis.V1.Position> GetPosition(global::Instrosetta.Interfaces.MotionControl.Singleaxis.V1.GetPositionRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
-      public virtual global::System.Threading.Tasks.Task<global::Instrosetta.Interfaces.MotionControl.Singleaxis.Position> GetPosition(global::Instrosetta.Interfaces.MotionControl.Singleaxis.GetPositionRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task MoveAbsolute(global::Instrosetta.Interfaces.MotionControl.Singleaxis.V1.MoveAbsoluteRequest request, grpc::IServerStreamWriter<global::Instrosetta.Interfaces.MotionControl.Singleaxis.V1.Position> responseStream, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
-      public virtual global::System.Threading.Tasks.Task MoveAbsolute(global::Instrosetta.Interfaces.MotionControl.Singleaxis.MoveAbsoluteRequest request, grpc::IServerStreamWriter<global::Instrosetta.Interfaces.MotionControl.Singleaxis.Position> responseStream, grpc::ServerCallContext context)
-      {
-        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
-      }
-
-      public virtual global::System.Threading.Tasks.Task MoveRelative(global::Instrosetta.Interfaces.MotionControl.Singleaxis.MoveRelativeRequest request, grpc::IServerStreamWriter<global::Instrosetta.Interfaces.MotionControl.Singleaxis.Position> responseStream, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task MoveRelative(global::Instrosetta.Interfaces.MotionControl.Singleaxis.V1.MoveRelativeRequest request, grpc::IServerStreamWriter<global::Instrosetta.Interfaces.MotionControl.Singleaxis.V1.Position> responseStream, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -167,123 +156,107 @@ namespace Instrosetta.Interfaces.MotionControl.Singleaxis {
       {
       }
 
-      public virtual global::Instrosetta.Interfaces.MotionControl.Singleaxis.TextMessage Echo(global::Instrosetta.Interfaces.MotionControl.Singleaxis.TextMessage request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return Echo(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      public virtual global::Instrosetta.Interfaces.MotionControl.Singleaxis.TextMessage Echo(global::Instrosetta.Interfaces.MotionControl.Singleaxis.TextMessage request, grpc::CallOptions options)
-      {
-        return CallInvoker.BlockingUnaryCall(__Method_Echo, null, options, request);
-      }
-      public virtual grpc::AsyncUnaryCall<global::Instrosetta.Interfaces.MotionControl.Singleaxis.TextMessage> EchoAsync(global::Instrosetta.Interfaces.MotionControl.Singleaxis.TextMessage request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return EchoAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      public virtual grpc::AsyncUnaryCall<global::Instrosetta.Interfaces.MotionControl.Singleaxis.TextMessage> EchoAsync(global::Instrosetta.Interfaces.MotionControl.Singleaxis.TextMessage request, grpc::CallOptions options)
-      {
-        return CallInvoker.AsyncUnaryCall(__Method_Echo, null, options, request);
-      }
-      public virtual grpc::AsyncServerStreamingCall<global::Instrosetta.Interfaces.MotionControl.Singleaxis.Device> ScanDevices(global::Instrosetta.Interfaces.MotionControl.Singleaxis.ScanDevicesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncServerStreamingCall<global::Instrosetta.Interfaces.MotionControl.Singleaxis.V1.ScanDevicesResponse> ScanDevices(global::Instrosetta.Interfaces.MotionControl.Singleaxis.V1.ScanDevicesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ScanDevices(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual grpc::AsyncServerStreamingCall<global::Instrosetta.Interfaces.MotionControl.Singleaxis.Device> ScanDevices(global::Instrosetta.Interfaces.MotionControl.Singleaxis.ScanDevicesRequest request, grpc::CallOptions options)
+      public virtual grpc::AsyncServerStreamingCall<global::Instrosetta.Interfaces.MotionControl.Singleaxis.V1.ScanDevicesResponse> ScanDevices(global::Instrosetta.Interfaces.MotionControl.Singleaxis.V1.ScanDevicesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncServerStreamingCall(__Method_ScanDevices, null, options, request);
       }
-      public virtual global::Instrosetta.Interfaces.MotionControl.Singleaxis.Device Connect(global::Instrosetta.Interfaces.MotionControl.Singleaxis.ConnectRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::ConnectResponse Connect(global::ConnectRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return Connect(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual global::Instrosetta.Interfaces.MotionControl.Singleaxis.Device Connect(global::Instrosetta.Interfaces.MotionControl.Singleaxis.ConnectRequest request, grpc::CallOptions options)
+      public virtual global::ConnectResponse Connect(global::ConnectRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_Connect, null, options, request);
       }
-      public virtual grpc::AsyncUnaryCall<global::Instrosetta.Interfaces.MotionControl.Singleaxis.Device> ConnectAsync(global::Instrosetta.Interfaces.MotionControl.Singleaxis.ConnectRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::ConnectResponse> ConnectAsync(global::ConnectRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ConnectAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual grpc::AsyncUnaryCall<global::Instrosetta.Interfaces.MotionControl.Singleaxis.Device> ConnectAsync(global::Instrosetta.Interfaces.MotionControl.Singleaxis.ConnectRequest request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::ConnectResponse> ConnectAsync(global::ConnectRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_Connect, null, options, request);
       }
-      public virtual global::Instrosetta.Interfaces.MotionControl.Singleaxis.Device Disconnect(global::Instrosetta.Interfaces.MotionControl.Singleaxis.DisconnectRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::DisconnectResponse Disconnect(global::DisconnectRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return Disconnect(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual global::Instrosetta.Interfaces.MotionControl.Singleaxis.Device Disconnect(global::Instrosetta.Interfaces.MotionControl.Singleaxis.DisconnectRequest request, grpc::CallOptions options)
+      public virtual global::DisconnectResponse Disconnect(global::DisconnectRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_Disconnect, null, options, request);
       }
-      public virtual grpc::AsyncUnaryCall<global::Instrosetta.Interfaces.MotionControl.Singleaxis.Device> DisconnectAsync(global::Instrosetta.Interfaces.MotionControl.Singleaxis.DisconnectRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::DisconnectResponse> DisconnectAsync(global::DisconnectRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DisconnectAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual grpc::AsyncUnaryCall<global::Instrosetta.Interfaces.MotionControl.Singleaxis.Device> DisconnectAsync(global::Instrosetta.Interfaces.MotionControl.Singleaxis.DisconnectRequest request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::DisconnectResponse> DisconnectAsync(global::DisconnectRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_Disconnect, null, options, request);
       }
-      public virtual global::Instrosetta.Interfaces.MotionControl.Singleaxis.Position HomeMotor(global::Instrosetta.Interfaces.MotionControl.Singleaxis.HomeMotorRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::Instrosetta.Interfaces.MotionControl.Singleaxis.V1.Position HomeMotor(global::Instrosetta.Interfaces.MotionControl.Singleaxis.V1.HomeMotorRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return HomeMotor(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual global::Instrosetta.Interfaces.MotionControl.Singleaxis.Position HomeMotor(global::Instrosetta.Interfaces.MotionControl.Singleaxis.HomeMotorRequest request, grpc::CallOptions options)
+      public virtual global::Instrosetta.Interfaces.MotionControl.Singleaxis.V1.Position HomeMotor(global::Instrosetta.Interfaces.MotionControl.Singleaxis.V1.HomeMotorRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_HomeMotor, null, options, request);
       }
-      public virtual grpc::AsyncUnaryCall<global::Instrosetta.Interfaces.MotionControl.Singleaxis.Position> HomeMotorAsync(global::Instrosetta.Interfaces.MotionControl.Singleaxis.HomeMotorRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Instrosetta.Interfaces.MotionControl.Singleaxis.V1.Position> HomeMotorAsync(global::Instrosetta.Interfaces.MotionControl.Singleaxis.V1.HomeMotorRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return HomeMotorAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual grpc::AsyncUnaryCall<global::Instrosetta.Interfaces.MotionControl.Singleaxis.Position> HomeMotorAsync(global::Instrosetta.Interfaces.MotionControl.Singleaxis.HomeMotorRequest request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::Instrosetta.Interfaces.MotionControl.Singleaxis.V1.Position> HomeMotorAsync(global::Instrosetta.Interfaces.MotionControl.Singleaxis.V1.HomeMotorRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_HomeMotor, null, options, request);
       }
-      public virtual global::Instrosetta.Interfaces.MotionControl.Singleaxis.StageRange GetRange(global::Instrosetta.Interfaces.MotionControl.Singleaxis.GetRangeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::Instrosetta.Interfaces.MotionControl.Singleaxis.V1.StageRange GetRange(global::Instrosetta.Interfaces.MotionControl.Singleaxis.V1.GetRangeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetRange(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual global::Instrosetta.Interfaces.MotionControl.Singleaxis.StageRange GetRange(global::Instrosetta.Interfaces.MotionControl.Singleaxis.GetRangeRequest request, grpc::CallOptions options)
+      public virtual global::Instrosetta.Interfaces.MotionControl.Singleaxis.V1.StageRange GetRange(global::Instrosetta.Interfaces.MotionControl.Singleaxis.V1.GetRangeRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetRange, null, options, request);
       }
-      public virtual grpc::AsyncUnaryCall<global::Instrosetta.Interfaces.MotionControl.Singleaxis.StageRange> GetRangeAsync(global::Instrosetta.Interfaces.MotionControl.Singleaxis.GetRangeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Instrosetta.Interfaces.MotionControl.Singleaxis.V1.StageRange> GetRangeAsync(global::Instrosetta.Interfaces.MotionControl.Singleaxis.V1.GetRangeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetRangeAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual grpc::AsyncUnaryCall<global::Instrosetta.Interfaces.MotionControl.Singleaxis.StageRange> GetRangeAsync(global::Instrosetta.Interfaces.MotionControl.Singleaxis.GetRangeRequest request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::Instrosetta.Interfaces.MotionControl.Singleaxis.V1.StageRange> GetRangeAsync(global::Instrosetta.Interfaces.MotionControl.Singleaxis.V1.GetRangeRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetRange, null, options, request);
       }
-      public virtual global::Instrosetta.Interfaces.MotionControl.Singleaxis.Position GetPosition(global::Instrosetta.Interfaces.MotionControl.Singleaxis.GetPositionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::Instrosetta.Interfaces.MotionControl.Singleaxis.V1.Position GetPosition(global::Instrosetta.Interfaces.MotionControl.Singleaxis.V1.GetPositionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetPosition(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual global::Instrosetta.Interfaces.MotionControl.Singleaxis.Position GetPosition(global::Instrosetta.Interfaces.MotionControl.Singleaxis.GetPositionRequest request, grpc::CallOptions options)
+      public virtual global::Instrosetta.Interfaces.MotionControl.Singleaxis.V1.Position GetPosition(global::Instrosetta.Interfaces.MotionControl.Singleaxis.V1.GetPositionRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetPosition, null, options, request);
       }
-      public virtual grpc::AsyncUnaryCall<global::Instrosetta.Interfaces.MotionControl.Singleaxis.Position> GetPositionAsync(global::Instrosetta.Interfaces.MotionControl.Singleaxis.GetPositionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Instrosetta.Interfaces.MotionControl.Singleaxis.V1.Position> GetPositionAsync(global::Instrosetta.Interfaces.MotionControl.Singleaxis.V1.GetPositionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetPositionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual grpc::AsyncUnaryCall<global::Instrosetta.Interfaces.MotionControl.Singleaxis.Position> GetPositionAsync(global::Instrosetta.Interfaces.MotionControl.Singleaxis.GetPositionRequest request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::Instrosetta.Interfaces.MotionControl.Singleaxis.V1.Position> GetPositionAsync(global::Instrosetta.Interfaces.MotionControl.Singleaxis.V1.GetPositionRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetPosition, null, options, request);
       }
-      public virtual grpc::AsyncServerStreamingCall<global::Instrosetta.Interfaces.MotionControl.Singleaxis.Position> MoveAbsolute(global::Instrosetta.Interfaces.MotionControl.Singleaxis.MoveAbsoluteRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncServerStreamingCall<global::Instrosetta.Interfaces.MotionControl.Singleaxis.V1.Position> MoveAbsolute(global::Instrosetta.Interfaces.MotionControl.Singleaxis.V1.MoveAbsoluteRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return MoveAbsolute(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual grpc::AsyncServerStreamingCall<global::Instrosetta.Interfaces.MotionControl.Singleaxis.Position> MoveAbsolute(global::Instrosetta.Interfaces.MotionControl.Singleaxis.MoveAbsoluteRequest request, grpc::CallOptions options)
+      public virtual grpc::AsyncServerStreamingCall<global::Instrosetta.Interfaces.MotionControl.Singleaxis.V1.Position> MoveAbsolute(global::Instrosetta.Interfaces.MotionControl.Singleaxis.V1.MoveAbsoluteRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncServerStreamingCall(__Method_MoveAbsolute, null, options, request);
       }
-      public virtual grpc::AsyncServerStreamingCall<global::Instrosetta.Interfaces.MotionControl.Singleaxis.Position> MoveRelative(global::Instrosetta.Interfaces.MotionControl.Singleaxis.MoveRelativeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncServerStreamingCall<global::Instrosetta.Interfaces.MotionControl.Singleaxis.V1.Position> MoveRelative(global::Instrosetta.Interfaces.MotionControl.Singleaxis.V1.MoveRelativeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return MoveRelative(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual grpc::AsyncServerStreamingCall<global::Instrosetta.Interfaces.MotionControl.Singleaxis.Position> MoveRelative(global::Instrosetta.Interfaces.MotionControl.Singleaxis.MoveRelativeRequest request, grpc::CallOptions options)
+      public virtual grpc::AsyncServerStreamingCall<global::Instrosetta.Interfaces.MotionControl.Singleaxis.V1.Position> MoveRelative(global::Instrosetta.Interfaces.MotionControl.Singleaxis.V1.MoveRelativeRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncServerStreamingCall(__Method_MoveRelative, null, options, request);
       }
@@ -299,7 +272,6 @@ namespace Instrosetta.Interfaces.MotionControl.Singleaxis {
     public static grpc::ServerServiceDefinition BindService(SingleAxisBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
-          .AddMethod(__Method_Echo, serviceImpl.Echo)
           .AddMethod(__Method_ScanDevices, serviceImpl.ScanDevices)
           .AddMethod(__Method_Connect, serviceImpl.Connect)
           .AddMethod(__Method_Disconnect, serviceImpl.Disconnect)
@@ -316,15 +288,14 @@ namespace Instrosetta.Interfaces.MotionControl.Singleaxis {
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
     public static void BindService(grpc::ServiceBinderBase serviceBinder, SingleAxisBase serviceImpl)
     {
-      serviceBinder.AddMethod(__Method_Echo, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Instrosetta.Interfaces.MotionControl.Singleaxis.TextMessage, global::Instrosetta.Interfaces.MotionControl.Singleaxis.TextMessage>(serviceImpl.Echo));
-      serviceBinder.AddMethod(__Method_ScanDevices, serviceImpl == null ? null : new grpc::ServerStreamingServerMethod<global::Instrosetta.Interfaces.MotionControl.Singleaxis.ScanDevicesRequest, global::Instrosetta.Interfaces.MotionControl.Singleaxis.Device>(serviceImpl.ScanDevices));
-      serviceBinder.AddMethod(__Method_Connect, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Instrosetta.Interfaces.MotionControl.Singleaxis.ConnectRequest, global::Instrosetta.Interfaces.MotionControl.Singleaxis.Device>(serviceImpl.Connect));
-      serviceBinder.AddMethod(__Method_Disconnect, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Instrosetta.Interfaces.MotionControl.Singleaxis.DisconnectRequest, global::Instrosetta.Interfaces.MotionControl.Singleaxis.Device>(serviceImpl.Disconnect));
-      serviceBinder.AddMethod(__Method_HomeMotor, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Instrosetta.Interfaces.MotionControl.Singleaxis.HomeMotorRequest, global::Instrosetta.Interfaces.MotionControl.Singleaxis.Position>(serviceImpl.HomeMotor));
-      serviceBinder.AddMethod(__Method_GetRange, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Instrosetta.Interfaces.MotionControl.Singleaxis.GetRangeRequest, global::Instrosetta.Interfaces.MotionControl.Singleaxis.StageRange>(serviceImpl.GetRange));
-      serviceBinder.AddMethod(__Method_GetPosition, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Instrosetta.Interfaces.MotionControl.Singleaxis.GetPositionRequest, global::Instrosetta.Interfaces.MotionControl.Singleaxis.Position>(serviceImpl.GetPosition));
-      serviceBinder.AddMethod(__Method_MoveAbsolute, serviceImpl == null ? null : new grpc::ServerStreamingServerMethod<global::Instrosetta.Interfaces.MotionControl.Singleaxis.MoveAbsoluteRequest, global::Instrosetta.Interfaces.MotionControl.Singleaxis.Position>(serviceImpl.MoveAbsolute));
-      serviceBinder.AddMethod(__Method_MoveRelative, serviceImpl == null ? null : new grpc::ServerStreamingServerMethod<global::Instrosetta.Interfaces.MotionControl.Singleaxis.MoveRelativeRequest, global::Instrosetta.Interfaces.MotionControl.Singleaxis.Position>(serviceImpl.MoveRelative));
+      serviceBinder.AddMethod(__Method_ScanDevices, serviceImpl == null ? null : new grpc::ServerStreamingServerMethod<global::Instrosetta.Interfaces.MotionControl.Singleaxis.V1.ScanDevicesRequest, global::Instrosetta.Interfaces.MotionControl.Singleaxis.V1.ScanDevicesResponse>(serviceImpl.ScanDevices));
+      serviceBinder.AddMethod(__Method_Connect, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::ConnectRequest, global::ConnectResponse>(serviceImpl.Connect));
+      serviceBinder.AddMethod(__Method_Disconnect, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::DisconnectRequest, global::DisconnectResponse>(serviceImpl.Disconnect));
+      serviceBinder.AddMethod(__Method_HomeMotor, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Instrosetta.Interfaces.MotionControl.Singleaxis.V1.HomeMotorRequest, global::Instrosetta.Interfaces.MotionControl.Singleaxis.V1.Position>(serviceImpl.HomeMotor));
+      serviceBinder.AddMethod(__Method_GetRange, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Instrosetta.Interfaces.MotionControl.Singleaxis.V1.GetRangeRequest, global::Instrosetta.Interfaces.MotionControl.Singleaxis.V1.StageRange>(serviceImpl.GetRange));
+      serviceBinder.AddMethod(__Method_GetPosition, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Instrosetta.Interfaces.MotionControl.Singleaxis.V1.GetPositionRequest, global::Instrosetta.Interfaces.MotionControl.Singleaxis.V1.Position>(serviceImpl.GetPosition));
+      serviceBinder.AddMethod(__Method_MoveAbsolute, serviceImpl == null ? null : new grpc::ServerStreamingServerMethod<global::Instrosetta.Interfaces.MotionControl.Singleaxis.V1.MoveAbsoluteRequest, global::Instrosetta.Interfaces.MotionControl.Singleaxis.V1.Position>(serviceImpl.MoveAbsolute));
+      serviceBinder.AddMethod(__Method_MoveRelative, serviceImpl == null ? null : new grpc::ServerStreamingServerMethod<global::Instrosetta.Interfaces.MotionControl.Singleaxis.V1.MoveRelativeRequest, global::Instrosetta.Interfaces.MotionControl.Singleaxis.V1.Position>(serviceImpl.MoveRelative));
     }
 
   }

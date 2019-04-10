@@ -13,8 +13,8 @@
     <ROW Property="AI_PROPPATH_DIR_PERBUILD_Grpc.Core.dll_1" Value="..\packages\Grpc.Core.1.19.0\lib\net45"/>
     <ROW Property="AI_PROPPATH_DIR_PERBUILD_Grpc.Reflection.dll" Value="..\packages\Grpc.Reflection.1.19.0\lib\net45"/>
     <ROW Property="AI_PROPPATH_DIR_PERBUILD_Grpc.Reflection.dll_1" Value="..\packages\Grpc.Reflection.1.19.0\lib\net45"/>
-    <ROW Property="AI_PROPPATH_DIR_PERBUILD_Instrosetta.dll" Value="..\packages\InstrosettaTest.0.1.0\lib\netstandard2.0"/>
-    <ROW Property="AI_PROPPATH_DIR_PERBUILD_Instrosetta.dll_1" Value="..\packages\InstrosettaTest.0.1.0\lib\netstandard2.0"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_Instrosetta.dll" Value="..\packages\InstrosettaTest.0.1.2\lib\netstandard2.0"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_Instrosetta.dll_1" Value="..\packages\InstrosettaTest.0.1.2\lib\netstandard2.0"/>
     <ROW Property="AI_PROPPATH_DIR_PERBUILD_System.Interactive.Async.dll" Value="..\packages\System.Interactive.Async.3.2.0\lib\net46"/>
     <ROW Property="AI_PROPPATH_DIR_PERBUILD_System.Interactive.Async.dll_1" Value="..\packages\System.Interactive.Async.3.2.0\lib\net46"/>
     <ROW Property="AI_PROPPATH_DIR_PERBUILD_System.ValueTuple.dll" Value="..\packages\System.ValueTuple.4.5.0\lib\net461"/>
@@ -61,8 +61,8 @@
     <ROW Property="AI_PROPPATH_DIR_PERBUILD_ThorlabsKDC101ServerCLI.exe.config" Value="..\ThorlabsKDC101ServerCLI\bin\Release"/>
     <ROW Property="AI_PROPPATH_DIR_PERBUILD_ThorlabsKDC101ServerGUI.exe" Value="..\ThorlabsKDC101ServerGUI\bin\Release"/>
     <ROW Property="AI_PROPPATH_DIR_PERBUILD_ThorlabsKDC101ServerGUI.exe.config" Value="..\ThorlabsKDC101ServerGUI\bin\Release"/>
-    <ROW Property="AI_PROPPATH_DIR_PERBUILD_UnitsNet.dll" Value="..\packages\UnitsNet.4.14.0\lib\net40"/>
-    <ROW Property="AI_PROPPATH_DIR_PERBUILD_UnitsNet.dll_1" Value="..\packages\UnitsNet.4.14.0\lib\net40"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_UnitsNet.dll" Value="..\packages\UnitsNet.4.17.0\lib\net40"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_UnitsNet.dll_1" Value="..\packages\UnitsNet.4.17.0\lib\net40"/>
     <ROW Property="AI_PROPPATH_DIR_PERBUILD_Xceed.Wpf.Toolkit.dll" Value="..\ThorlabsDependencies"/>
     <ROW Property="AI_PROPPATH_DIR_PERBUILD_ftd2xx.dll" Value="..\ThorlabsKDC101ServerCLI\bin\Release"/>
     <ROW Property="AI_PROPPATH_DIR_PERBUILD_ftd2xx.dll_1" Value="..\ThorlabsKDC101ServerGUI\bin\Release"/>
