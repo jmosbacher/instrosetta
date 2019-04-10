@@ -5,10 +5,10 @@
     <Version>0.1.0</Version>
     <Authors>Yossi Mosbacher</Authors>
     <Description>The rosetta stone of instrument control.</Description>
-    <PackageReleaseNotes>Test</PackageReleaseNotes>
-    <PackageTags>test</PackageTags>
-    <PackageId>InstrosettaTest</PackageId>
-    <Product>InstrosettaTest</Product>
+    <PackageReleaseNotes>release for internal testing</PackageReleaseNotes>
+    <PackageTags></PackageTags>
+    <PackageId>Instrosetta</PackageId>
+    <Product>Instrosetta</Product>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
   </PropertyGroup>
 
@@ -22,7 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Protobuf Include="../../instrosetta-proto/**/*.proto" ProtoRoot="../../instrosetta-proto" OutputDir="./src" CompileOutputs="false"/>
+    <Protobuf Include="../../instrosetta-proto/**/*.proto" ProtoRoot="../../instrosetta-proto" OutputDir="./src" CompileOutputs="false" />
   </ItemGroup>
   
 
