@@ -85,13 +85,13 @@ namespace ThorlabsKDC101Server
 
         }
 
-        public override Task<Device> Connect(ConnectRequest request, ServerCallContext context)
+        public override Task<ConnectResponse> Connect(ConnectRequest request, ServerCallContext context)
         {
             if (_Motor != null)
             {
-                if (_Motor.SerialNo == request.Device.SerialNumber)
+                if (_Motor.SerialNo == request.DeviceId)
                 {
-                    return Task.FromResult(request.Device);
+                    return Task.FromResult(new ConnectResponse{ Connected = true});
                 }
                 else
                 {
@@ -115,10 +115,10 @@ namespace ThorlabsKDC101Server
             }
 
             int timeout = (int)(request.Timeout * 1000); //UnitConverter.ConvertByAbbreviation(request.Timeout, "Time", "s", "ms");
-            int interval = (int)(request.PollingInterval * 1000); //UnitConverter.ConvertByAbbreviation(request.PollingInterval, "Time", "s", "ms");
+            int interval = 100; //(int)(request.PollingInterval * 1000); //UnitConverter.ConvertByAbbreviation(request.PollingInterval, "Time", "s", "ms");
             try
             {
-                _Motor.Connect(request.Device.SerialNumber, timeout, interval);
+                _Motor.Connect(request.DeviceId, timeout, interval);
             }
             catch (Exception ex)
             {
@@ -131,9 +131,10 @@ namespace ThorlabsKDC101Server
                 throw new RpcException(stat, meta);
             }
 
-            return Task.FromResult(request.Device);
+            return Task.FromResult(new ConnectResponse { Connected = true });
 
         }
+
         public bool OnExit()
         {
             
@@ -155,19 +156,19 @@ namespace ThorlabsKDC101Server
 
         }
 
-        public Task<Device> Disconnect()
+        public Task<DisconnectResponse> Disconnect(DisconnectRequest request, ServerCallContext context)
         {
             if (_Motor == null || !_Motor.Connected)
             {
-                return Task.FromResult(new Device());
+                return Task.FromResult(new DisconnectResponse { Disconnected = true });
             }
 
-                try
+            try
             {
-                Device dev = new Device { SerialNumber = _Motor.SerialNo };
+                
                 _Motor.Disconnect();
                 SimulationManager.Instance.UninitializeSimulations();
-                return Task.FromResult(dev);
+                return Task.FromResult(new DisconnectResponse { Disconnected = true });
             }
             catch (Exception ex)
             {

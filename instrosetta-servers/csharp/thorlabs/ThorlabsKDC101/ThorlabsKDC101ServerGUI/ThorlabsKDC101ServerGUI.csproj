@@ -66,7 +66,7 @@
       <HintPath>..\packages\Grpc.Reflection.1.19.0\lib\net45\Grpc.Reflection.dll</HintPath>
     </Reference>
     <Reference Include="Instrosetta, Version=0.1.2.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Instrosetta.0.1.2\lib\netstandard2.0\Instrosetta.dll</HintPath>
+      <HintPath>..\packages\InstrosettaTest.0.1.2\lib\netstandard2.0\Instrosetta.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
