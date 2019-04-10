@@ -2,14 +2,14 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <Version>0.1.0</Version>
+    <Version>0.1.2</Version>
     <Authors>Yossi Mosbacher</Authors>
     <Description>The rosetta stone of instrument control.</Description>
-    <PackageReleaseNotes>release for internal testing</PackageReleaseNotes>
+    <PackageReleaseNotes>Release for internal testing. Fixed echo bug.</PackageReleaseNotes>
     <PackageTags></PackageTags>
     <PackageId>Instrosetta</PackageId>
     <Product>Instrosetta</Product>
-    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <ItemGroup>

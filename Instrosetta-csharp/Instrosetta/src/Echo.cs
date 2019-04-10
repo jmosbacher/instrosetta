@@ -9,7 +9,7 @@ using pb = global::Google.Protobuf;
 using pbc = global::Google.Protobuf.Collections;
 using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
-namespace Instrosetta.Common.Messages.V1 {
+namespace Instrosetta.Interfaces.Debugging.Echo.V1 {
 
   /// <summary>Holder for reflection information generated from instrosetta/interfaces/debugging/echo.proto</summary>
   public static partial class EchoReflection {
@@ -25,17 +25,18 @@ namespace Instrosetta.Common.Messages.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CitpbnN0cm9zZXR0YS9pbnRlcmZhY2VzL2RlYnVnZ2luZy9lY2hvLnByb3Rv",
-            "Eh5pbnN0cm9zZXR0YS5jb21tb24ubWVzc2FnZXMudjEiLAoLRWNob1JlcXVl",
-            "c3QSDAoEbmFtZRgBIAEoCRIPCgdtZXNzYWdlGAIgASgJIi0KDEVjaG9SZXNw",
-            "b25zZRIMCgRuYW1lGAEgASgJEg8KB21lc3NhZ2UYAiABKAkycgoLRWNob1Nl",
-            "cnZpY2USYwoERWNobxIrLmluc3Ryb3NldHRhLmNvbW1vbi5tZXNzYWdlcy52",
-            "MS5FY2hvUmVxdWVzdBosLmluc3Ryb3NldHRhLmNvbW1vbi5tZXNzYWdlcy52",
-            "MS5FY2hvUmVzcG9uc2UiAGIGcHJvdG8z"));
+            "EihpbnN0cm9zZXR0YS5pbnRlcmZhY2VzLmRlYnVnZ2luZy5lY2hvLnYxIiwK",
+            "C0VjaG9SZXF1ZXN0EgwKBG5hbWUYASABKAkSDwoHbWVzc2FnZRgCIAEoCSIt",
+            "CgxFY2hvUmVzcG9uc2USDAoEbmFtZRgBIAEoCRIPCgdtZXNzYWdlGAIgASgJ",
+            "MoYBCgtFY2hvU2VydmljZRJ3CgRFY2hvEjUuaW5zdHJvc2V0dGEuaW50ZXJm",
+            "YWNlcy5kZWJ1Z2dpbmcuZWNoby52MS5FY2hvUmVxdWVzdBo2Lmluc3Ryb3Nl",
+            "dHRhLmludGVyZmFjZXMuZGVidWdnaW5nLmVjaG8udjEuRWNob1Jlc3BvbnNl",
+            "IgBiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Instrosetta.Common.Messages.V1.EchoRequest), global::Instrosetta.Common.Messages.V1.EchoRequest.Parser, new[]{ "Name", "Message" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Instrosetta.Common.Messages.V1.EchoResponse), global::Instrosetta.Common.Messages.V1.EchoResponse.Parser, new[]{ "Name", "Message" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Instrosetta.Interfaces.Debugging.Echo.V1.EchoRequest), global::Instrosetta.Interfaces.Debugging.Echo.V1.EchoRequest.Parser, new[]{ "Name", "Message" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Instrosetta.Interfaces.Debugging.Echo.V1.EchoResponse), global::Instrosetta.Interfaces.Debugging.Echo.V1.EchoResponse.Parser, new[]{ "Name", "Message" }, null, null, null)
           }));
     }
     #endregion
@@ -50,7 +51,7 @@ namespace Instrosetta.Common.Messages.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Instrosetta.Common.Messages.V1.EchoReflection.Descriptor.MessageTypes[0]; }
+      get { return global::Instrosetta.Interfaces.Debugging.Echo.V1.EchoReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -207,7 +208,7 @@ namespace Instrosetta.Common.Messages.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Instrosetta.Common.Messages.V1.EchoReflection.Descriptor.MessageTypes[1]; }
+      get { return global::Instrosetta.Interfaces.Debugging.Echo.V1.EchoReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

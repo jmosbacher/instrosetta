@@ -1,2 +1,2 @@
-.\src\interfaces\light_analysis/Monochromator.cs \
-.\src\interfaces\light_analysis/MonochromatorGrpc.cs: ../../instrosetta-proto/instrosetta/interfaces/light_analysis/monochromator.proto
+src/Monochromator.cs \
+src/MonochromatorGrpc.cs: ../../instrosetta-proto/instrosetta/interfaces/light_analysis/monochromator.proto

@@ -6,4 +6,3 @@ C:\Users\yossimo\source\repos\instrosetta\Instrosetta-csharp\Instrosetta\obj\Deb
 C:\Users\yossimo\source\repos\instrosetta\Instrosetta-csharp\Instrosetta\obj\Debug\netstandard2.0\Instrosetta.AssemblyInfo.cs
 C:\Users\yossimo\source\repos\instrosetta\Instrosetta-csharp\Instrosetta\obj\Debug\netstandard2.0\Instrosetta.dll
 C:\Users\yossimo\source\repos\instrosetta\Instrosetta-csharp\Instrosetta\obj\Debug\netstandard2.0\Instrosetta.pdb
-C:\Users\yossimo\source\repos\instrosetta\Instrosetta-csharp\Instrosetta\obj\Debug\netstandard2.0\Instrosetta.csprojAssemblyReference.cache

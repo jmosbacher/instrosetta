@@ -7,31 +7,31 @@
 
 using grpc = global::Grpc.Core;
 
-namespace Instrosetta.Common.Messages.V1 {
+namespace Instrosetta.Interfaces.Debugging.Echo.V1 {
   public static partial class EchoService
   {
-    static readonly string __ServiceName = "instrosetta.common.messages.v1.EchoService";
+    static readonly string __ServiceName = "instrosetta.interfaces.debugging.echo.v1.EchoService";
 
-    static readonly grpc::Marshaller<global::Instrosetta.Common.Messages.V1.EchoRequest> __Marshaller_instrosetta_common_messages_v1_EchoRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Instrosetta.Common.Messages.V1.EchoRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Instrosetta.Common.Messages.V1.EchoResponse> __Marshaller_instrosetta_common_messages_v1_EchoResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Instrosetta.Common.Messages.V1.EchoResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Instrosetta.Interfaces.Debugging.Echo.V1.EchoRequest> __Marshaller_instrosetta_interfaces_debugging_echo_v1_EchoRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Instrosetta.Interfaces.Debugging.Echo.V1.EchoRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Instrosetta.Interfaces.Debugging.Echo.V1.EchoResponse> __Marshaller_instrosetta_interfaces_debugging_echo_v1_EchoResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Instrosetta.Interfaces.Debugging.Echo.V1.EchoResponse.Parser.ParseFrom);
 
-    static readonly grpc::Method<global::Instrosetta.Common.Messages.V1.EchoRequest, global::Instrosetta.Common.Messages.V1.EchoResponse> __Method_Echo = new grpc::Method<global::Instrosetta.Common.Messages.V1.EchoRequest, global::Instrosetta.Common.Messages.V1.EchoResponse>(
+    static readonly grpc::Method<global::Instrosetta.Interfaces.Debugging.Echo.V1.EchoRequest, global::Instrosetta.Interfaces.Debugging.Echo.V1.EchoResponse> __Method_Echo = new grpc::Method<global::Instrosetta.Interfaces.Debugging.Echo.V1.EchoRequest, global::Instrosetta.Interfaces.Debugging.Echo.V1.EchoResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "Echo",
-        __Marshaller_instrosetta_common_messages_v1_EchoRequest,
-        __Marshaller_instrosetta_common_messages_v1_EchoResponse);
+        __Marshaller_instrosetta_interfaces_debugging_echo_v1_EchoRequest,
+        __Marshaller_instrosetta_interfaces_debugging_echo_v1_EchoResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
-      get { return global::Instrosetta.Common.Messages.V1.EchoReflection.Descriptor.Services[0]; }
+      get { return global::Instrosetta.Interfaces.Debugging.Echo.V1.EchoReflection.Descriptor.Services[0]; }
     }
 
     /// <summary>Base class for server-side implementations of EchoService</summary>
     public abstract partial class EchoServiceBase
     {
-      public virtual global::System.Threading.Tasks.Task<global::Instrosetta.Common.Messages.V1.EchoResponse> Echo(global::Instrosetta.Common.Messages.V1.EchoRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Instrosetta.Interfaces.Debugging.Echo.V1.EchoResponse> Echo(global::Instrosetta.Interfaces.Debugging.Echo.V1.EchoRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -61,19 +61,19 @@ namespace Instrosetta.Common.Messages.V1 {
       {
       }
 
-      public virtual global::Instrosetta.Common.Messages.V1.EchoResponse Echo(global::Instrosetta.Common.Messages.V1.EchoRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::Instrosetta.Interfaces.Debugging.Echo.V1.EchoResponse Echo(global::Instrosetta.Interfaces.Debugging.Echo.V1.EchoRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return Echo(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual global::Instrosetta.Common.Messages.V1.EchoResponse Echo(global::Instrosetta.Common.Messages.V1.EchoRequest request, grpc::CallOptions options)
+      public virtual global::Instrosetta.Interfaces.Debugging.Echo.V1.EchoResponse Echo(global::Instrosetta.Interfaces.Debugging.Echo.V1.EchoRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_Echo, null, options, request);
       }
-      public virtual grpc::AsyncUnaryCall<global::Instrosetta.Common.Messages.V1.EchoResponse> EchoAsync(global::Instrosetta.Common.Messages.V1.EchoRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Instrosetta.Interfaces.Debugging.Echo.V1.EchoResponse> EchoAsync(global::Instrosetta.Interfaces.Debugging.Echo.V1.EchoRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return EchoAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual grpc::AsyncUnaryCall<global::Instrosetta.Common.Messages.V1.EchoResponse> EchoAsync(global::Instrosetta.Common.Messages.V1.EchoRequest request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::Instrosetta.Interfaces.Debugging.Echo.V1.EchoResponse> EchoAsync(global::Instrosetta.Interfaces.Debugging.Echo.V1.EchoRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_Echo, null, options, request);
       }
@@ -98,7 +98,7 @@ namespace Instrosetta.Common.Messages.V1 {
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
     public static void BindService(grpc::ServiceBinderBase serviceBinder, EchoServiceBase serviceImpl)
     {
-      serviceBinder.AddMethod(__Method_Echo, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Instrosetta.Common.Messages.V1.EchoRequest, global::Instrosetta.Common.Messages.V1.EchoResponse>(serviceImpl.Echo));
+      serviceBinder.AddMethod(__Method_Echo, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Instrosetta.Interfaces.Debugging.Echo.V1.EchoRequest, global::Instrosetta.Interfaces.Debugging.Echo.V1.EchoResponse>(serviceImpl.Echo));
     }
 
   }

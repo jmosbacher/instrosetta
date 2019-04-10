@@ -67,7 +67,7 @@
       <HintPath>..\packages\Grpc.Reflection.1.19.0\lib\net45\Grpc.Reflection.dll</HintPath>
     </Reference>
     <Reference Include="Instrosetta, Version=0.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\InstrosettaTest.0.1.0\lib\netstandard2.0\Instrosetta.dll</HintPath>
+      <HintPath>..\packages\Instrosetta.0.1.0\lib\netstandard2.0\Instrosetta.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -109,7 +109,7 @@
       <HintPath>..\ThorlabsDependencies\Thorlabs.MotionControl.Tools.Logging.dll</HintPath>
     </Reference>
     <Reference Include="UnitsNet, Version=4.0.0.0, Culture=neutral, PublicKeyToken=f8601875a1f041da, processorArchitecture=MSIL">
-      <HintPath>..\packages\UnitsNet.4.14.0\lib\net40\UnitsNet.dll</HintPath>
+      <HintPath>..\packages\UnitsNet.4.17.0\lib\net40\UnitsNet.dll</HintPath>
     </Reference>
     <Reference Include="Xceed.Wpf.Toolkit, Version=3.4.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>

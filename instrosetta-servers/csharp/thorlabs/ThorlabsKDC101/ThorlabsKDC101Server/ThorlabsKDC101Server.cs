@@ -5,7 +5,7 @@ using Grpc.Core;
 using Grpc.Reflection;
 using Grpc.Reflection.V1Alpha;
 using Instrosetta.Interfaces.MotionControl.Singleaxis;
-
+using Instrosetta.Interfaces.
 
 namespace ThorlabsKDC101Server
 {
