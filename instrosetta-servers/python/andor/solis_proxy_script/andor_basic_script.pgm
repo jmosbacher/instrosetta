@@ -1,0 +1,211 @@
+// CONSTANTS =====================>
+
+TERMINATION$ = "\n"
+COMPORT = 6
+BAUDRATE = 115200
+
+// ===============================<
+
+
+// FUNCTIONS =====================>
+
+function ~ReadInput$()
+	comread(COMPORT,text$)
+	comwrite(COMPORT,"ACK:"+text$+TERMINATION$)
+	ReadInput$ = text$
+return
+
+function ~SendMessage(message$)
+	comwrite(COMPORT, message$+TERMINATION$)
+	comread(COMPORT, response$)
+	if !strcomp(response$, "ACK:"+message$) then
+		WriteResponse = 0
+	else
+		WriteResponse = -1
+	endif
+return
+
+function ~ToNumber(text$)
+	atext$ = "" 
+	for i= len(text$) to 1 step -1
+	  atext$ = atext$ + str$(asc(right$(text$, i)))
+	next
+	ToNumber = val(atext$)
+return
+
+function ~Increment(i)
+	if (i>10) then
+		cls()
+		Increment=0	
+	else
+		Increment=i+1
+	endif
+return
+
+// ===============================<
+
+
+
+// COMMANDS ======================>
+IDN = ~ToNumber("*IDN?")
+
+CALL_EXIT = ~ToNumber("CALL:EXIT")
+CALL_SAVE = ~ToNumber("CALL:SAVE")
+CALL_RUN = ~ToNumber("CALL:RUN")
+CALL_CLEARSCREEN = ~ToNumber("CALL:CLEARSCREEN")
+
+GET_EXPOSURE = ~ToNumber("GET:EXPOSURE")
+SET_EXPOSURE = ~ToNumber("SET:EXPOSURE")
+
+GET_WAVELENGTH = ~ToNumber("GET:WAVELENGTH")
+SET_WAVELENGTH = ~ToNumber("SET:WAVELENGTH")
+
+GET_SLIT_WIDTH = ~ToNumber("GET:SLIT_WIDTH")
+SET_SLIT_WIDTH = ~ToNumber("SET:SLIT_WIDTH")
+
+GET_GRATING = ~ToNumber("GET:GRATING")
+SET_GRATING = ~ToNumber("SET:GRATING")
+
+GET_SHUTTER_MODE = ~ToNumber("GET:SHUTTER_MODE")
+SET_SHUTTER_MODE = ~ToNumber("SET:SHUTTER_MODE")
+
+GET_READOUT_MODE = ~ToNumber("GET:READOUT_MODE")
+SET_READOUT_MODE = ~ToNumber("SET:READOUT_MODE")
+
+GET_AREA = ~ToNumber("GET:AREA")
+
+// ===============================<
+
+// SETUP ======================>
+baud(COMPORT,BAUDRATE)
+i=0
+
+// ===============================<
+
+// MAIN LOOP ======================>
+while(1)
+
+i = Increment(i)
+REQUEST$ = ~ReadInput$()
+REQUEST_CODE = ~ToNumber(REQUEST$)
+
+select case REQUEST_CODE
+
+case IDN
+   comwrite("ANDOR_SOLIS\n")
+   break
+
+case CALL_EXIT
+   SendMessage("OK")
+   print("Stopping ANDOR porgram")
+   end
+   break
+
+case CALL_SAVE
+   path$ = ~ReadInput()
+   SaveAsciiXY(#0, path$, 2, 1)
+   print("Saved ascii file in "+path$)
+   break
+
+case CALL_CLEARSCREEN
+ 	cls()
+	break
+
+case GET_SHUTTER_MODE
+    break
+
+case SET_SHUTTER_MODE
+	acq_type$ ReadInput()
+	acq_type = val(acq_type$)
+	SetShutter(acq_type, 1)
+   break
+
+case GET_GRATING
+   	grating$ = GetGrating()
+   	SendMessage(grating)
+	break
+
+case SET_GRATING
+	grating$ = ReadInput()
+	grating =  val(grating$)
+	SetGrating(grating)
+   	grating$ = GetGrating()
+   	print("Grating set to " + grating$) 
+	break
+
+case SET_READOUT_MODE
+	mode$ = ReadInput()
+	mode = val(mode$)
+	SetReadoutMode(mode)
+	if (mode == 0) then
+	print("Camera Set To Full Vertical Bininning")
+	endif
+	if (mode == 4) then
+	print("Camera Set To Image")
+	endif
+ 	break
+ 	
+case GET_AREA
+	start$ = ReadInput()
+	end$ = ReadInput()
+	start = val(start$)
+	end = val(end$)
+	area$ = carea(#0_sig, start, end)
+	SendMessage(area$)
+	print("Corrected area equals" + area$)
+ 	break
+
+case GET_WAVELENGTH
+	wl$ = GetWavelength()
+	SendMessage(wl$)
+	print(wl$)
+   	break
+
+case SET_WAVELENGTH
+	wl$ = ReadInput()
+	SetWavelength(val(wl$))
+	wl$ = GetWavelength()
+	print("Wavelength set to " + wl$)
+   	SendMessage(wl$)
+   	break
+
+case GET_EXPOSURE
+   	exposure$ = GetExposureTime()
+   	SendMessage(exposure$)
+   	break
+
+case SET_EXPOSURE
+	exposure$ = ReadInput()
+   	SetExposureTime(val(exposure$))
+   	ExposureTime$ = GetExposureTime()
+   	print("Exposure time set to " + exposure$)
+	SendMessage(exposure$)
+   	break
+
+case GET_SLIT_WIDTH
+   	width$ = GetSlit()
+   	SendMessage(width$)
+   	break
+
+case SET_SLIT_WIDTH
+	width$ = ReadInput()
+   	SetSlit(val(width$))
+   	width$ = GetSlit()
+   	print("Slit width time set to " + width$ )
+   	SendMessage(width$)
+   	break
+
+case CALL_RUN 
+   run()
+   print("Exposure Done.")
+   break
+
+case else
+  SendMessage("INVALID")
+  print("Not a valid command")
+  break
+
+SendMessage("OK")
+selend
+wend
+// ===============================<
