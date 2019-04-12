@@ -7,3 +7,6 @@
 [submodule "instrosetta-csharp"]
 	path = instrosetta-csharp
 	url = https://github.com/jmosbacher/instrosetta-csharp.git
+[submodule "instrosetta-servers"]
+	path = instrosetta-servers
+	url = https://github.com/jmosbacher/instrosetta-servers.git
