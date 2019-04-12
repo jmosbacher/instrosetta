@@ -1,0 +1,3 @@
+[submodule "instrosetta-proto"]
+	path = instrosetta-proto
+	url = https://github.com/jmosbacher/instrosetta-proto.git
