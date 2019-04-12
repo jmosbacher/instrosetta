@@ -1,6 +1,6 @@
 # The Rosetta Stone of instrument control
 ### Because message passing is, and always will be a great idea.
-![Screenshot](docs/images/instrosetta_architecture.png)
+![Screenshot](docs/images/instrosetta_simple.png)
 
 This repo may be useful to you if:
  - You want to control all your lab instruments from a single script/application but those pesky hardware apis/sdks work best on different languages/OSs and devices are connected to different PCs.
