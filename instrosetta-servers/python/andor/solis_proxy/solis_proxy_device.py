@@ -3,19 +3,8 @@ import struct
 import time
 import ast
 import enum
+from instrosetta.utils.devices import test_connection, TestableEnum
 
-
-def test_connected(f):
-    def wrapped(self, *args, **kwargs):
-        if not self.connected:
-            raise ConnectionError("Device not connected.")
-        return f(self, *args, **kwargs)
-    return wrapped
-
-class TestableEnum(enum.Enum):
-    @classmethod
-    def has_value(cls, value):
-        return any(value == item.value for item in cls)
 
 class ShutterState(TestableEnum):
     CLOSED = 0
@@ -39,22 +28,22 @@ class SolisProxy:
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.conn = None
-        self.sio = None
+        self._conn = None
+        self._sio = None
         self.polling_interval = 0.2
 
-    @test_connected
+    @test_connection
     def read(self):
-        msg = self.sio.readline().strip()
-        self.conn.write(f"ACK:{msg}")
+        msg = self._sio.readline().strip()
+        self._conn.write(f"ACK:{msg}")
         return msg
 
-    @test_connected
+    @test_connection
     def write(self, msg):
-        self.sio.flush()
-        self.sio.write(f'{msg}')
+        self._sio.flush()
+        self._sio.write(f'{msg}')
         time.sleep(0.1)
-        resp = self.sio.readline().strip()
+        resp = self._sio.readline().strip()
         if resp != f"ACK:{msg}":
             raise ConnectionError("Message not acknowledged by peer.")
         return True
@@ -142,18 +131,18 @@ class SolisProxy:
         self.polling_interval = timeout
         self.disconnect()
         try:
-            self.conn = serial.Serial(com_port, baudrate=baudrate, timeout=timeout)
-            self.sio = io.TextIOWrapper(io.BufferedRWPair(self.conn, self.conn))
+            self._conn = serial.Serial(com_port, baudrate=baudrate, timeout=timeout)
+            self._sio = io.TextIOWrapper(io.BufferedRWPair(self._conn, self._conn))
         except:
             pass
 
     @property
     def connected(self):
-        if self.conn is None:
+        if self._conn is None:
             return False
-        return self.conn.is_open
+        return self._conn.is_open
         
     def disconnect(self):
-        if self.connected:
-            self.conn.close()
+        if self._connected:
+            self._conn.close()
             
