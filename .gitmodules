@@ -4,3 +4,6 @@
 [submodule "instrosetta-python"]
 	path = instrosetta-python
 	url = https://github.com/jmosbacher/instrosetta-python.git
+[submodule "instrosetta-csharp"]
+	path = instrosetta-csharp
+	url = https://github.com/jmosbacher/instrosetta-csharp.git
