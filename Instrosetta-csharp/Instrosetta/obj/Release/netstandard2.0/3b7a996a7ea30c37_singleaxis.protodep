@@ -1,2 +1,0 @@
-src/Singleaxis.cs \
-src/SingleaxisGrpc.cs: ../../instrosetta-proto/instrosetta/interfaces/motion_control/singleaxis.proto
