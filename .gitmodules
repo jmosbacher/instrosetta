@@ -1,0 +1,16 @@
+[submodule "instrosetta-proto"]
+	path = instrosetta-proto
+	url = https://github.com/jmosbacher/instrosetta-proto.git
+	branch = master
+[submodule "instrosetta-python"]
+	path = instrosetta-python
+	url = https://github.com/jmosbacher/instrosetta-python.git
+	branch = master
+[submodule "instrosetta-csharp"]
+	path = instrosetta-csharp
+	url = https://github.com/jmosbacher/instrosetta-csharp.git
+	branch = master
+[submodule "instrosetta-servers"]
+	path = instrosetta-servers
+	url = https://github.com/jmosbacher/instrosetta-servers.git
+	branch = master
