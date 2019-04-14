@@ -1,5 +1,6 @@
 # The Rosetta Stone of instrument control
-### Because message passing is, and always will be a great idea.
+## Because message passing is, and always will be a great idea.
+### This project is brand new and under intensive development. Please check back soon for the first release.
 ![Screenshot](docs/images/instrosetta_simple.png)
 
 This repo may be useful to you if:
